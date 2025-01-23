@@ -674,7 +674,7 @@ MonoBehaviour:
       m_SoundsAsset: {fileID: 11400000, guid: 2482253cdd4732744baf41bb9978ea06, type: 2}
   m_Ragdoll:
     m_Ragdoll:
-      rid: 4340017111633756416
+      rid: 3611814858461020748
   references:
     version: 2
     RefIds:
@@ -686,6 +686,14 @@ MonoBehaviour:
         m_AutoMeshLink: 1
         m_AgentType:
           m_AgentTypeIndex: 0
+    - rid: 3611814858461020748
+      type: {class: RagdollDefault, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data:
+        m_BoneRack:
+          m_Skeleton: {fileID: 11400000, guid: 5809449d43408435db32108bd69aa82c, type: 2}
+        m_TransitionDuration: 0.2
+        m_RecoverFaceDown: {fileID: 0}
+        m_RecoverFaceUp: {fileID: 0}
     - rid: 4295614983071073190
       type: {class: RigLookTo, ns: GameCreator.Runtime.Characters.IK, asm: GameCreator.Runtime.Core}
       data:
@@ -737,9 +745,6 @@ MonoBehaviour:
           m_Type: 1
           m_Human: 6
           m_Path: 
-    - rid: 4340017111633756416
-      type: {class: RagdollNone, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data: 
     - rid: 4340017111633756417
       type: {class: UnitPlayerDirectional, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:
@@ -855,7 +860,7 @@ MonoBehaviour:
       rid: 2908845282200125830
   m_RuntimeData:
     m_Overrides:
-    - rid: 3611814818466759662
+    - rid: 3611814858505323099
   references:
     version: 2
     RefIds:
@@ -863,15 +868,15 @@ MonoBehaviour:
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 0.5
-    - rid: 3611814818466759662
+    - rid: 3611814858505323099
       type: {class: Parameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Value:
-          rid: 3611814818466759663
+          rid: 3611814858505323100
         m_Name: Roll
-    - rid: 3611814818466759663
+    - rid: 3611814858505323100
       type: {class: ValueNumber, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
@@ -2885,6 +2890,8 @@ MonoBehaviour:
     - rid: 2908845284069999365
     - rid: 4295615049609249010
     - rid: 2908845284069999381
+    - rid: 3611814858003579764
+    - rid: 3611814858375299585
     - rid: 2908845332233978468
     - rid: 2908845511666565120
     - rid: 2908845284069999369
@@ -3009,6 +3016,36 @@ MonoBehaviour:
       type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 0
+    - rid: 3611814858003579764
+      type: {class: InstructionCharacterNavigationFollowStop, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 3611814858003579766
+    - rid: 3611814858003579766
+      type: {class: GetGameObjectCharactersInstance, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data:
+        m_Character: {fileID: 5718657893811192464}
+    - rid: 3611814858375299585
+      type: {class: InstructionCharacterNavigationMoveStop, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 3611814858375299586
+        m_Priority:
+          m_Property:
+            rid: 3611814858375299587
+    - rid: 3611814858375299586
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 3611814858375299587
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
     - rid: 4295614983071073231
       type: {class: InstructionCharacterIKLookStop, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:

@@ -48,7 +48,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 0
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -14824,7 +14824,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 0
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -29828,6 +29828,7 @@ Transform:
   m_Children:
   - {fileID: 7453017179724300632}
   - {fileID: 5232473379021579936}
+  - {fileID: 3507851215369341620}
   m_Father: {fileID: 4325011464202298312}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7183237704210529530
@@ -29845,6 +29846,8 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 3611814407890535072
+    - rid: 3611814861031867019
+    - rid: 3611814861031867015
     - rid: 3611814408681685195
   m_TriggerEvent:
     rid: 3611814407890535063
@@ -29880,6 +29883,39 @@ MonoBehaviour:
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_GameObject: {fileID: 8715168807200888895}
+    - rid: 3611814861031867015
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 3611814861031867016
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 3611814861031867016
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 3611814861031867019
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 3611814861031867020
+        m_Active:
+          m_Property:
+            rid: 3611814861031867021
+    - rid: 3611814861031867020
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 6561909635348297603}
+    - rid: 3611814861031867021
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
 --- !u!1 &4477669962684089994
 GameObject:
   m_ObjectHideFlags: 0
@@ -29928,7 +29964,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 0
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -70316,6 +70352,7 @@ Transform:
   m_Children:
   - {fileID: 5379538940795915322}
   - {fileID: 3717194716807898241}
+  - {fileID: 224734322000199036}
   m_Father: {fileID: 987952369396279310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3191719075000544890
@@ -70333,6 +70370,8 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 3611814407890535072
+    - rid: 3611814861031867019
+    - rid: 3611814861031867015
     - rid: 3611814408681685195
   m_TriggerEvent:
     rid: 3611814407890535063
@@ -70368,6 +70407,39 @@ MonoBehaviour:
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_GameObject: {fileID: 8715168807200888895}
+    - rid: 3611814861031867015
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 3611814861031867016
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 3611814861031867016
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 3611814861031867019
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 3611814861031867020
+        m_Active:
+          m_Property:
+            rid: 3611814861031867021
+    - rid: 3611814861031867020
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 6561909635348297603}
+    - rid: 3611814861031867021
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
 --- !u!1 &8648532216747923071
 GameObject:
   m_ObjectHideFlags: 0
@@ -75364,6 +75436,7 @@ Transform:
   m_Children:
   - {fileID: 45121926516588428}
   - {fileID: 4911626275798488442}
+  - {fileID: 51356418489135598}
   m_Father: {fileID: 4786148031232017091}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4916698882577613397
@@ -75381,6 +75454,8 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 3611814407890535072
+    - rid: 3611814861031867019
+    - rid: 3611814861031867015
     - rid: 3611814408681685195
   m_TriggerEvent:
     rid: 3611814407890535063
@@ -75416,6 +75491,39 @@ MonoBehaviour:
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_GameObject: {fileID: 8715168807200888895}
+    - rid: 3611814861031867015
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 3611814861031867016
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 3611814861031867016
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 3611814861031867019
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 3611814861031867020
+        m_Active:
+          m_Property:
+            rid: 3611814861031867021
+    - rid: 3611814861031867020
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 6561909635348297603}
+    - rid: 3611814861031867021
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
 --- !u!1 &9047159423907463882
 GameObject:
   m_ObjectHideFlags: 0
@@ -75712,3 +75820,189 @@ TrailRenderer:
   m_Autodestruct: 1
   m_Emitting: 1
   m_ApplyActiveColorSpace: 0
+--- !u!1001 &1845777667917712278
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5096112885381146155}
+    m_Modifications:
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161762220320829639, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_Name
+      value: Line Charge Sound
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+--- !u!4 &3507851215369341620 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+  m_PrefabInstance: {fileID: 1845777667917712278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2991961878129651916
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2731607023209531403}
+    m_Modifications:
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161762220320829639, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_Name
+      value: Line Charge Sound
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+--- !u!4 &51356418489135598 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+  m_PrefabInstance: {fileID: 2991961878129651916}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3039238941375888478
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4275130239885583477}
+    m_Modifications:
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161762220320829639, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+      propertyPath: m_Name
+      value: Line Charge Sound
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+--- !u!4 &224734322000199036 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2968964081816863010, guid: ca6b906a9cc982847af18c689425b888, type: 3}
+  m_PrefabInstance: {fileID: 3039238941375888478}
+  m_PrefabAsset: {fileID: 0}
