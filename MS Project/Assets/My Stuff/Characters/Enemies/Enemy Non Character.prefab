@@ -319,7 +319,12 @@ MonoBehaviour:
     m_Keys:
     - m_String: Max-HP
     - m_String: DMG
+    - m_String: STGR
     m_Values:
+    - m_IsExpanded: 0
+      m_ChangeBase:
+        m_IsEnabled: 0
+        m_Value: 1
     - m_IsExpanded: 0
       m_ChangeBase:
         m_IsEnabled: 0
@@ -584,6 +589,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Instructions:
     m_Instructions:
+    - rid: 3611814882409185468
+    - rid: 3611814882409185471
     - rid: 4295615206596018994
     - rid: 4295615163942568222
     - rid: 2908845511666566004
@@ -625,6 +632,38 @@ MonoBehaviour:
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_GameObject: {fileID: 1152353502807799909}
+    - rid: 3611814882409185468
+      type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 3611814882409185469
+        m_Value:
+          m_Property:
+            rid: 3611814882409185470
+    - rid: 3611814882409185469
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 4593067aae51dc34e9066e7d747800ba, type: 2}
+          m_Name:
+            m_String: Enemies-Killed
+            m_ID: -278692829
+    - rid: 3611814882409185470
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 3611814882409185471
+      type: {class: InstructionLogicRaiseSignal, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Signal:
+          m_String: Enemies-Killed
     - rid: 4295615163942568222
       type: {class: InstructionInventoryCurrency, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
       data:
