@@ -5463,7 +5463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4123929045308220160, guid: 050a09c2f8b2a544cbf0e3b9cecb9d36, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4839026425252736599, guid: 050a09c2f8b2a544cbf0e3b9cecb9d36, type: 3}
       propertyPath: 'managedReferences[3611814816826786137]'
@@ -5676,7 +5676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6097430834509617745, guid: 2a0c7eed5f514984f960a1163647abe0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6633567882215592829, guid: 2a0c7eed5f514984f960a1163647abe0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16160,7 +16160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8936493290603245813, guid: c6607c6bb2f9b1e4ea73cd560affdde6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25642,7 +25642,7 @@ Transform:
   m_GameObject: {fileID: 863315355}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.04877, y: 5.8182845, z: 4.3776407}
+  m_LocalPosition: {x: 0, y: 6.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27549,7 +27549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4123929045308220160, guid: 050a09c2f8b2a544cbf0e3b9cecb9d36, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4839026425252736599, guid: 050a09c2f8b2a544cbf0e3b9cecb9d36, type: 3}
       propertyPath: 'managedReferences[3611814816826786141]'
@@ -35265,7 +35265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8792302914223367424, guid: 70abfa2e12769a948b4c97ca042b1205, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38847,10 +38847,12 @@ MonoBehaviour:
     - rid: 3611814791682720117
     - rid: 3611814791682720114
     - rid: 3611814724932207359
-    - rid: 3611814862703559217
+    - rid: 3611814883375448328
+    - rid: 3611814883375448321
     - rid: 3611814861125714883
     - rid: 3611814726621201149
     - rid: 3611814724932207362
+    - rid: 3611814883375448324
     - rid: 3611814724932207356
   m_TriggerEvent:
     rid: 3611814724932206631
@@ -39064,16 +39066,54 @@ MonoBehaviour:
       type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 1
-    - rid: 3611814862703559217
-      type: {class: InstructionCommonTimeFrame, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+    - rid: 3611814883375448321
+      type: {class: InstructionCharacterPropertyIsControllable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Frames:
+        m_Character:
           m_Property:
-            rid: 3611814862703559218
-    - rid: 3611814862703559218
-      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+            rid: 3611814883375448322
+        m_IsControllable:
+          m_Property:
+            rid: 3611814883375448323
+    - rid: 3611814883375448322
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 3611814883375448323
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 3611814883375448324
+      type: {class: InstructionCharacterPropertyIsControllable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 3611814883375448325
+        m_IsControllable:
+          m_Property:
+            rid: 3611814883375448326
+    - rid: 3611814883375448325
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 3611814883375448326
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 3611814883375448328
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 3611814883375448329
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 3611814883375448329
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 1
 --- !u!114 &1659846810
@@ -41185,7 +41225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4123929045308220160, guid: 050a09c2f8b2a544cbf0e3b9cecb9d36, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4839026425252736599, guid: 050a09c2f8b2a544cbf0e3b9cecb9d36, type: 3}
       propertyPath: 'managedReferences[3611814816826786133]'
@@ -48573,7 +48613,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7320508, y: 1.7320508, z: 1.7320508}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1244228408}
@@ -51561,77 +51601,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1381724939837228350, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381724939837228350, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381724939837228350, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381724939837228350, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381724939837228350, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381724939837228350, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1857558775088257596, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 2164972965303693901, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 8758383654174548219, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
+      propertyPath: m_CoinColor
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 2164972965303693901, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164972965303693901, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164972965303693901, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164972965303693901, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164972965303693901, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3742830725904082242, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3742830725904082242, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3742830725904082242, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3742830725904082242, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3742830725904082242, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
+    - target: {fileID: 8758383654174548219, guid: 3858f298f87222545bf21259f9433ccf, type: 3}
+      propertyPath: m_CoinImage
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -51665,9 +51645,9 @@ SceneRoots:
   - {fileID: 1745386513}
   - {fileID: 286475864}
   - {fileID: 950302923}
-  - {fileID: 617972994}
   - {fileID: 298884456}
   - {fileID: 1432425495}
+  - {fileID: 617972994}
   - {fileID: 303533275}
   - {fileID: 45287533}
   - {fileID: 1891764507}
