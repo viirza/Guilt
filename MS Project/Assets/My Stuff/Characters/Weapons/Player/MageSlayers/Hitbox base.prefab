@@ -47,7 +47,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 516
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
           m_Conditions:
           - rid: 3611814518853992763
           - rid: 3611814521167675489
+          - rid: 3611814884621157099
     - rid: 3611814518853992763
       type: {class: ConditionGameObjectLayerMask, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -182,6 +183,18 @@ MonoBehaviour:
             rid: 3611814521167675490
     - rid: 3611814521167675490
       type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 3611814884621157099
+      type: {class: ConditionCharacterIsDead, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 0
+        m_Character:
+          m_Property:
+            rid: 3611814884621157101
+    - rid: 3611814884621157101
+      type: {class: GetGameObjectLastTriggerEnter, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
 --- !u!114 &3114796516375360082
 MonoBehaviour:
@@ -632,7 +645,6 @@ MonoBehaviour:
     - rid: 3611814520919949542
     - rid: 3611814518853992978
     - rid: 3611814521127830148
-    - rid: 3611814521127830150
   m_TriggerEvent:
     rid: 3611814518853992977
   references:
@@ -736,14 +748,3 @@ MonoBehaviour:
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 1
-    - rid: 3611814521127830150
-      type: {class: InstructionGameObjectDestroy, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 0
-        m_GameObject:
-          m_Property:
-            rid: 3611814521127830152
-    - rid: 3611814521127830152
-      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
