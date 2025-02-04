@@ -461,7 +461,8 @@ MonoBehaviour:
     - rid: 92410013869933347
     - rid: 356423530014048321
     - rid: 92410013869933350
-    - rid: 92410013850534455
+    - rid: 5820885025460584461
+    - rid: 5820885025460584466
   m_TriggerEvent:
     rid: 92410013850534454
   references:
@@ -470,42 +471,6 @@ MonoBehaviour:
     - rid: 92410013850534454
       type: {class: EventOnEnable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data: 
-    - rid: 92410013850534455
-      type: {class: InstructionShadingLerpColor, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Set:
-          m_Property:
-            rid: 92410013850534459
-        m_Color1:
-          m_Property:
-            rid: 92410013850534462
-        m_Color2:
-          m_Property:
-            rid: 92410013850534463
-        m_Transition:
-          m_Duration: 1
-          m_Easing: 3
-          m_Time: 0
-          m_WaitToComplete: 1
-    - rid: 92410013850534459
-      type: {class: SetColorUIGraphic, ns: GameCreator.Runtime.Common.UnityUI, asm: GameCreator.Runtime.Core}
-      data:
-        m_Graphic:
-          m_Property:
-            rid: 92410013850534461
-    - rid: 92410013850534461
-      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 92410013850534462
-      type: {class: GetColorValueHDR, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: {r: 1, g: 1, b: 1, a: 0}
-    - rid: 92410013850534463
-      type: {class: GetColorValueHDR, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: {r: 1, g: 1, b: 1, a: 1}
     - rid: 92410013869933347
       type: {class: InstructionTransformChangeScale, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -599,6 +564,61 @@ MonoBehaviour:
     - rid: 356423530014048333
       type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 5820885025460584461
+      type: {class: InstructionShadingLerpColor, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5820885025460584462
+        m_Color1:
+          m_Property:
+            rid: 5820885025460584463
+        m_Color2:
+          m_Property:
+            rid: 5820885025460584464
+        m_Transition:
+          m_Duration: 2
+          m_Easing: 3
+          m_Time: 0
+          m_WaitToComplete: 1
+    - rid: 5820885025460584462
+      type: {class: SetColorUIGraphic, ns: GameCreator.Runtime.Common.UnityUI, asm: GameCreator.Runtime.Core}
+      data:
+        m_Graphic:
+          m_Property:
+            rid: 5820885025460584465
+    - rid: 5820885025460584463
+      type: {class: GetColorValueHDR, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: {r: 1, g: 1, b: 1, a: 0}
+    - rid: 5820885025460584464
+      type: {class: GetColorValueHDR, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: {r: 1, g: 1, b: 1, a: 1}
+    - rid: 5820885025460584465
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 5820885025460584466
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 5820885025460584467
+        m_Active:
+          m_Property:
+            rid: 5820885025460584468
+    - rid: 5820885025460584467
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 3196205812385343687}
+    - rid: 5820885025460584468
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
 --- !u!1 &3196205812385343687
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,12 +650,11 @@ RectTransform:
   - {fileID: 1407187759363901036}
   - {fileID: 4757803138501698470}
   - {fileID: 2846389578684454832}
-  - {fileID: 1743564647135360217}
   m_Father: {fileID: 3012139228365368957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -650, y: 400}
   m_SizeDelta: {x: 656.8582, y: 180.9975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5189980349262505594
@@ -675,218 +694,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 842.4772, y: 231.621}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &5330738053319764316
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1743564647135360217}
-  - component: {fileID: 1637420233090142276}
-  m_Layer: 5
-  m_Name: Warp in Bounce Animation (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1743564647135360217
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330738053319764316}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5759978546778152254}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1637420233090142276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330738053319764316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Instructions:
-    m_Instructions:
-    - rid: 356423530014048917
-    - rid: 92410013869933350
-    - rid: 356423530014048321
-    - rid: 92410013869933347
-    - rid: 92410013850534455
-  m_TriggerEvent:
-    rid: 92410013850534454
-  references:
-    version: 2
-    RefIds:
-    - rid: 92410013850534454
-      type: {class: EventOnEnable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 92410013850534455
-      type: {class: InstructionShadingLerpColor, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Set:
-          m_Property:
-            rid: 92410013850534459
-        m_Color1:
-          m_Property:
-            rid: 92410013850534462
-        m_Color2:
-          m_Property:
-            rid: 92410013850534463
-        m_Transition:
-          m_Duration: 1
-          m_Easing: 3
-          m_Time: 0
-          m_WaitToComplete: 1
-    - rid: 92410013850534459
-      type: {class: SetColorUIGraphic, ns: GameCreator.Runtime.Common.UnityUI, asm: GameCreator.Runtime.Core}
-      data:
-        m_Graphic:
-          m_Property:
-            rid: 92410013850534461
-    - rid: 92410013850534461
-      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 92410013850534462
-      type: {class: GetColorValueHDR, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: {r: 1, g: 1, b: 1, a: 0}
-    - rid: 92410013850534463
-      type: {class: GetColorValueHDR, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: {r: 1, g: 1, b: 1, a: 1}
-    - rid: 92410013869933347
-      type: {class: InstructionTransformChangeScale, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Transform:
-          m_Property:
-            rid: 356423530014048325
-        m_Scale:
-          m_Operation: 0
-          m_Value:
-            m_Property:
-              rid: 92410013869933349
-        m_Transition:
-          m_Duration: 0.4
-          m_Easing: 3
-          m_Time: 0
-          m_WaitToComplete: 1
-    - rid: 92410013869933349
-      type: {class: GetScaleVector3, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Scale: {x: 5, y: 0, z: 1}
-    - rid: 92410013869933350
-      type: {class: InstructionTransformChangeScale, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Transform:
-          m_Property:
-            rid: 356423530014048331
-        m_Scale:
-          m_Operation: 0
-          m_Value:
-            m_Property:
-              rid: 92410013869933352
-        m_Transition:
-          m_Duration: 0.1
-          m_Easing: 30
-          m_Time: 0
-          m_WaitToComplete: 1
-    - rid: 92410013869933352
-      type: {class: GetScaleVector3, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Scale: {x: 1, y: 1, z: 1}
-    - rid: 356423530014048321
-      type: {class: InstructionTransformChangeScale, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Transform:
-          m_Property:
-            rid: 356423530014048328
-        m_Scale:
-          m_Operation: 0
-          m_Value:
-            m_Property:
-              rid: 356423530014048323
-        m_Transition:
-          m_Duration: 0.5
-          m_Easing: 23
-          m_Time: 0
-          m_WaitToComplete: 1
-    - rid: 356423530014048323
-      type: {class: GetScaleVector3, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Scale: {x: 0.9, y: 1.1, z: 1}
-    - rid: 356423530014048325
-      type: {class: GetGameObjectParent, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Transform:
-          m_Property:
-            rid: 356423530014048327
-    - rid: 356423530014048327
-      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 356423530014048328
-      type: {class: GetGameObjectParent, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Transform:
-          m_Property:
-            rid: 356423530014048330
-    - rid: 356423530014048330
-      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 356423530014048331
-      type: {class: GetGameObjectParent, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Transform:
-          m_Property:
-            rid: 356423530014048333
-    - rid: 356423530014048333
-      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 356423530014048917
-      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Seconds:
-          m_Property:
-            rid: 356423530014048922
-        m_Mode:
-          m_UpdateTime: 0
-    - rid: 356423530014048922
-      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: number
-          m_Variable: {fileID: 11400000, guid: b73ffaca67aa82746aec93c8dafbfad6, type: 2}
-          m_Name:
-            m_String: change-me-to-call-a-notification-duration
-            m_ID: -2142250390
 --- !u!1 &7714078542511575901
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,13 +762,13 @@ MonoBehaviour:
   m_text: Notification Text goes here
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4840653846369403502, guid: ee6cceba026bd344e862ee9240a74e54, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 3504069595
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
