@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e25e7ff5b3ce840cd941cc265f0dfce0, type: 3}
-  m_Name: _MageSlayer
+  m_Name: _Mark Base
   m_EditorClassIdentifier: 
   m_ID:
     m_SerializedID:
-      m_String: _MS
+      m_String: _Mark
   m_Parent: {fileID: 0}
   m_Prefab: {fileID: 0}
   m_CanDrop:
@@ -34,7 +34,7 @@ MonoBehaviour:
         rid: 2908845350248514435
     m_Color:
       m_Property:
-        rid: 2908845351081083083
+        rid: 2908845351081083084
     m_OnCreate:
       m_Instructions:
         m_Instructions: []
@@ -63,7 +63,31 @@ MonoBehaviour:
       m_Number: 0
       m_Text:
         m_Property:
-          rid: 3611814703409135681
+          rid: 3611814702946976351
+    - m_Breakpoint: 0
+      m_IsEnabled: 0
+      m_PropertyID:
+        m_String: projectile
+      m_Visible: 0
+      m_Hide: 0
+      m_Icon: {fileID: 0}
+      m_Color: {r: 0, g: 0, b: 0, a: 0}
+      m_Number: 0
+      m_Text:
+        m_Property:
+          rid: 3611814724088102932
+    - m_Breakpoint: 0
+      m_IsEnabled: 0
+      m_PropertyID:
+        m_String: fire-rate
+      m_Visible: 0
+      m_Hide: 0
+      m_Icon: {fileID: 0}
+      m_Color: {r: 0, g: 0, b: 0, a: 0}
+      m_Number: 0
+      m_Text:
+        m_Property:
+          rid: 3611814724088102933
     m_Overrides:
       m_Keys: []
       m_Values: []
@@ -79,7 +103,8 @@ MonoBehaviour:
         m_Conditions: []
     m_InstructionsOnEquip:
       m_Instructions:
-        m_Instructions: []
+        m_Instructions:
+        - rid: 5820885091046654081
     m_InstructionsOnUnequip:
       m_Instructions:
         m_Instructions: []
@@ -92,13 +117,10 @@ MonoBehaviour:
         rid: 2908845350248514437
     m_ConditionsCanUse:
       m_Conditions:
-        m_Conditions:
-        - rid: 4295615025322131697
+        m_Conditions: []
     m_InstructionsOnUse:
       m_Instructions:
-        m_Instructions:
-        - rid: 4295615025322131695
-        - rid: 4295615025322131700
+        m_Instructions: []
     m_ExecuteFromParent: 0
   m_Crafting:
     m_Ingredients: []
@@ -122,7 +144,7 @@ MonoBehaviour:
     - rid: 2908845350248514433
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: MageSlayer
+        m_Value: Mark 1
     - rid: 2908845350248514434
       type: {class: GetStringTextArea, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -131,65 +153,31 @@ MonoBehaviour:
     - rid: 2908845350248514435
       type: {class: GetSpriteInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Sprite: {fileID: 21300000, guid: 21c137fd8d486c845b9f2c768eea9899, type: 3}
+        m_Sprite: {fileID: 0}
     - rid: 2908845350248514437
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 0.33
-    - rid: 2908845351081083083
+        m_Value: 1
+    - rid: 2908845351081083084
       type: {class: GetColorValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: {r: 1, g: 1, b: 1, a: 1}
-    - rid: 3611814703409135681
+    - rid: 3611814702946976351
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: Damage
-    - rid: 4295615025322131695
-      type: {class: InstructionMeleeInputExecute, ns: GameCreator.Runtime.Melee, asm: GameCreator.Runtime.Melee}
+    - rid: 3611814724088102932
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Projectile
+    - rid: 3611814724088102933
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Fire Rate
+    - rid: 5820885091046654081
+      type: {class: InstructionLogicRaiseSignal, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Character:
-          m_Property:
-            rid: 4295615025322131696
-        m_Key: 0
-    - rid: 4295615025322131696
-      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 4295615025322131697
-      type: {class: ConditionInventoryItemCooldown, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Sign: 0
-        m_Bag:
-          m_Property:
-            rid: 4295615025322131698
-        m_Item:
-          m_Property:
-            rid: 4295615025322131699
-    - rid: 4295615025322131698
-      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 4295615025322131699
-      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
-      data:
-        m_Item: {fileID: 11400000}
-    - rid: 4295615025322131700
-      type: {class: InstructionInventoryCooldownAddItem, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Bag:
-          m_Property:
-            rid: 4295615025322131701
-        m_Item:
-          m_Property:
-            rid: 4295615025322131702
-    - rid: 4295615025322131701
-      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 4295615025322131702
-      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
-      data:
-        m_Item: {fileID: 11400000}
+        m_IsEnabled: 0
+        m_Signal:
+          m_String: Equip-New

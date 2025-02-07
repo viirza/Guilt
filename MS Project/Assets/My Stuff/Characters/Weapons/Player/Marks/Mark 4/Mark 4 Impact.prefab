@@ -47,8 +47,10 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 5820885070213808379
+    - rid: 5820885087750194127
+    - rid: 5820885089859403779
   m_TriggerEvent:
-    rid: 5820885070213808543
+    rid: 5820885089859403855
   references:
     version: 2
     RefIds:
@@ -90,6 +92,38 @@ MonoBehaviour:
     - rid: 5820885070213808387
       type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
-    - rid: 5820885070213808543
-      type: {class: EventOnUpdate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+    - rid: 5820885087750194127
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 5820885087750194130
+        m_Active:
+          m_Property:
+            rid: 5820885087750194129
+    - rid: 5820885087750194129
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 5820885087750194130
+      type: {class: GetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: f77964e298cdcf34faddc00bc6d2f198, type: 2}
+          m_Name:
+            m_String: glyph-holder
+            m_ID: 1293943004
+    - rid: 5820885089859403779
+      type: {class: InstructionLogicRaiseSignal, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Signal:
+          m_String: Glyph-Aim
+    - rid: 5820885089859403855
+      type: {class: EventOnEnable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data: 
