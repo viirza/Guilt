@@ -76,7 +76,7 @@ MonoBehaviour:
     m_HitPauseDuration: 0.1
     m_TimeScale: 0
   m_Animation: {fileID: 7400000, guid: 5f459ecb0152ffa44826a61e3163685a, type: 2}
-  m_Mask: {fileID: 31900000, guid: 9bf8ddda34e8fb646bf37001a5b12691, type: 2}
+  m_Mask: {fileID: 31900000, guid: f115d6a653457f14689f028c53ef5cd9, type: 2}
   m_Motion: 0
   m_SyncReaction: {fileID: 0}
   m_Gravity: 1
@@ -126,7 +126,8 @@ MonoBehaviour:
       m_Conditions: []
   m_OnHit:
     m_Instructions:
-      m_Instructions: []
+      m_Instructions:
+      - rid: 1296925803930190446
   <EditorModelPath>k__BackingField: 
   references:
     version: 2
@@ -269,3 +270,36 @@ MonoBehaviour:
       type: {class: GetAudioClip, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: {fileID: 8300000, guid: f74e2bc62a78dc8448474c598b53475d, type: 3}
+    - rid: 1296925803930190446
+      type: {class: InstructionStatsChangeAttribute, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Target:
+          m_Property:
+            rid: 1296925803930190447
+        m_Attribute:
+          m_Property:
+            rid: 1296925803930190448
+        m_Change:
+          m_Operation: 2
+          m_Value:
+            m_Property:
+              rid: 1296925803930190449
+    - rid: 1296925803930190447
+      type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1296925803930190448
+      type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Attribute: {fileID: 11400000, guid: 91e989c89e934194da21053b9c882591, type: 2}
+    - rid: 1296925803930190449
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: a306070c341df9d4dbc95a5bb8eb190b, type: 2}
+          m_Name:
+            m_String: attack-1
+            m_ID: 1228979367
