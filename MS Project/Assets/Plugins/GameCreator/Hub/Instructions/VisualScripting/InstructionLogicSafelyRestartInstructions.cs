@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace GameCreator.Runtime.VisualScripting
 {
-    [Version(1, 0, 1)]
+    [Version(1, 0, 2)]
     
     [Title("Safely Restart Instructions")]
     [Category("Visual Scripting/Safely Restart Instructions")]
@@ -25,15 +25,11 @@ namespace GameCreator.Runtime.VisualScripting
     [Serializable]
     public class InstructionLogicSafelyRestartInstructions : Instruction
     {
-        #if UNITY_EDITOR
-
-        [SerializeField, Min(0)] 
+        [SerializeField, Min(1)] 
         private int m_BreakThreshold = 10000;
 
-        [NonSerialized] private int m_CurrentLoop = 1;
+        [NonSerialized] private int m_CurrentLoop = 0;
         [NonSerialized] private int m_CurrentFrame;
-
-        #endif
 
         // PROPERTIES: ----------------------------------------------------------------------------
 
@@ -48,7 +44,7 @@ namespace GameCreator.Runtime.VisualScripting
             if (UnityEngine.Time.frameCount == this.m_CurrentFrame)
             {
                 this.m_CurrentLoop++;
-                if (this.m_CurrentLoop >= this.m_BreakThreshold) 
+                if (this.m_CurrentLoop > this.m_BreakThreshold) 
                 {
                     Debug.LogWarning(
                         $"Infinite Loop Detected! at Args:Self = {args.Self}, " +
