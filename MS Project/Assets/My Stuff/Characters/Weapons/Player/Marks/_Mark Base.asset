@@ -117,10 +117,12 @@ MonoBehaviour:
         rid: 2908845350248514437
     m_ConditionsCanUse:
       m_Conditions:
-        m_Conditions: []
+        m_Conditions:
+        - rid: 5820885203075990050
     m_InstructionsOnUse:
       m_Instructions:
-        m_Instructions: []
+        m_Instructions:
+        - rid: 5820885203075990053
     m_ExecuteFromParent: 0
   m_Crafting:
     m_Ingredients: []
@@ -181,3 +183,40 @@ MonoBehaviour:
         m_IsEnabled: 0
         m_Signal:
           m_String: Equip-New
+    - rid: 5820885203075990050
+      type: {class: ConditionInventoryItemCooldown, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 0
+        m_Bag:
+          m_Property:
+            rid: 5820885203075990051
+        m_Item:
+          m_Property:
+            rid: 5820885203075990052
+    - rid: 5820885203075990051
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 5820885203075990052
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000}
+    - rid: 5820885203075990053
+      type: {class: InstructionInventoryCooldownAddItem, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Bag:
+          m_Property:
+            rid: 5820885203075990054
+        m_Item:
+          m_Property:
+            rid: 5820885203075990055
+    - rid: 5820885203075990054
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 5820885203075990055
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000}

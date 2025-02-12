@@ -855,7 +855,7 @@ GameObject:
   - component: {fileID: 8442901025402558236}
   - component: {fileID: 8093347945653815192}
   - component: {fileID: 3205691464685898627}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door_Arch_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1075,6 +1075,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3872152196457127909}
   - {fileID: 5610078125893644663}
   m_Father: {fileID: 1717390805014558120}
   m_LocalEulerAnglesHint: {x: 0, y: 89.957, z: 0}
@@ -1172,7 +1173,7 @@ MonoBehaviour:
         m_InstructionList:
           m_Instructions:
           - rid: 2908845512517223085
-          - rid: 4295615208527233444
+          - rid: 5820885201566302441
           - rid: 4295615366689194062
     - rid: 2908845373346545675
       type: {class: ConditionGameObjectLayerMask, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
@@ -1214,85 +1215,6 @@ MonoBehaviour:
           m_Name:
             m_String: Enemies-Left
             m_ID: 311019828
-    - rid: 4295615208527233444
-      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_GameObject:
-          m_Property:
-            rid: 4295615208527233445
-          usePooling: 0
-          size: 5
-          hasDuration: 0
-          duration: 10
-        m_Position:
-          m_Property:
-            rid: 4295615208527233446
-        m_Rotation:
-          m_Property:
-            rid: 4295615208527233447
-        m_Parent:
-          m_Property:
-            rid: 4295615208527233468
-        m_Save:
-          m_Property:
-            rid: 4295615208527233449
-    - rid: 4295615208527233445
-      type: {class: GetGameObjectGlobalList, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: game-object
-          m_Variable: {fileID: 11400000, guid: 175c4bb5f1ffc6247bb6c1153ee16400, type: 2}
-          m_Select:
-            rid: 4295615208742716156
-    - rid: 4295615208527233446
-      type: {class: GetPositionGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject:
-          m_Property:
-            rid: 4295615208527233451
-    - rid: 4295615208527233447
-      type: {class: GetRotationGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject:
-          m_Property:
-            rid: 4295615208527233452
-        m_Space: 1
-    - rid: 4295615208527233449
-      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 4295615208527233451
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 144243567001031190}
-    - rid: 4295615208527233452
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 144243567001031190}
-    - rid: 4295615208527233468
-      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 4295615208742716156
-      type: {class: GetPickIndex, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Index:
-          m_Property:
-            rid: 4295615208742716173
-    - rid: 4295615208742716173
-      type: {class: GetDecimalRandomRange, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_MinValue:
-          m_Property:
-            rid: 4989388309401436350
-        m_MaxValue:
-          m_Property:
-            rid: 4295615208742716191
-    - rid: 4295615208742716191
-      type: {class: GetDecimalGlobalListLength, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable: {fileID: 11400000, guid: 175c4bb5f1ffc6247bb6c1153ee16400, type: 2}
     - rid: 4295615366689194062
       type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -1311,10 +1233,19 @@ MonoBehaviour:
       type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 0
-    - rid: 4989388309401436350
-      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 5820885201566302441
+      type: {class: InstructionLogicRunActions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 5
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Actions:
+          m_Property:
+            rid: 5820885201566302442
+        m_WaitToFinish: 1
+    - rid: 5820885201566302442
+      type: {class: GetGameObjectActions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Actions: {fileID: 3038328000446798505}
 --- !u!1 &167286400923979841
 GameObject:
   m_ObjectHideFlags: 0
@@ -3247,7 +3178,7 @@ GameObject:
   - component: {fileID: 5092725523137188801}
   - component: {fileID: 1584914432565539561}
   - component: {fileID: 6453606520708539995}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Doorhandle_R_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3850,7 +3781,7 @@ GameObject:
   - component: {fileID: 418206046244432106}
   - component: {fileID: 807967146555969215}
   - component: {fileID: 2567279598065968407}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rose_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4258,7 +4189,7 @@ GameObject:
   - component: {fileID: 3957171756145976452}
   - component: {fileID: 2898970435852029882}
   - component: {fileID: 6975488843474177212}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rose_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6902,7 +6833,7 @@ GameObject:
   - component: {fileID: 6173051133730827351}
   - component: {fileID: 6087552460582735155}
   - component: {fileID: 2421437521430714216}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Doorhandle_L_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7535,7 +7466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8371406509793063641}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9143,7 +9074,7 @@ GameObject:
   - component: {fileID: 2320672626193631235}
   - component: {fileID: 3572343931145588936}
   - component: {fileID: 5926387827359102592}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14076,7 +14007,7 @@ GameObject:
   - component: {fileID: 7983119455588522500}
   - component: {fileID: 7148510343304438225}
   - component: {fileID: 5067032022044743987}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14579,7 +14510,7 @@ GameObject:
   - component: {fileID: 4752066887728999037}
   - component: {fileID: 7022709906128700898}
   - component: {fileID: 8615603638221545745}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15124,7 +15055,7 @@ GameObject:
   - component: {fileID: 1731757291936527858}
   - component: {fileID: 8978400558993778513}
   - component: {fileID: 8803828817072353080}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15794,7 +15725,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7258667355196293361}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22163,7 +22094,7 @@ GameObject:
   - component: {fileID: 7553070531873759148}
   - component: {fileID: 8403617012539949730}
   - component: {fileID: 7729463893402751886}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rose_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24855,7 +24786,7 @@ GameObject:
   - component: {fileID: 3300064978839291689}
   - component: {fileID: 17091714535429087}
   - component: {fileID: 2954634216239310636}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Doorhandle_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26210,7 +26141,7 @@ GameObject:
   - component: {fileID: 2214538846647568997}
   - component: {fileID: 395438420932516640}
   - component: {fileID: 5817049181185367929}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rose_R_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27461,7 +27392,7 @@ GameObject:
   - component: {fileID: 4122760069063189722}
   - component: {fileID: 7967742195482953754}
   - component: {fileID: 6448235346665463779}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rose_L_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27848,7 +27779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8321123198851406069}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28461,7 +28392,7 @@ GameObject:
   - component: {fileID: 6141373745216998067}
   - component: {fileID: 848287176021125493}
   - component: {fileID: 3688122938837452993}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Doorhandle_L_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30205,7 +30136,7 @@ GameObject:
   - component: {fileID: 4453162415901290373}
   - component: {fileID: 4057330941159590991}
   - component: {fileID: 6300353804629590408}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door_Arch_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32075,7 +32006,7 @@ GameObject:
   - component: {fileID: 5467597094887269458}
   - component: {fileID: 1637078431160482903}
   - component: {fileID: 1954505510248611682}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rose_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33389,7 +33320,7 @@ GameObject:
   - component: {fileID: 1672200946798821156}
   - component: {fileID: 1794485832583692697}
   - component: {fileID: 6689356334551490628}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Doorhandle_L_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35088,7 +35019,7 @@ GameObject:
   - component: {fileID: 5345869596975084165}
   - component: {fileID: 9132753604798734221}
   - component: {fileID: 7749123998607092310}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Doorhandle_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36399,7 +36330,7 @@ GameObject:
   - component: {fileID: 9219181984559122845}
   - component: {fileID: 9079628723222481612}
   - component: {fileID: 3743422721650816995}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Doorhandle_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37556,7 +37487,7 @@ GameObject:
   - component: {fileID: 1790277488568378958}
   - component: {fileID: 4414961679337216960}
   - component: {fileID: 6586060731885122339}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rose_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40274,7 +40205,7 @@ GameObject:
   - component: {fileID: 7683597760141790128}
   - component: {fileID: 6056172749939177635}
   - component: {fileID: 1493527911416789524}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Doorhandle_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40468,7 +40399,7 @@ GameObject:
   - component: {fileID: 6787592415502328412}
   - component: {fileID: 1703293597858498721}
   - component: {fileID: 8361416532889997526}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rose_L_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40858,7 +40789,7 @@ GameObject:
   - component: {fileID: 4078156291763992935}
   - component: {fileID: 1993057933831255816}
   - component: {fileID: 7962720446660304504}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42410,7 +42341,7 @@ GameObject:
   - component: {fileID: 2154218627199011043}
   - component: {fileID: 5977586549434196657}
   - component: {fileID: 8857726434807584237}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rose_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46876,7 +46807,7 @@ GameObject:
   - component: {fileID: 6991867827121667281}
   - component: {fileID: 2484606629815361037}
   - component: {fileID: 8738586704299388547}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rose_R_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48128,7 +48059,7 @@ GameObject:
   - component: {fileID: 4425663135888466415}
   - component: {fileID: 7098151985806116364}
   - component: {fileID: 9138624066894487303}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Doorhandle_R_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48837,7 +48768,7 @@ GameObject:
   - component: {fileID: 610070383267501792}
   - component: {fileID: 7216721488846710463}
   - component: {fileID: 7122586177951156873}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Keyhole_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51712,7 +51643,7 @@ GameObject:
   - component: {fileID: 8063582909486521442}
   - component: {fileID: 4667257870631128675}
   - component: {fileID: 5613328638275575989}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51821,7 +51752,7 @@ GameObject:
   - component: {fileID: 2189128207325378483}
   - component: {fileID: 5063206989599961395}
   - component: {fileID: 4850532989917949688}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rose_R_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52574,7 +52505,7 @@ GameObject:
   - component: {fileID: 5829654127930710267}
   - component: {fileID: 2365386459055493610}
   - component: {fileID: 2933696274269484058}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Doorhandle_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54396,7 +54327,7 @@ GameObject:
   - component: {fileID: 8688806621720519425}
   - component: {fileID: 2615513112293460021}
   - component: {fileID: 3843411821887003056}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door_Arch_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54671,7 +54602,7 @@ GameObject:
   - component: {fileID: 3367089656983928835}
   - component: {fileID: 5987786176742214694}
   - component: {fileID: 7746748855003366689}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Keyhole_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56786,7 +56717,7 @@ GameObject:
   - component: {fileID: 2904390793144851658}
   - component: {fileID: 1260722563997814071}
   - component: {fileID: 5817932063566971570}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Doorhandle_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57262,7 +57193,7 @@ GameObject:
   - component: {fileID: 1044901983062006692}
   - component: {fileID: 5378632032468553879}
   - component: {fileID: 1673793048346752656}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Keyhole_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58342,7 +58273,7 @@ GameObject:
   - component: {fileID: 7408823456195278626}
   - component: {fileID: 7942965298538374034}
   - component: {fileID: 1689937781353777246}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Doorhandle_R_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58774,7 +58705,7 @@ GameObject:
   - component: {fileID: 603879456539507910}
   - component: {fileID: 3653338320413337616}
   - component: {fileID: 2532198446475424508}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rose_L_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59231,3 +59162,84 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4027023, y: 6.019553, z: 1.4027147}
   m_Center: {x: 0, y: 2.9940019, z: 0.00000047683716}
+--- !u!1001 &823534732285265685
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8899375942976196022}
+    m_Modifications:
+    - target: {fileID: 2398034096544439740, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+      propertyPath: managedReferences[5820885201566302436].m_GameObject
+      value: 
+      objectReference: {fileID: 144243567001031190}
+    - target: {fileID: 2398034096544439740, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+      propertyPath: managedReferences[5820885201566302437].m_GameObject
+      value: 
+      objectReference: {fileID: 144243567001031190}
+    - target: {fileID: 4526519574050117872, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.0138464
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526519574050117872, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.42677388
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526519574050117872, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.96326
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526519574050117872, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526519574050117872, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526519574050117872, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526519574050117872, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526519574050117872, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526519574050117872, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526519574050117872, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806914872372346271, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+      propertyPath: m_Name
+      value: Dungeon TIleset
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+--- !u!114 &3038328000446798505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2398034096544439740, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+  m_PrefabInstance: {fileID: 823534732285265685}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280989d249f9b482d890a5f97137f44b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &3872152196457127909 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4526519574050117872, guid: f765847cf7278654f8ee2a30add19aa8, type: 3}
+  m_PrefabInstance: {fileID: 823534732285265685}
+  m_PrefabAsset: {fileID: 0}
