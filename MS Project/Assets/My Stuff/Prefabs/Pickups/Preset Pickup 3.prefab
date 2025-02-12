@@ -1,5 +1,78 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &633391102803044806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1570025011247599454}
+  - component: {fileID: 3565170203255566681}
+  m_Layer: 9
+  m_Name: vfx parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1570025011247599454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633391102803044806}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8789497964219415442}
+  m_Father: {fileID: 7237842920337267598}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3565170203255566681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633391102803044806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 5820885206831727482
+  m_TriggerEvent:
+    rid: 5820885206831727516
+  references:
+    version: 2
+    RefIds:
+    - rid: 5820885206831727482
+      type: {class: InstructionTransformLookAt, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Transform:
+          m_Property:
+            rid: 5820885206831727485
+        m_Target:
+          m_Property:
+            rid: 5820885206831727486
+    - rid: 5820885206831727485
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 5820885206831727486
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 5820885206831727516
+      type: {class: EventOnUpdate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data: 
 --- !u!1 &4838316198991910673
 GameObject:
   m_ObjectHideFlags: 0
@@ -4912,7 +4985,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8789497964219415442}
-  - component: {fileID: 2263533696817591234}
   - component: {fileID: 2497571282603349429}
   - component: {fileID: 2165841491730924348}
   m_Layer: 0
@@ -4937,31 +5009,8 @@ Transform:
   m_Children:
   - {fileID: 1109479669094592082}
   - {fileID: 2714019354843113899}
-  m_Father: {fileID: 7237842920337267598}
+  m_Father: {fileID: 1570025011247599454}
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
---- !u!114 &2263533696817591234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5460158010229601934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12ba759cd568c0e47a7018ab70867a0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotate: 0
-  rotateAmount: 45
-  bounce: 0
-  bounceForce: 10
-  speed: 55
-  accuracy: 95
-  fireRate: 2
-  muzzlePrefab: {fileID: 1340992293834908, guid: 86bc1d89c0dc3e443ba2c64d79930c2a, type: 3}
-  hitPrefab: {fileID: 1099692020379546, guid: 5ca1f4da639fd214bb7e49b0360406f7, type: 3}
-  trails:
-  - {fileID: 0}
 --- !u!199 &2497571282603349429
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -15023,7 +15072,7 @@ PrefabInstance:
       addedObject: {fileID: 8875029377963684494}
     - targetCorrespondingSourceObject: {fileID: 6384502670904822216, guid: a9148316f3cba0143a38a1a81c6b79b4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8789497964219415442}
+      addedObject: {fileID: 1570025011247599454}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9148316f3cba0143a38a1a81c6b79b4, type: 3}
 --- !u!4 &7237842920337267598 stripped
