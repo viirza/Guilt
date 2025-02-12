@@ -635,11 +635,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 957942872447936013}
-  - {fileID: 1651898484545931415}
-  - {fileID: 4804373389471109912}
-  - {fileID: 6438816738948621746}
-  - {fileID: 6328662067046969258}
-  - {fileID: 5404039969291401271}
+  - {fileID: 2453147983102827699}
   - {fileID: 3234225667599551596}
   - {fileID: 3461386987479373798}
   - {fileID: 5838810638015913428}
@@ -826,7 +822,9 @@ MonoBehaviour:
     m_Keys:
     - m_String: Max-HP
     - m_String: DMG
+    - m_String: DMG-M
     - m_String: STGR
+    - m_String: Speed
     - m_String: MK3C
     m_Values:
     - m_IsExpanded: 0
@@ -837,6 +835,14 @@ MonoBehaviour:
       m_ChangeBase:
         m_IsEnabled: 0
         m_Value: 35
+    - m_IsExpanded: 0
+      m_ChangeBase:
+        m_IsEnabled: 0
+        m_Value: 1
+    - m_IsExpanded: 0
+      m_ChangeBase:
+        m_IsEnabled: 0
+        m_Value: 1
     - m_IsExpanded: 0
       m_ChangeBase:
         m_IsEnabled: 0
@@ -865,7 +871,7 @@ MonoBehaviour:
       rid: 2908845282200125830
   m_RuntimeData:
     m_Overrides:
-    - rid: 5820885090180006527
+    - rid: 5820885205224259867
   references:
     version: 2
     RefIds:
@@ -873,15 +879,15 @@ MonoBehaviour:
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 0.5
-    - rid: 5820885090180006527
+    - rid: 5820885205224259867
       type: {class: Parameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Value:
-          rid: 5820885090180006528
+          rid: 5820885205224259868
         m_Name: Roll
-    - rid: 5820885090180006528
+    - rid: 5820885205224259868
       type: {class: ValueNumber, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
@@ -1126,6 +1132,86 @@ Transform:
   - {fileID: 7969403316073051868}
   m_Father: {fileID: 2788829391438899075}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1378202187348391522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2723115549964372452}
+  - component: {fileID: 6183813526031211881}
+  m_Layer: 7
+  m_Name: Startup Logic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2723115549964372452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378202187348391522}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 6.59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2453147983102827699}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6183813526031211881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378202187348391522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 5820885205224259864
+  m_TriggerEvent:
+    rid: 2908845442748645394
+  references:
+    version: 2
+    RefIds:
+    - rid: 2908845442748645394
+      type: {class: EventOnStart, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 5820885205224259864
+      type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5820885205224259865
+        m_Value:
+          m_Property:
+            rid: 5820885205224259866
+    - rid: 5820885205224259865
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 709c714d5e5fa094f813073e2f81d811, type: 2}
+          m_Name:
+            m_String: Enemies-Left
+            m_ID: 311019828
+    - rid: 5820885205224259866
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
 --- !u!1 &1412522755152290230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,7 +1529,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 535009961442947401}
+  m_Father: {fileID: 2453147983102827699}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1830834439734464303
 MonoBehaviour:
@@ -2355,7 +2441,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 535009961442947401}
+  m_Father: {fileID: 2453147983102827699}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2158020398151803888
 MonoBehaviour:
@@ -2971,7 +3057,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 535009961442947401}
+  m_Father: {fileID: 2453147983102827699}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1019611682406811853
 MonoBehaviour:
@@ -3419,6 +3505,43 @@ Transform:
   - {fileID: 4225214911725968009}
   m_Father: {fileID: 7013273847670664356}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6590258743403577488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2453147983102827699}
+  m_Layer: 7
+  m_Name: Triggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2453147983102827699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6590258743403577488}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1651898484545931415}
+  - {fileID: 4804373389471109912}
+  - {fileID: 6438816738948621746}
+  - {fileID: 6328662067046969258}
+  - {fileID: 5404039969291401271}
+  - {fileID: 2723115549964372452}
+  m_Father: {fileID: 535009961442947401}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6762991625216602389
 GameObject:
   m_ObjectHideFlags: 0
@@ -3431,7 +3554,7 @@ GameObject:
   - component: {fileID: 237139424338941673}
   - component: {fileID: 398890539702301809}
   m_Layer: 7
-  m_Name: On Damaged Enemy
+  m_Name: On Damaged Enemy Logic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3450,7 +3573,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 535009961442947401}
+  m_Father: {fileID: 2453147983102827699}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &237139424338941673
 MonoBehaviour:
@@ -4348,7 +4471,7 @@ GameObject:
   - component: {fileID: 30753184755843103}
   - component: {fileID: 5127579146777181936}
   m_Layer: 7
-  m_Name: Startup
+  m_Name: Startup Equip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4367,7 +4490,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 535009961442947401}
+  m_Father: {fileID: 2453147983102827699}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &30753184755843103
 MonoBehaviour:
