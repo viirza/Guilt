@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1675477510966641502
 Transform:
   m_ObjectHideFlags: 0
@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 5820885205224260569
+    - rid: 5820885223076003865
   m_TriggerEvent:
     rid: 2908845285957697932
   references:
@@ -252,6 +253,25 @@ MonoBehaviour:
     - rid: 5820885205224260572
       type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 5820885223076003865
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 5820885223076003866
+        m_Active:
+          m_Property:
+            rid: 5820885223076003867
+    - rid: 5820885223076003866
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 1362482641454113855}
+    - rid: 5820885223076003867
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
 --- !u!114 &3696860670607490432
 MonoBehaviour:
   m_ObjectHideFlags: 0
