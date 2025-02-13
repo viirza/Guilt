@@ -16,6 +16,7 @@ MonoBehaviour:
     m_Handles:
     - rid: 1820692375224975385
     - rid: 5820885224645460486
+    - rid: 5820885228468568157
   references:
     version: 2
     RefIds:
@@ -129,3 +130,58 @@ MonoBehaviour:
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 1
+    - rid: 5820885228468568157
+      type: {class: HandleItem, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+            m_Conditions:
+            - rid: 5820885228468568158
+        m_Bone:
+          m_Type: 1
+          m_Human: 10
+          m_Path: 
+        m_LocalPosition:
+          m_Property:
+            rid: 5820885228468568159
+        m_LocalRotation:
+          m_Property:
+            rid: 5820885228468568160
+    - rid: 5820885228468568158
+      type: {class: ConditionMathCompareDecimals, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 5820885228468568161
+        m_CompareTo:
+          m_Comparison: 0
+          m_CompareTo:
+            m_Property:
+              rid: 5820885228468568162
+    - rid: 5820885228468568159
+      type: {class: GetPositionVector3, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Position: {x: -1.2, y: -0.4, z: 0.3}
+    - rid: 5820885228468568160
+      type: {class: GetRotationConstantEulerVector, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Angles: {x: 0, y: 0, z: 0}
+    - rid: 5820885228468568161
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: e6c15c163e0c6df4ba2493684ed3d204, type: 2}
+          m_Name:
+            m_String: Hand-Location-Index
+            m_ID: 1352254604
+    - rid: 5820885228468568162
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 2
