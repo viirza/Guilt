@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2968964081816863010}
   - component: {fileID: 9222857080473537330}
   - component: {fileID: -6339824264737658738}
+  - component: {fileID: 3485603997563711114}
   m_Layer: 9
   m_Name: Mark 3 Fire Sound
   m_TagString: Untagged
@@ -43,8 +44,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 8957512448589675011, guid: f4062be418d706748a5b39dcd557ddd2, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 589f4794bc6c07a4eafaa02a0b3aca84, type: 3}
-  m_Resource: {fileID: 8300000, guid: 589f4794bc6c07a4eafaa02a0b3aca84, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 94720cc026ff5ef49bd5f7f1a47afac7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 94720cc026ff5ef49bd5f7f1a47afac7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.8
   m_Pitch: 1
@@ -144,9 +145,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Instructions:
     m_Instructions:
+    - rid: 5820885316178280973
     - rid: 4295615048169816457
   m_TriggerEvent:
-    rid: 4295615048169816470
+    rid: 5820885316178280972
   references:
     version: 2
     RefIds:
@@ -177,6 +179,70 @@ MonoBehaviour:
     - rid: 4295615048169816460
       type: {class: SetPickFirst, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data: 
-    - rid: 4295615048169816470
+    - rid: 5820885316178280972
+      type: {class: EventOnStart, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 5820885316178280973
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 5820885316178280974
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 5820885316178280974
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0.25
+--- !u!114 &3485603997563711114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9161762220320829639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 5820885316178281043
+  m_TriggerEvent:
+    rid: 5820885316178281042
+  references:
+    version: 2
+    RefIds:
+    - rid: 5820885316178281042
       type: {class: EventOnDisable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 5820885316178281043
+      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5820885316178281044
+        m_From:
+          m_Property:
+            rid: 5820885316178281045
+    - rid: 5820885316178281044
+      type: {class: SetBoolGlobalList, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: boolean
+          m_Variable: {fileID: 11400000, guid: 7b70a9f4a3e87b64da2a2eccca8bc1e7, type: 2}
+          m_Select:
+            rid: 5820885316178281046
+    - rid: 5820885316178281045
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 5820885316178281046
+      type: {class: SetPickFirst, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data: 
