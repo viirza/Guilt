@@ -8601,6 +8601,7 @@ Transform:
   - {fileID: 2566575225889342683}
   - {fileID: 7303041750471304220}
   - {fileID: 3473589811380615379}
+  - {fileID: 8410853721132555794}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7363406600483881252
@@ -11896,6 +11897,137 @@ Transform:
   - {fileID: 4349743175565788074}
   m_Father: {fileID: 793267532961955093}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8298266768256994065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8410853721132555794}
+  - component: {fileID: 2890490293149480970}
+  m_Layer: 8
+  m_Name: CameraShake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8410853721132555794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8298266768256994065}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3194522875439461703}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2890490293149480970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8298266768256994065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 1296926033967841881
+    - rid: 1296926034994135450
+  m_TriggerEvent:
+    rid: 1296926033967841878
+  references:
+    version: 2
+    RefIds:
+    - rid: 1296926033967841878
+      type: {class: EventStatsAttributeChange, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Target:
+          m_Property:
+            rid: 1296926033967841879
+        m_When: 2
+        m_Attribute:
+          m_Property:
+            rid: 1296926033967841880
+    - rid: 1296926033967841879
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1296926033967841880
+      type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Attribute: {fileID: 11400000, guid: 91e989c89e934194da21053b9c882591, type: 2}
+    - rid: 1296926033967841881
+      type: {class: InstructionCameraShakeBurst, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Camera:
+          m_Property:
+            rid: 1296926033967841882
+        m_Delay: 0
+        m_Duration: 0.2
+        m_ShakeEffect:
+          m_ShakePosition: 0
+          m_ShakeRotation: 1
+          m_Magnitude: 1.8
+          m_Roughness: 5.5
+          m_Transform: {fileID: 0}
+          m_Radius: 10
+    - rid: 1296926033967841882
+      type: {class: GetGameObjectCameraMain, ns: GameCreator.Runtime.Cameras, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1296926034994135450
+      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 1296926034994135451
+          usePooling: 1
+          size: 1
+          hasDuration: 1
+          duration: 2
+        m_Position:
+          m_Property:
+            rid: 1296926034994135452
+        m_Rotation:
+          m_Property:
+            rid: 1296926034994135453
+        m_Parent:
+          m_Property:
+            rid: 1296926034994135454
+        m_Save:
+          m_Property:
+            rid: 1296926034994135455
+    - rid: 1296926034994135451
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 66808795712187290, guid: fb1935ad403dbb844bc7c57f26ffb7e2, type: 3}
+    - rid: 1296926034994135452
+      type: {class: GetPositionCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1296926034994135453
+      type: {class: GetRotationCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Space: 1
+    - rid: 1296926034994135454
+      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1296926034994135455
+      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
 --- !u!1 &8332722987142394833
 GameObject:
   m_ObjectHideFlags: 0
