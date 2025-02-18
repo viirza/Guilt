@@ -30,6 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8633050664687955515}
   - {fileID: 3928111603649997148}
   m_Father: {fileID: 2616820191011966850}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48,16 +49,49 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 5820885318193644198
+    - rid: 1296926053290475588
+    - rid: 1296926053290475596
   m_TriggerEvent:
     rid: 5820885318193644197
   references:
     version: 2
     RefIds:
+    - rid: 1296926053290475588
+      type: {class: InstructionMeleeWaitSkill, ns: GameCreator.Runtime.Melee, asm: GameCreator.Runtime.Melee}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 1296926053290475589
+        m_Until: 0
+    - rid: 1296926053290475589
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1296926053290475596
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 1296926053290475597
+        m_Active:
+          m_Property:
+            rid: 1296926053290475598
+    - rid: 1296926053290475597
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 504389012985769085}
+    - rid: 1296926053290475598
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
     - rid: 5820885318193644197
       type: {class: EventOnReceiveSignal, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Signal:
-          m_String: Show-Slash
+          m_String: SwordSlash01
     - rid: 5820885318193644198
       type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -72,7 +106,7 @@ MonoBehaviour:
     - rid: 5820885318193644199
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_GameObject: {fileID: 3928111603649997149}
+        m_GameObject: {fileID: 504389012985769085}
     - rid: 5820885318193644200
       type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -266,11 +300,11 @@ MonoBehaviour:
   m_Shape:
     rid: 7624061255711457400
   m_Trail:
-    m_PointA: {x: 0.8, y: 0, z: 0}
-    m_PointB: {x: 0.15, y: 0, z: 0}
-    m_Quads: 64
-    m_Length: 3
-    m_Material: {fileID: 2100000, guid: fee56917bb0b7fb4294f2423a38ed7c3, type: 2}
+    m_PointA: {x: 0, y: 0, z: 0}
+    m_PointB: {x: 0, y: 0, z: 0}
+    m_Quads: 0
+    m_Length: 0
+    m_Material: {fileID: 0}
   references:
     version: 2
     RefIds:
@@ -19968,6 +20002,77 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1001 &2922357977237878626
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3847887930831806458}
+    m_Modifications:
+    - target: {fileID: 3346665155913751327, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+      propertyPath: m_Name
+      value: SwordSlash01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3346665155913751327, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863640649164790105, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.7583048
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863640649164790105, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3859766
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863640649164790105, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.5297974
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863640649164790105, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863640649164790105, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863640649164790105, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863640649164790105, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863640649164790105, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863640649164790105, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863640649164790105, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+--- !u!1 &504389012985769085 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3346665155913751327, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+  m_PrefabInstance: {fileID: 2922357977237878626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8633050664687955515 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6863640649164790105, guid: 31427082eb18c6444bdc7ff9f1a3bab3, type: 3}
+  m_PrefabInstance: {fileID: 2922357977237878626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3364931427363610338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19976,6 +20081,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3847887930831806458}
     m_Modifications:
+    - target: {fileID: 1743412021257025468, guid: 5d2fd9d72935aa74081ac037a5a5d6d1, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1743412021257025468, guid: 5d2fd9d72935aa74081ac037a5a5d6d1, type: 3}
       propertyPath: InitialModule.rotation3D
       value: 0
@@ -20060,10 +20169,5 @@ PrefabInstance:
 --- !u!4 &3928111603649997148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1743412021257025470, guid: 5d2fd9d72935aa74081ac037a5a5d6d1, type: 3}
-  m_PrefabInstance: {fileID: 3364931427363610338}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3928111603649997149 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1743412021257025471, guid: 5d2fd9d72935aa74081ac037a5a5d6d1, type: 3}
   m_PrefabInstance: {fileID: 3364931427363610338}
   m_PrefabAsset: {fileID: 0}
