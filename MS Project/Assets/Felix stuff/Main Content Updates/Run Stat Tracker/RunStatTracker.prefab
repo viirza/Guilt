@@ -5174,6 +5174,8 @@ MonoBehaviour:
         m_InstructionList:
           m_Instructions:
           - rid: 1296926100975780013
+          - rid: 1296926126572569313
+          - rid: 1296926126642299781
     - rid: 1296926100975779964
       type: {class: ConditionMeleeHasEquipped, ns: GameCreator.Runtime.Melee, asm: GameCreator.Runtime.Melee}
       data:
@@ -5201,6 +5203,9 @@ MonoBehaviour:
         m_InstructionList:
           m_Instructions:
           - rid: 1296926100975780008
+          - rid: 1296926126572569311
+          - rid: 1296926126642299779
+          - rid: 1296926126642299780
     - rid: 1296926100975779968
       type: {class: ConditionMeleeHasEquipped, ns: GameCreator.Runtime.Melee, asm: GameCreator.Runtime.Melee}
       data:
@@ -5391,6 +5396,48 @@ MonoBehaviour:
       type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 3
+    - rid: 1296926126572569311
+      type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Message:
+          m_Property:
+            rid: 1296926126572569312
+    - rid: 1296926126572569312
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: warhammer kills + 1
+    - rid: 1296926126572569313
+      type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Message:
+          m_Property:
+            rid: 1296926126572569314
+    - rid: 1296926126572569314
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: pistol kills + 1
+    - rid: 1296926126642299779
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: ERROR here, idk why the count is added to sword
+    - rid: 1296926126642299780
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: and fails to detect that player has equip HM
+    - rid: 1296926126642299781
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: ERROR, fails to detect player has equip pistol
 --- !u!114 &6863832818389337742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5465,7 +5512,7 @@ MonoBehaviour:
       type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
-        m_IsEnabled: 0
+        m_IsEnabled: 1
         m_Seconds:
           m_Property:
             rid: 1296926126264812193
