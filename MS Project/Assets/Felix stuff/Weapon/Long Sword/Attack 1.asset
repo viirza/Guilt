@@ -54,13 +54,13 @@ MonoBehaviour:
   m_Effects:
     m_SoundUse:
       m_Property:
-        rid: 1296925807551971587
+        rid: 1296926192519873282
     m_SoundStrike:
       m_Property:
         rid: 1296925806163657403
     m_SoundHit:
       m_Property:
-        rid: 1296925807551971592
+        rid: 1296926192519873281
     m_SoundBlocked:
       m_Property:
         rid: 1296925806163657405
@@ -191,7 +191,10 @@ MonoBehaviour:
     - rid: 1296925806163657413
       type: {class: TrackDefault, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
-        m_Clips: []
+        m_Clips:
+        - rid: 1296926192519873283
+        - rid: 1296926192519873301
+        - rid: 1296926192519873308
     - rid: 1296925806163657414
       type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
@@ -265,7 +268,7 @@ MonoBehaviour:
       type: {class: InstructionStatsChangeAttribute, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
       data:
         m_Breakpoint: 0
-        m_IsEnabled: 1
+        m_IsEnabled: 0
         m_Target:
           m_Property:
             rid: 1296925807551971568
@@ -294,11 +297,244 @@ MonoBehaviour:
           m_Name:
             m_String: attack-1
             m_ID: 1228979367
-    - rid: 1296925807551971587
-      type: {class: GetAudioClip, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 1296926192519873281
+      type: {class: GetAudioNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1296926192519873282
+      type: {class: GetAudioNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1296926192519873283
+      type: {class: ClipDefault, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: {fileID: 8300000, guid: 19756e363d920c6469b54c65f8f10927, type: 3}
-    - rid: 1296925807551971592
-      type: {class: GetAudioClip, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+        m_Time: 0.045454547
+        m_Duration: 0
+        m_Instructions:
+          m_Instructions:
+            m_Instructions:
+            - rid: 1296926192519873284
+            - rid: 1296926192519873286
+            - rid: 1296926192519873289
+            - rid: 1296926192519873292
+            - rid: 1296926192519873285
+            - rid: 1296926192519873295
+            - rid: 1296926192519873298
+    - rid: 1296926192519873284
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: {fileID: 8300000, guid: f5ef9068c8b7f4d40bd340cfb0ddc5c2, type: 3}
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: SET WEAPON SFX BELOW
+    - rid: 1296926192519873285
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: SET HITBOX HOLDER VAR BELOW
+    - rid: 1296926192519873286
+      type: {class: InstructionGameObjectSetGameObject, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 1296926192519873287
+        m_From:
+          m_Property:
+            rid: 1296926192519873288
+    - rid: 1296926192519873287
+      type: {class: SetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 543f01dd0702b704981fbca0c3f16b00, type: 2}
+          m_Name:
+            m_String: SFX
+            m_ID: 1378384062
+    - rid: 1296926192519873288
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 66808795712187290, guid: e4aa1345e95c13c4fb1488960c12558e, type: 3}
+    - rid: 1296926192519873289
+      type: {class: InstructionGameObjectSetGameObject, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 1296926192519873290
+        m_From:
+          m_Property:
+            rid: 1296926192519873291
+    - rid: 1296926192519873290
+      type: {class: SetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 543f01dd0702b704981fbca0c3f16b00, type: 2}
+          m_Name:
+            m_String: SFX-1
+            m_ID: 347430970
+    - rid: 1296926192519873291
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 66808795712187290, guid: 7f828f43e349e5b4ebc0e5a108fbc2f1, type: 3}
+    - rid: 1296926192519873292
+      type: {class: InstructionGameObjectSetGameObject, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 1296926192519873293
+        m_From:
+          m_Property:
+            rid: 1296926192519873294
+    - rid: 1296926192519873293
+      type: {class: SetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 543f01dd0702b704981fbca0c3f16b00, type: 2}
+          m_Name:
+            m_String: SFX-2
+            m_ID: -1917046400
+    - rid: 1296926192519873294
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 66808795712187290, guid: 77c3119fd594b234d838348e9a0d3e2e, type: 3}
+    - rid: 1296926192519873295
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 1296926192519873296
+        m_From:
+          m_Property:
+            rid: 1296926192519873297
+    - rid: 1296926192519873296
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 543f01dd0702b704981fbca0c3f16b00, type: 2}
+          m_Name:
+            m_String: Damage
+            m_ID: 375673178
+    - rid: 1296926192519873297
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 1f948958c2f698640a5221302d05e373, type: 2}
+          m_Name:
+            m_String: attack-1
+            m_ID: 1228979367
+    - rid: 1296926192519873298
+      type: {class: InstructionGeometrySetPoint, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 1296926192519873299
+        m_From:
+          m_Property:
+            rid: 1296926192519873300
+    - rid: 1296926192519873299
+      type: {class: SetVector3GlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: vector3
+          m_Variable: {fileID: 11400000, guid: 543f01dd0702b704981fbca0c3f16b00, type: 2}
+          m_Name:
+            m_String: hitbox-size
+            m_ID: -424050857
+    - rid: 1296926192519873300
+      type: {class: GetPositionVector3, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Position: {x: 3, y: 1, z: 3}
+    - rid: 1296926192519873301
+      type: {class: ClipDefault, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Time: 0.38636363
+        m_Duration: 0
+        m_Instructions:
+          m_Instructions:
+            m_Instructions:
+            - rid: 1296926192519873302
+    - rid: 1296926192519873302
+      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 1296926192519873303
+          usePooling: 0
+          size: 1
+          hasDuration: 1
+          duration: 1
+        m_Position:
+          m_Property:
+            rid: 1296926192519873304
+        m_Rotation:
+          m_Property:
+            rid: 1296926192519873305
+        m_Parent:
+          m_Property:
+            rid: 1296926192519873306
+        m_Save:
+          m_Property:
+            rid: 1296926192519873307
+    - rid: 1296926192519873303
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 7060623971842362358, guid: ebfe6f3c0b49c2c419ab2078449e738f, type: 3}
+    - rid: 1296926192519873304
+      type: {class: GetPositionCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1296926192519873305
+      type: {class: GetRotationCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Space: 1
+    - rid: 1296926192519873306
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1296926192519873307
+      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1296926192519873308
+      type: {class: ClipDefault, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Time: 0.6818182
+        m_Duration: 0
+        m_Instructions:
+          m_Instructions:
+            m_Instructions:
+            - rid: 1296926192519873309
+    - rid: 1296926192519873309
+      type: {class: InstructionGameObjectDestroy, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 1296926192519873310
+    - rid: 1296926192519873310
+      type: {class: GetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 543f01dd0702b704981fbca0c3f16b00, type: 2}
+          m_Name:
+            m_String: Hitbox
+            m_ID: -715220355
