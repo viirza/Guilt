@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 2803325362911806471}
   - component: {fileID: 2643797251101357576}
   m_Layer: 0
-  m_Name: Line (9)
+  m_Name: FavoriteWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,9 +113,9 @@ RectTransform:
   - {fileID: 8768061144238399287}
   m_Father: {fileID: 6704717480905948946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 509, y: -395.49997}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1018, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2803325362911806471
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 7217793942635779560}
   - component: {fileID: 7208316959548232260}
   m_Layer: 0
-  m_Name: Line (8)
+  m_Name: BossEncountered
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,9 +190,9 @@ RectTransform:
   - {fileID: 7106780372695271911}
   m_Father: {fileID: 6704717480905948946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 509, y: -349.49997}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1018, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7217793942635779560
@@ -563,6 +563,7 @@ MonoBehaviour:
     - rid: 1296926121344630994
     - rid: 1296926121344631005
     - rid: 1296926126416068624
+    - rid: 1296926216071676646
     - rid: 1296926126416068630
     - rid: 1296926178842247311
     - rid: 1296926195317474272
@@ -1133,6 +1134,31 @@ MonoBehaviour:
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Text: Better make a loop to set 0 for all below's
+    - rid: 1296926216071676646
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 1296926216071676647
+        m_From:
+          m_Property:
+            rid: 1296926216071676648
+    - rid: 1296926216071676647
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 64fabc82d4cce4f4fa572f846fa22a57, type: 2}
+          m_Name:
+            m_String: HighestDamage
+            m_ID: 1836368827
+    - rid: 1296926216071676648
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
 --- !u!1 &493584338668775900
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,7 +2520,7 @@ GameObject:
   - component: {fileID: 6007613501148986629}
   - component: {fileID: 8100640997146569906}
   m_Layer: 0
-  m_Name: Line (6)
+  m_Name: RoomCompleted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2517,9 +2543,9 @@ RectTransform:
   - {fileID: 7668633306467899923}
   m_Father: {fileID: 6704717480905948946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 509, y: -257.49997}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1018, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6007613501148986629
@@ -2689,13 +2715,13 @@ RectTransform:
   - {fileID: 4128795301633906192}
   - {fileID: 7645969198068869012}
   - {fileID: 5297947615175990495}
+  - {fileID: 2629234870457709250}
   - {fileID: 4918109763523735289}
   - {fileID: 5704753564894260186}
   - {fileID: 5831437883300155241}
   - {fileID: 4529050995772115740}
   - {fileID: 2401881156986311780}
   - {fileID: 2716780393889601390}
-  - {fileID: 2629234870457709250}
   m_Father: {fileID: 3238007026679157364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3331,6 +3357,101 @@ MonoBehaviour:
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: Enemies killed
+--- !u!1 &2563172295602019984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5125057050161922174}
+  - component: {fileID: 8223495123949430387}
+  - component: {fileID: 8245604012979944362}
+  m_Layer: 5
+  m_Name: Value
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5125057050161922174
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2563172295602019984}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2629234870457709250}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 332.75, y: 0}
+  m_SizeDelta: {x: 295.03, y: 44}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8223495123949430387
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2563172295602019984}
+  m_CullTransparentMesh: 1
+--- !u!114 &8245604012979944362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2563172295602019984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47425a7bbe224e69874b500860abf565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 32cc83d748e18b14b8c32ab6e7706cef, type: 3}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 6
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+  m_Value:
+    m_Property:
+      rid: 1296926120524120322
+  references:
+    version: 2
+    RefIds:
+    - rid: 1296926120524120322
+      type: {class: GetStringGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: string
+          m_Variable: {fileID: 11400000, guid: 64fabc82d4cce4f4fa572f846fa22a57, type: 2}
+          m_Name:
+            m_String: HighestDamage
+            m_ID: 1836368827
 --- !u!1 &2688494478875667415
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,7 +3749,7 @@ GameObject:
   - component: {fileID: 2016981228867503889}
   - component: {fileID: 5742734367040945316}
   m_Layer: 5
-  m_Name: Unknown
+  m_Name: Highest Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3694,7 +3815,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Unknown
+  m_Text: Highest Damage
   m_Value:
     m_Property:
       rid: 1296926120524120319
@@ -3704,7 +3825,7 @@ MonoBehaviour:
     - rid: 1296926120524120319
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: Unknown
+        m_Value: Highest Damage
 --- !u!1 &3140104265847605936
 GameObject:
   m_ObjectHideFlags: 0
@@ -3806,7 +3927,7 @@ GameObject:
   - component: {fileID: 1084997410023614821}
   - component: {fileID: 4271062990964623862}
   m_Layer: 0
-  m_Name: Line (7)
+  m_Name: HighestCombo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3829,9 +3950,9 @@ RectTransform:
   - {fileID: 7203582431576293679}
   m_Father: {fileID: 6704717480905948946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 509, y: -303.49997}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1018, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1084997410023614821
@@ -4423,7 +4544,7 @@ GameObject:
   - component: {fileID: 3953938705023352041}
   - component: {fileID: 8280003695688987494}
   m_Layer: 0
-  m_Name: Line (1)
+  m_Name: EnemiesKilled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4446,9 +4567,9 @@ RectTransform:
   - {fileID: 1328779894811897155}
   m_Father: {fileID: 6704717480905948946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 509, y: -27.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1018, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3953938705023352041
@@ -4857,7 +4978,7 @@ GameObject:
   - component: {fileID: 4241574383848802820}
   - component: {fileID: 5807944718673985267}
   m_Layer: 0
-  m_Name: Line (2)
+  m_Name: DamageDealt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4880,9 +5001,9 @@ RectTransform:
   - {fileID: 5586512395354029153}
   m_Father: {fileID: 6704717480905948946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 509, y: -73.49999}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1018, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4241574383848802820
@@ -4940,7 +5061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3238007026679157364
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5935,6 +6056,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Instructions:
     m_Instructions:
+    - rid: 1296926216953528909
+    - rid: 1296926216953528904
     - rid: 1296926125828341791
     - rid: 1296926125828341770
     - rid: 1296926126264812192
@@ -6005,6 +6128,48 @@ MonoBehaviour:
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 0.5
+    - rid: 1296926216953528904
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 1296926216953528905
+    - rid: 1296926216953528905
+      type: {class: ConditionMathCompareIntegers, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 0
+        m_Value:
+          m_Property:
+            rid: 1296926216953528908
+        m_CompareTo:
+          m_Comparison: 0
+          m_CompareTo:
+            m_Property:
+              rid: 1296926216953528907
+    - rid: 1296926216953528907
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 1296926216953528908
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 64fabc82d4cce4f4fa572f846fa22a57, type: 2}
+          m_Name:
+            m_String: EnemiesKilled
+            m_ID: 1303483087
+    - rid: 1296926216953528909
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: No need to continue if there is no kill
 --- !u!114 &897323675680969606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6864,7 +7029,7 @@ GameObject:
   - component: {fileID: 5053691708756752528}
   - component: {fileID: 8480275722155240450}
   m_Layer: 0
-  m_Name: Line (5)
+  m_Name: RunningTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6887,9 +7052,9 @@ RectTransform:
   - {fileID: 1546493825780068068}
   m_Father: {fileID: 6704717480905948946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 509, y: -211.49997}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1018, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5053691708756752528
@@ -6942,7 +7107,7 @@ GameObject:
   - component: {fileID: 7966815708666216506}
   - component: {fileID: 1255374855883684234}
   m_Layer: 0
-  m_Name: Line (10)
+  m_Name: HighestDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6962,11 +7127,12 @@ RectTransform:
   m_Children:
   - {fileID: 6776244173044586318}
   - {fileID: 5862060725754871224}
+  - {fileID: 5125057050161922174}
   m_Father: {fileID: 6704717480905948946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 509, y: -441.49997}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1018, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7966815708666216506
@@ -8133,7 +8299,7 @@ GameObject:
   - component: {fileID: 5864018446735644979}
   - component: {fileID: 2540436347182974582}
   m_Layer: 0
-  m_Name: Line (3)
+  m_Name: DamageReceived
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8156,9 +8322,9 @@ RectTransform:
   - {fileID: 4062468744445338773}
   m_Father: {fileID: 6704717480905948946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 509, y: -119.499985}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1018, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5864018446735644979
@@ -9486,7 +9652,7 @@ GameObject:
   - component: {fileID: 4162992476177458738}
   - component: {fileID: 2205418708924707336}
   m_Layer: 5
-  m_Name: WaveCompleted
+  m_Name: RoomCompleted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9552,7 +9718,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Wave Completed
+  m_Text: Room Completed
   m_Value:
     m_Property:
       rid: 1296926120524120319
@@ -9562,7 +9728,7 @@ MonoBehaviour:
     - rid: 1296926120524120319
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: Wave Completed
+        m_Value: Room Completed
 --- !u!1 &8554565978560065923
 GameObject:
   m_ObjectHideFlags: 0
@@ -10119,7 +10285,7 @@ GameObject:
   - component: {fileID: 5185182970446680434}
   - component: {fileID: 4176739152626786880}
   m_Layer: 0
-  m_Name: Line (4)
+  m_Name: TotalHealing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10142,9 +10308,9 @@ RectTransform:
   - {fileID: 5903663884906316001}
   m_Father: {fileID: 6704717480905948946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 509, y: -165.49997}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1018, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5185182970446680434
