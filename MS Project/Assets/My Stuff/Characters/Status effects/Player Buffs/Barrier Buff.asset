@@ -52,6 +52,9 @@ MonoBehaviour:
       - rid: 4295615523439772244
       - rid: 4295615523439772269
       - rid: 4295615523439772237
+      - rid: 5820885521977573868
+      - rid: 5820885521977573872
+      - rid: 5820885521977573876
   m_ID:
     m_Save:
       m_Save: 0
@@ -113,7 +116,7 @@ MonoBehaviour:
             rid: 4295615523439772238
         m_Value:
           m_Property:
-            rid: 4295615523439772239
+            rid: 5820885521977573864
     - rid: 4295615523439772238
       type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
@@ -124,10 +127,6 @@ MonoBehaviour:
           m_Name:
             m_String: Damage-Taken-Multiplier
             m_ID: 242759024
-    - rid: 4295615523439772239
-      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: -0.05
     - rid: 4295615523439772242
       type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -194,7 +193,7 @@ MonoBehaviour:
             rid: 4295615523439772270
         m_Value:
           m_Property:
-            rid: 4295615523439772271
+            rid: 5820885521977573860
     - rid: 4295615523439772270
       type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
@@ -205,7 +204,153 @@ MonoBehaviour:
           m_Name:
             m_String: Current-DR
             m_ID: 36833988
-    - rid: 4295615523439772271
+    - rid: 5820885521977573860
+      type: {class: GetDecimalMathMultiply, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Number1:
+          m_Property:
+            rid: 5820885521977573861
+        m_Number2:
+          m_Property:
+            rid: 5820885521977573863
+    - rid: 5820885521977573861
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: -0.05
+    - rid: 5820885521977573863
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: baea46a273346c84eb97d3f9d7c494f5, type: 2}
+          m_Name:
+            m_String: Barrier-Upgrade
+            m_ID: -211609515
+    - rid: 5820885521977573864
+      type: {class: GetDecimalMathMultiply, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Number1:
+          m_Property:
+            rid: 5820885521977573865
+        m_Number2:
+          m_Property:
+            rid: 5820885521977573867
+    - rid: 5820885521977573865
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: -0.05
+    - rid: 5820885521977573867
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: baea46a273346c84eb97d3f9d7c494f5, type: 2}
+          m_Name:
+            m_String: Barrier-Upgrade
+            m_ID: -211609515
+    - rid: 5820885521977573868
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 5820885521977573869
+    - rid: 5820885521977573869
+      type: {class: ConditionMathCompareDecimals, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 5820885521977573870
+        m_CompareTo:
+          m_Comparison: 4
+          m_CompareTo:
+            m_Property:
+              rid: 5820885521977573871
+    - rid: 5820885521977573870
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 52a1786241a5f754984874a62726b4b8, type: 2}
+          m_Name:
+            m_String: Current-DR
+            m_ID: 36833988
+    - rid: 5820885521977573871
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 52a1786241a5f754984874a62726b4b8, type: 2}
+          m_Name:
+            m_String: Max-DR
+            m_ID: 691536373
+    - rid: 5820885521977573872
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5820885521977573873
+        m_From:
+          m_Property:
+            rid: 5820885521977573875
+    - rid: 5820885521977573873
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 52a1786241a5f754984874a62726b4b8, type: 2}
+          m_Name:
+            m_String: Current-DR
+            m_ID: 36833988
+    - rid: 5820885521977573875
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 52a1786241a5f754984874a62726b4b8, type: 2}
+          m_Name:
+            m_String: Max-DR
+            m_ID: 691536373
+    - rid: 5820885521977573876
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5820885521977573877
+        m_From:
+          m_Property:
+            rid: 5820885521977573878
+    - rid: 5820885521977573877
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
+          m_Name:
+            m_String: Current-DR
+            m_ID: 36833988
+    - rid: 5820885521977573878
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 52a1786241a5f754984874a62726b4b8, type: 2}
+          m_Name:
+            m_String: Max-DR
+            m_ID: 691536373
