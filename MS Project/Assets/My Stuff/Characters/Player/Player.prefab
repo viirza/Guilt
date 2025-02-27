@@ -4011,6 +4011,8 @@ MonoBehaviour:
     - rid: 4295615525931450835
     - rid: 4295615455408685289
     - rid: 4295615525931450827
+    - rid: 5820885521977573681
+    - rid: 5820885521977573607
     - rid: 4295615525931450842
   m_TriggerEvent:
     rid: 4295615523439772313
@@ -4051,8 +4053,8 @@ MonoBehaviour:
             m_String: number
           m_Variable: {fileID: 11400000, guid: baea46a273346c84eb97d3f9d7c494f5, type: 2}
           m_Name:
-            m_String: Barrier-Upgrade
-            m_ID: -211609515
+            m_String: Glass-Cannon-Upgrade
+            m_ID: -217349119
     - rid: 4295615523439772313
       type: {class: EventOnVariableGlobalNameChange, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -4066,7 +4068,7 @@ MonoBehaviour:
       type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
-        m_IsEnabled: 1
+        m_IsEnabled: 0
         m_Set:
           m_Property:
             rid: 4295615525931450828
@@ -4137,12 +4139,64 @@ MonoBehaviour:
             m_String: number
           m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
           m_Name:
-            m_String: Ranged-Damage-Multiplier
-            m_ID: -2071306361
+            m_String: Magical-Damage-Multiplier
+            m_ID: 59891617
     - rid: 4295615525931450864
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 1.5
+        m_Value: 0.5
+    - rid: 5820885521977573607
+      type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5820885521977573608
+        m_Value:
+          m_Property:
+            rid: 5820885521977573609
+    - rid: 5820885521977573608
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
+          m_Name:
+            m_String: Physical-Damage-Multiplier
+            m_ID: 1768596274
+    - rid: 5820885521977573609
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 5820885521977573681
+      type: {class: InstructionStatsChangeStat, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Target:
+          m_Property:
+            rid: 5820885521977573682
+        m_Stat:
+          m_Property:
+            rid: 5820885521977573683
+        m_Change:
+          m_Operation: 4
+          m_Value:
+            m_Property:
+              rid: 5820885521977573688
+    - rid: 5820885521977573682
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 5820885521977573683
+      type: {class: GetStatInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Stat: {fileID: 11400000, guid: 46a4a73e52defe64cb28741531cd16dd, type: 2}
+    - rid: 5820885521977573688
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 2
 --- !u!1 &2490555057486973906
 GameObject:
   m_ObjectHideFlags: 0
@@ -6896,7 +6950,7 @@ MonoBehaviour:
     - rid: 1296926232606933227
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 0.2
+        m_Value: 0.3
     - rid: 1296926232606933232
       type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -8039,6 +8093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Instructions:
     m_Instructions:
+    - rid: 5820885521977573859
     - rid: 4295615455408685289
     - rid: 4295615524227514625
     - rid: 4295615524227514615
@@ -8208,6 +8263,12 @@ MonoBehaviour:
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: -1
+    - rid: 5820885521977573859
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: resets barrier dmg multiplier
 --- !u!1 &5061086057182776659
 GameObject:
   m_ObjectHideFlags: 0
@@ -9128,10 +9189,10 @@ MonoBehaviour:
     - m_String: xp
     - m_String: level
     m_Values:
-    - m_IsExpanded: 0
+    - m_IsExpanded: 1
       m_ChangeBase:
-        m_IsEnabled: 0
-        m_Value: 1
+        m_IsEnabled: 1
+        m_Value: 150
     - m_IsExpanded: 0
       m_ChangeBase:
         m_IsEnabled: 0
@@ -15653,9 +15714,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7105669888714163145, guid: 8f5d608c0e1756f41a1124077b704965, type: 3}
+      propertyPath: managedReferences[4295615455408685171].m_Value
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8831827444340197677, guid: 8f5d608c0e1756f41a1124077b704965, type: 3}
       propertyPath: m_Name
-      value: Retaliation Projectile
+      value: Retaliation Logic
       objectReference: {fileID: 0}
     - target: {fileID: 8831827444340197677, guid: 8f5d608c0e1756f41a1124077b704965, type: 3}
       propertyPath: m_IsActive
