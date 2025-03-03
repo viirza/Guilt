@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e25e7ff5b3ce840cd941cc265f0dfce0, type: 3}
-  m_Name: Mark 4
+  m_Name: Life Seed
   m_EditorClassIdentifier: 
   m_ID:
     m_SerializedID:
-      m_String: Mark-4
-  m_Parent: {fileID: 11400000, guid: f2588a4ab73274b49b407cbc74ebe8dc, type: 2}
+      m_String: Mark-3
+  m_Parent: {fileID: 11400000, guid: e39b74c3b6700b742830f3e52dcb672c, type: 2}
   m_Prefab: {fileID: 0}
   m_CanDrop:
     m_IsEnabled: 1
@@ -79,13 +79,11 @@ MonoBehaviour:
         m_Instructions:
         - rid: 2908845351081083463
         - rid: 2908845350248514475
-        - rid: 5820885070213808353
     m_InstructionsOnUnequip:
       m_Instructions:
         m_Instructions:
         - rid: 4295615024592061288
         - rid: 4295615024592061116
-        - rid: 5820885070213808359
     m_ExecuteFromParent: 1
   m_Usage:
     m_CanUse: 1
@@ -123,7 +121,7 @@ MonoBehaviour:
     - rid: 2908845350248514433
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: Meteor Glyph
+        m_Value: Mark Heal
     - rid: 2908845350248514434
       type: {class: GetStringTextArea, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -132,11 +130,11 @@ MonoBehaviour:
     - rid: 2908845350248514435
       type: {class: GetSpriteInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Sprite: {fileID: 21300000, guid: 4ec1a7e23c9add246ba2b8f90d4c39e6, type: 3}
+        m_Sprite: {fileID: 21300000, guid: 3a10ff263195c41459010b62de696582, type: 3}
     - rid: 2908845350248514437
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 6
+        m_Value: 2
     - rid: 2908845350248514475
       type: {class: InstructionShooterEquipWeapon, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
       data:
@@ -157,7 +155,7 @@ MonoBehaviour:
     - rid: 2908845350248514477
       type: {class: GetWeaponShooterInstance, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
       data:
-        m_Weapon: {fileID: 11400000, guid: f10eb92065f7abe4b8ac6fa94b8449ca, type: 2}
+        m_Weapon: {fileID: 11400000, guid: 07ef3d3618827854697a43b557a14255, type: 2}
     - rid: 2908845351081083084
       type: {class: GetColorValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -210,7 +208,7 @@ MonoBehaviour:
     - rid: 4295615024592061118
       type: {class: GetWeaponShooterInstance, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
       data:
-        m_Weapon: {fileID: 11400000, guid: f10eb92065f7abe4b8ac6fa94b8449ca, type: 2}
+        m_Weapon: {fileID: 11400000, guid: 07ef3d3618827854697a43b557a14255, type: 2}
     - rid: 4295615024592061288
       type: {class: InstructionCharacterRemoveProp, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -247,63 +245,4 @@ MonoBehaviour:
     - rid: 4295615025322131725
       type: {class: GetWeaponShooterInstance, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
       data:
-        m_Weapon: {fileID: 11400000, guid: f10eb92065f7abe4b8ac6fa94b8449ca, type: 2}
-    - rid: 5820885070213808353
-      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_GameObject:
-          m_Property:
-            rid: 5820885070213808354
-          usePooling: 0
-          size: 5
-          hasDuration: 0
-          duration: 10
-        m_Position:
-          m_Property:
-            rid: 5820885070213808355
-        m_Rotation:
-          m_Property:
-            rid: 5820885070213808356
-        m_Parent:
-          m_Property:
-            rid: 5820885070213808357
-        m_Save:
-          m_Property:
-            rid: 5820885070213808358
-    - rid: 5820885070213808354
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 7350284532139835348, guid: bfe4c60f783e25a4c804f90bce18f5d0, type: 3}
-    - rid: 5820885070213808355
-      type: {class: GetPositionCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 5820885070213808356
-      type: {class: GetRotationCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Space: 1
-    - rid: 5820885070213808357
-      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 5820885070213808358
-      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 5820885070213808359
-      type: {class: InstructionGameObjectDestroy, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_GameObject:
-          m_Property:
-            rid: 5820885070213808361
-    - rid: 5820885070213808361
-      type: {class: GetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: game-object
-          m_Variable: {fileID: 11400000, guid: f77964e298cdcf34faddc00bc6d2f198, type: 2}
-          m_Name:
-            m_String: Glyph-Visual
-            m_ID: 1876704944
+        m_Weapon: {fileID: 11400000, guid: 07ef3d3618827854697a43b557a14255, type: 2}
