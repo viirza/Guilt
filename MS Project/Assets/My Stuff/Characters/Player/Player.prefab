@@ -117,6 +117,7 @@ MonoBehaviour:
     - rid: 5820885226081485019
     - rid: 5820885226081485047
     - rid: 1296926278140035701
+    - rid: 6402566234027589897
   references:
     version: 2
     RefIds:
@@ -476,6 +477,55 @@ MonoBehaviour:
     - rid: 5820885226666328073
       type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 6402566234027589897
+      type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Description: Mark 8 Blink
+        m_ConditionList:
+          m_Conditions:
+          - rid: 6402566234027589898
+        m_InstructionList:
+          m_Instructions:
+          - rid: 6402566234027589899
+    - rid: 6402566234027589898
+      type: {class: ConditionInventoryIsEquipped, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Item:
+          m_Property:
+            rid: 6402566234027589901
+        m_Bag:
+          m_Property:
+            rid: 6402566234027589902
+    - rid: 6402566234027589899
+      type: {class: InstructionShooterFireRelease, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6402566234027589903
+        m_Weapon:
+          m_Property:
+            rid: 6402566234027589904
+    - rid: 6402566234027589901
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000, guid: 35ad775282319e0449dda76f89e2d333, type: 2}
+    - rid: 6402566234027589902
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566234027589903
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566234027589904
+      type: {class: GetWeaponShooterInstance, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Weapon: {fileID: 11400000, guid: 2b034e73f037deb43a8f214034d96627, type: 2}
 --- !u!1 &86359529537664130
 GameObject:
   m_ObjectHideFlags: 0
@@ -8651,6 +8701,7 @@ MonoBehaviour:
     - rid: 5820885226081485019
     - rid: 5820885226081485047
     - rid: 1296926278140035689
+    - rid: 6402566234027589888
   references:
     version: 2
     RefIds:
@@ -9010,6 +9061,55 @@ MonoBehaviour:
     - rid: 5820885226081485815
       type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 6402566234027589888
+      type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Description: Mark 8 Blink
+        m_ConditionList:
+          m_Conditions:
+          - rid: 6402566234027589889
+        m_InstructionList:
+          m_Instructions:
+          - rid: 6402566234027589890
+    - rid: 6402566234027589889
+      type: {class: ConditionInventoryIsEquipped, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Item:
+          m_Property:
+            rid: 6402566234027589892
+        m_Bag:
+          m_Property:
+            rid: 6402566234027589893
+    - rid: 6402566234027589890
+      type: {class: InstructionShooterFirePull, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6402566234027589894
+        m_Weapon:
+          m_Property:
+            rid: 6402566234027589895
+    - rid: 6402566234027589892
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000, guid: 35ad775282319e0449dda76f89e2d333, type: 2}
+    - rid: 6402566234027589893
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566234027589894
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566234027589895
+      type: {class: GetWeaponShooterInstance, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Weapon: {fileID: 11400000, guid: 2b034e73f037deb43a8f214034d96627, type: 2}
 --- !u!1 &5493969559099067622
 GameObject:
   m_ObjectHideFlags: 0
