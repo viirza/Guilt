@@ -25170,10 +25170,67 @@ MonoBehaviour:
     - rid: 4295615183466004674
     - rid: 4295615183466005063
     - rid: 4295615183466004672
+    - rid: 1779838920104345750
     - rid: 4295615183466004480
   references:
     version: 2
     RefIds:
+    - rid: 1779838920104345750
+      type: {class: InstructionLogicCheckConditionsExecuteElse, ns: , asm: Assembly-CSharp-firstpass}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 1779838920104345753
+        m_ConditionalInstructions:
+          m_Instructions:
+          - rid: 1779838920104345751
+    - rid: 1779838920104345751
+      type: {class: InstructionCommonSceneLoad, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Scene:
+          m_Property:
+            rid: 1779838920104345752
+        m_Mode: 0
+        m_Async: 1
+        m_SceneEntries:
+          m_Entries: []
+    - rid: 1779838920104345752
+      type: {class: GetSceneAsset, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Scene:
+          m_Scene: {fileID: 102900000, guid: 2f03bf0bf2fffb34c86493fd4878750a, type: 3}
+          m_SceneName: Hub
+          m_SceneIndex: 2
+    - rid: 1779838920104345753
+      type: {class: ConditionMathCompareBooleans, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 1779838920104345756
+        m_Comparison: 0
+        m_CompareTo:
+          m_Property:
+            rid: 1779838920104345755
+    - rid: 1779838920104345755
+      type: {class: GetBoolTrue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779838920104345756
+      type: {class: GetBoolGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: boolean
+          m_Variable: {fileID: 11400000, guid: 4593067aae51dc34e9066e7d747800ba, type: 2}
+          m_Name:
+            m_String: Has-Completed-Tutorial
+            m_ID: -945944718
     - rid: 4295615183466004480
       type: {class: InstructionCommonSceneLoad, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -25192,7 +25249,7 @@ MonoBehaviour:
         m_Scene:
           m_Scene: {fileID: 102900000, guid: 5d682b0a0912ecf4da80b5a028ffbc72, type: 3}
           m_SceneName: Tutorial room
-          m_SceneIndex: -1
+          m_SceneIndex: 1
     - rid: 4295615183466004672
       type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
