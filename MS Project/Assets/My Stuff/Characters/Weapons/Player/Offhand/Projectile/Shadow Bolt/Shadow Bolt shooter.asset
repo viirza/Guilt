@@ -31,8 +31,7 @@ MonoBehaviour:
   m_ParriedReaction: {fileID: 0}
   m_OnEquip:
     m_Instructions:
-      m_Instructions:
-      - rid: 2908845350248514463
+      m_Instructions: []
   m_OnUnequip:
     m_Instructions:
       m_Instructions: []
@@ -217,6 +216,7 @@ MonoBehaviour:
   m_Sights:
     m_Sights:
     - rid: 2908845214741823874
+    - rid: 1779839012204708291
   m_Reloads:
     m_State:
       m_StateType: 2
@@ -252,7 +252,6 @@ MonoBehaviour:
   m_OnHit:
     m_Instructions:
       m_Instructions:
-      - rid: 3611814542535295757
       - rid: 3611814702946976609
       - rid: 3611814542535295763
       - rid: 3611814542535295766
@@ -272,6 +271,18 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 1779839012204708291
+      type: {class: SightItem, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Id:
+          m_String: shoot-sight
+        m_Sight: {fileID: 11400000, guid: c61bb362d74444341b41b44e158d4fda, type: 2}
+        m_ScopeThrough: 0
+        m_ScopePosition: {x: 0, y: 0.25, z: 0}
+        m_ScopeRotation: {x: 0, y: 0, z: 0}
+        m_ScopeDistance: 0.25
     - rid: 2908845214741823826
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -409,8 +420,8 @@ MonoBehaviour:
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Id:
-          m_String: my-sight-id
-        m_Sight: {fileID: 11400000, guid: 196ef3914f471df4693aa6f3dcfa12cb, type: 2}
+          m_String: idle-sight
+        m_Sight: {fileID: 11400000, guid: 8b3b8b8e7172d9e46bb10716d2b1d3de, type: 2}
         m_ScopeThrough: 0
         m_ScopePosition: {x: 0, y: 0.25, z: 0}
         m_ScopeRotation: {x: 0, y: 0, z: 0}
@@ -545,35 +556,7 @@ MonoBehaviour:
     - rid: 2908845330729533764
       type: {class: GetAnimationInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: {fileID: 1827226128182048838, guid: 21e0ba66fb5baa149b3ae13f0dbb829a, type: 3}
-    - rid: 2908845350248514463
-      type: {class: InstructionCharacterAttachProp, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 0
-        m_Character:
-          m_Property:
-            rid: 2908845350248514464
-        m_Type: 0
-        m_Prop:
-          m_Property:
-            rid: 2908845350248514465
-        m_Handle:
-          m_Type: 1
-          m_Bone:
-            m_Type: 1
-            m_Human: 18
-            m_Path: 
-          m_LocalPosition: {x: 0, y: 0, z: 0}
-          m_LocalRotation: {x: 0, y: 0, z: 0}
-          m_Handle: {fileID: 11400000, guid: 11963d9b9717ea848a9d85503679b34a, type: 2}
-    - rid: 2908845350248514464
-      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 2908845350248514465
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 747587428903177677, guid: 62a9c5740625ca4448f6242367d3a564, type: 3}
+        m_Value: {fileID: 0}
     - rid: 2908845465063653387
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -616,48 +599,6 @@ MonoBehaviour:
       type: {class: GetRotationSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Space: 1
-    - rid: 3611814542535295757
-      type: {class: InstructionStatsChangeAttribute, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 0
-        m_Target:
-          m_Property:
-            rid: 3611814542535295758
-        m_Attribute:
-          m_Property:
-            rid: 3611814542535295759
-        m_Change:
-          m_Operation: 2
-          m_Value:
-            m_Property:
-              rid: 3611814542535295760
-    - rid: 3611814542535295758
-      type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 3611814542535295759
-      type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
-      data:
-        m_Attribute: {fileID: 11400000, guid: 91e989c89e934194da21053b9c882591, type: 2}
-    - rid: 3611814542535295760
-      type: {class: GetDecimalMathMultiply, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Number1:
-          m_Property:
-            rid: 3611814702449689267
-        m_Number2:
-          m_Property:
-            rid: 3611814542535295762
-    - rid: 3611814542535295762
-      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: number
-          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
-          m_Name:
-            m_String: Magical-Damage-Multiplier
-            m_ID: 59891617
     - rid: 3611814542535295763
       type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -694,35 +635,6 @@ MonoBehaviour:
       type: {class: GetGameObjectConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Conditions: {fileID: 1743696400883472681, guid: 0787862ef68884c4593c4027dadd1205, type: 3}
-    - rid: 3611814702449689267
-      type: {class: GetDecimalMathSum, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Number1:
-          m_Property:
-            rid: 3611814702449689270
-        m_Number2:
-          m_Property:
-            rid: 3611814702449689271
-    - rid: 3611814702449689270
-      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: number
-          m_Variable: {fileID: 11400000, guid: ceb76510c79c4024fb43a6d4e97f6b2a, type: 2}
-          m_Name:
-            m_String: Damage-Per-Projectile
-            m_ID: -60337458
-    - rid: 3611814702449689271
-      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: number
-          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
-          m_Name:
-            m_String: Magical-Damage-Add
-            m_ID: -16245334
     - rid: 3611814702946976609
       type: {class: InstructionStatsChangeAttribute, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
       data:
