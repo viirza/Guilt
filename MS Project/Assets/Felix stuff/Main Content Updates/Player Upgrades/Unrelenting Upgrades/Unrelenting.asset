@@ -1,0 +1,249 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e203efa43fc9420f97b5e0072ce8db68, type: 3}
+  m_Name: Unrelenting
+  m_EditorClassIdentifier: 
+  m_Data:
+    m_Type: 1
+    m_MaxStack:
+      m_Property:
+        rid: 6402566326414737479
+    m_HasDuration: 1
+    m_IsHidden: 0
+    m_Duration:
+      m_Property:
+        rid: 6402566326414737500
+  m_Info:
+    m_Name:
+      m_Property:
+        rid: 6402566326414737481
+    m_Acronym:
+      m_Property:
+        rid: 6402566326414737482
+    m_Description:
+      m_Property:
+        rid: 6402566326414737483
+    m_Icon:
+      m_Property:
+        rid: 6402566326414737484
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_OnStart:
+    m_Instructions:
+      m_Instructions:
+      - rid: 6402566326414737485
+      - rid: 6402566326414737501
+      - rid: 6402566326414737519
+  m_OnEnd:
+    m_Instructions:
+      m_Instructions:
+      - rid: 6402566326414737486
+      - rid: 6402566326414737512
+      - rid: 6402566326414737523
+  m_WhileActive:
+    m_Instructions:
+      m_Instructions:
+      - rid: 6402566326414737487
+  m_ID:
+    m_Save:
+      m_Save: 0
+    m_UniqueID:
+      m_SerializedID:
+        m_String: my-unique-id
+  references:
+    version: 2
+    RefIds:
+    - rid: 6402566326414737479
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 6402566326414737481
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Unrelenting
+    - rid: 6402566326414737482
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: SE
+    - rid: 6402566326414737483
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Dealing mainhand damage now grants a charge of unrelenting for 1s
+          (+0.1s / stack) and refreshes the duration. Each charge increases movement
+          speed by 1, maindhand damage by 10.
+    - rid: 6402566326414737484
+      type: {class: GetSpriteNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566326414737485
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed right after this Status Effect is applied
+    - rid: 6402566326414737486
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed right after this Status Effect finishes
+    - rid: 6402566326414737487
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed over and over again while this Status Effect lasts
+    - rid: 6402566326414737500
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 80e1ed85e56db494ca9465d976d455b6, type: 2}
+          m_Name:
+            m_String: baseDuration
+            m_ID: 1063762575
+    - rid: 6402566326414737501
+      type: {class: InstructionCharacterPropertyMoveSpeed, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6402566326414737502
+        m_Speed:
+          m_Operation: 1
+          m_Value:
+            m_Property:
+              rid: 6402566326414737506
+        m_Transition:
+          m_Duration: 0
+          m_Easing: 3
+          m_Time: 0
+          m_WaitToComplete: 1
+    - rid: 6402566326414737502
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566326414737506
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 80e1ed85e56db494ca9465d976d455b6, type: 2}
+          m_Name:
+            m_String: speedBuff
+            m_ID: -1708956599
+    - rid: 6402566326414737512
+      type: {class: InstructionCharacterPropertyMoveSpeed, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6402566326414737513
+        m_Speed:
+          m_Operation: 2
+          m_Value:
+            m_Property:
+              rid: 6402566326414737514
+        m_Transition:
+          m_Duration: 0
+          m_Easing: 3
+          m_Time: 0
+          m_WaitToComplete: 1
+    - rid: 6402566326414737513
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566326414737514
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 80e1ed85e56db494ca9465d976d455b6, type: 2}
+          m_Name:
+            m_String: speedBuff
+            m_ID: -1708956599
+    - rid: 6402566326414737519
+      type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 6402566326414737520
+        m_Value:
+          m_Property:
+            rid: 6402566326414737522
+    - rid: 6402566326414737520
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
+          m_Name:
+            m_String: Physical-Damage-Add
+            m_ID: 1723511175
+    - rid: 6402566326414737522
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 80e1ed85e56db494ca9465d976d455b6, type: 2}
+          m_Name:
+            m_String: damageBuff
+            m_ID: -1497145794
+    - rid: 6402566326414737523
+      type: {class: InstructionArithmeticSubtractNumbers, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 6402566326414737524
+        m_Value1:
+          m_Property:
+            rid: 6402566326414737527
+        m_Value2:
+          m_Property:
+            rid: 6402566326414737528
+    - rid: 6402566326414737524
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
+          m_Name:
+            m_String: Physical-Damage-Add
+            m_ID: 1723511175
+    - rid: 6402566326414737527
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
+          m_Name:
+            m_String: Physical-Damage-Add
+            m_ID: 1723511175
+    - rid: 6402566326414737528
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 80e1ed85e56db494ca9465d976d455b6, type: 2}
+          m_Name:
+            m_String: damageBuff
+            m_ID: -1497145794
