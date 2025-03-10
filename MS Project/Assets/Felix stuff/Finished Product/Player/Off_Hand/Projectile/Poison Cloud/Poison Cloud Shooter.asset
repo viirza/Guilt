@@ -283,7 +283,7 @@ MonoBehaviour:
       - rid: 6402566298237928326
       - rid: 6402566299749188053
       - rid: 6402566301467541879
-      - rid: 6402566304440516667
+      - rid: 6402566390153741157
   m_Animations:
     m_Idle: {fileID: 0}
     m_Empty: {fileID: 0}
@@ -734,19 +734,47 @@ MonoBehaviour:
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 5
-    - rid: 6402566304440516667
-      type: {class: InstructionLogicRunConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Conditions:
-          m_Property:
-            rid: 6402566304440516668
-        m_WaitToFinish: 1
-    - rid: 6402566304440516668
-      type: {class: GetGameObjectConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Conditions: {fileID: 1877834891884241757, guid: 539111b9c8ab50f48a7db1de830837dc, type: 3}
     - rid: 6402566304440517176
       type: {class: GetDecimalConstantZero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 6402566390153741157
+      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 6402566390153741158
+          usePooling: 1
+          size: 1
+          hasDuration: 1
+          duration: 2.5
+        m_Position:
+          m_Property:
+            rid: 6402566390153741163
+        m_Rotation:
+          m_Property:
+            rid: 6402566390153741164
+        m_Parent:
+          m_Property:
+            rid: 6402566390153741161
+        m_Save:
+          m_Property:
+            rid: 6402566390153741162
+    - rid: 6402566390153741158
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 8489885495069182418, guid: 97694244f8e951f469a9101accad40c0, type: 3}
+    - rid: 6402566390153741161
+      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566390153741162
+      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566390153741163
+      type: {class: GetPositionTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566390153741164
+      type: {class: GetRotationTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Space: 1

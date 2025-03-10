@@ -280,6 +280,7 @@ MonoBehaviour:
       - rid: 6402566302454776433
       - rid: 6402566302454776474
       - rid: 6402566302454776466
+      - rid: 6402566396178333744
       - rid: 6402566305821491238
       - rid: 6402566305821491567
       - rid: 6402566305821491241
@@ -287,6 +288,8 @@ MonoBehaviour:
       - rid: 6402566305821491565
       - rid: 6402566305821491337
       - rid: 6402566305821491570
+      - rid: 6402566396178333905
+      - rid: 6402566396178333749
   m_Animations:
     m_Idle: {fileID: 0}
     m_Empty: {fileID: 0}
@@ -772,3 +775,72 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_Signal:
           m_String: BubblePop
+    - rid: 6402566396178333744
+      type: {class: InstructionCharacterNavigationDriver, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6402566396178333748
+        m_Driver:
+          m_Driver:
+            rid: 6402566396178333746
+    - rid: 6402566396178333746
+      type: {class: UnitDriverController, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data:
+        m_SkinWidth: 0.08
+        m_PushForce: 1
+        m_MaxSlope: 45
+        m_StepHeight: 0.3
+        m_Axonometry:
+          m_Axonometry:
+            rid: 6402566396178333747
+    - rid: 6402566396178333747
+      type: {class: AxonometryNone, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566396178333748
+      type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566396178333749
+      type: {class: InstructionCharacterNavigationDriver, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6402566396178333750
+        m_Driver:
+          m_Driver:
+            rid: 6402566396178333753
+    - rid: 6402566396178333750
+      type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566396178333753
+      type: {class: UnitDriverNavmesh, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data:
+        m_AvoidQuality: 4
+        m_AvoidPriority: 50
+        m_AutoMeshLink: 1
+        m_AgentType:
+          m_AgentTypeIndex: 0
+    - rid: 6402566396178333905
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 6402566396178333906
+    - rid: 6402566396178333906
+      type: {class: ConditionCharacterIsGrounded, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Character:
+          m_Property:
+            rid: 6402566396178333908
+    - rid: 6402566396178333908
+      type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
