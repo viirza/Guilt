@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Property:
         rid: 1296926261546320212
     m_RuntimeController: {fileID: 0}
-    m_State: {fileID: 11400000, guid: 2d62178e233ff8c4f8ec88424f339d66, type: 2}
+    m_State: {fileID: 0}
     m_AvatarMask: {fileID: 0}
   m_Layer:
     m_Property:
@@ -61,7 +61,7 @@ MonoBehaviour:
       m_Property:
         rid: 1296926261546320216
   m_Muzzle:
-    m_Position: {x: 0, y: 0, z: 0.25}
+    m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
   m_Fire:
     m_ProjectilesPerShot:
@@ -146,10 +146,10 @@ MonoBehaviour:
   m_Accuracy:
     m_MaxSpreadX:
       m_Property:
-        rid: 1296926261546320237
+        rid: 6402566414988215142
     m_MaxSpreadY:
       m_Property:
-        rid: 1296926261546320238
+        rid: 6402566414988215143
     m_SpreadBias:
       m_Property:
         rid: 1296926261546320239
@@ -174,10 +174,10 @@ MonoBehaviour:
         rid: 1296926261546320245
     m_RecoilX:
       m_Property:
-        rid: 1296926261546320246
+        rid: 6402566414988215144
     m_RecoilY:
       m_Property:
-        rid: 1296926261546320247
+        rid: 6402566414988215145
     m_RecoilDuration:
       m_Property:
         rid: 1296926261546320248
@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Sights:
     m_Sights:
     - rid: 1296926261546320256
+    - rid: 6402566414988214365
   m_Reloads:
     m_State:
       m_StateType: 2
@@ -255,7 +256,7 @@ MonoBehaviour:
   m_Animations:
     m_Idle: {fileID: 0}
     m_Empty: {fileID: 0}
-    m_Shoot: {fileID: 0}
+    m_Shoot: {fileID: 7400000, guid: e950e5244dd39434a98bc403df405f17, type: 3}
     m_ReloadQuick: {fileID: 0}
     m_ReloadDry: {fileID: 0}
     m_JamEnter: {fileID: 0}
@@ -361,12 +362,6 @@ MonoBehaviour:
     - rid: 1296926261546320236
       type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
-    - rid: 1296926261546320237
-      type: {class: GetDecimalConstantTwo, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 1296926261546320238
-      type: {class: GetDecimalConstantTwo, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
     - rid: 1296926261546320239
       type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
@@ -392,24 +387,6 @@ MonoBehaviour:
     - rid: 1296926261546320245
       type: {class: GetGameObjectCameraMain, ns: GameCreator.Runtime.Cameras, asm: GameCreator.Runtime.Core}
       data: 
-    - rid: 1296926261546320246
-      type: {class: GetDecimalRandomRange, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_MinValue:
-          m_Property:
-            rid: 1296926261546320267
-        m_MaxValue:
-          m_Property:
-            rid: 1296926261546320268
-    - rid: 1296926261546320247
-      type: {class: GetDecimalRandomRange, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_MinValue:
-          m_Property:
-            rid: 1296926261546320269
-        m_MaxValue:
-          m_Property:
-            rid: 1296926261546320270
     - rid: 1296926261546320248
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -446,7 +423,7 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_Id:
           m_String: my-sight-id
-        m_Sight: {fileID: 11400000, guid: 7023aa129222226489b07d4507beebea, type: 2}
+        m_Sight: {fileID: 11400000, guid: 8b3b8b8e7172d9e46bb10716d2b1d3de, type: 2}
         m_ScopeThrough: 0
         m_ScopePosition: {x: 0, y: 0.25, z: 0}
         m_ScopeRotation: {x: 0, y: 0, z: 0}
@@ -471,18 +448,6 @@ MonoBehaviour:
         m_Asset: {fileID: 0}
     - rid: 1296926261546320266
       type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 1296926261546320267
-      type: {class: GetDecimalConstantMinusOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 1296926261546320268
-      type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 1296926261546320269
-      type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 1296926261546320270
-      type: {class: GetDecimalConstantTwo, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 1296926261546320342
       type: {class: GetBoolFalse, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
@@ -651,6 +616,30 @@ MonoBehaviour:
     - rid: 6402566218376282615
       type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 6402566414988214365
+      type: {class: SightItem, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Id:
+          m_String: my-sight-id
+        m_Sight: {fileID: 11400000, guid: c61bb362d74444341b41b44e158d4fda, type: 2}
+        m_ScopeThrough: 0
+        m_ScopePosition: {x: 0, y: 0.25, z: 0}
+        m_ScopeRotation: {x: 0, y: 0, z: 0}
+        m_ScopeDistance: 0.25
+    - rid: 6402566414988215142
+      type: {class: GetDecimalConstantZero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566414988215143
+      type: {class: GetDecimalConstantZero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566414988215144
+      type: {class: GetDecimalConstantZero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566414988215145
+      type: {class: GetDecimalConstantZero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
 --- !u!221 &6915371415363015925
 AnimatorOverrideController:
   m_ObjectHideFlags: 1
@@ -675,7 +664,7 @@ AnimatorOverrideController:
   - m_OriginalClip: {fileID: 7400000, guid: 97f666d52615f44bd9d76cf19c9d2c86, type: 2}
     m_OverrideClip: {fileID: 0}
   - m_OriginalClip: {fileID: 7400000, guid: 9f44dbe24364e4ece814a7ab9bab293b, type: 2}
-    m_OverrideClip: {fileID: 0}
+    m_OverrideClip: {fileID: 7400000, guid: e950e5244dd39434a98bc403df405f17, type: 3}
   - m_OriginalClip: {fileID: 7400000, guid: b947eb4672e994a76a0d5e37f5c2dbdc, type: 2}
     m_OverrideClip: {fileID: 0}
   - m_OriginalClip: {fileID: 7400000, guid: a032dcd01ac0e476b956b7ab2fe946d7, type: 2}
