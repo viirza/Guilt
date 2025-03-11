@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3012963136116389881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6929643523941533967}
+  - component: {fileID: 5834259643766079076}
+  m_Layer: 0
+  m_Name: Stinger burst logic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6929643523941533967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3012963136116389881}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.71829, y: -3.1132708, z: 17.18094}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5834259643766079076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3012963136116389881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280989d249f9b482d890a5f97137f44b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 1779839098286768821
+    - rid: 1779839098626769276
+    - rid: 1779839098286768824
+    - rid: 1779839098626769380
+  references:
+    version: 2
+    RefIds:
+    - rid: 1779839098286768821
+      type: {class: InstructionShooterFirePull, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 1779839098286768822
+        m_Weapon:
+          m_Property:
+            rid: 1779839098286768823
+    - rid: 1779839098286768822
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839098286768823
+      type: {class: GetWeaponShooterInstance, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Weapon: {fileID: 11400000, guid: af3fdc5095b64b345984bb2a2c00df6d, type: 2}
+    - rid: 1779839098286768824
+      type: {class: InstructionShooterFireRelease, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 1779839098286768825
+        m_Weapon:
+          m_Property:
+            rid: 1779839098286768826
+    - rid: 1779839098286768825
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839098286768826
+      type: {class: GetWeaponShooterInstance, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Weapon: {fileID: 11400000, guid: af3fdc5095b64b345984bb2a2c00df6d, type: 2}
+    - rid: 1779839098626769276
+      type: {class: InstructionCommonTimeFrame, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Frames:
+          m_Property:
+            rid: 1779839098626769277
+    - rid: 1779839098626769277
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 1779839098626769380
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 1779839098626769381
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 1779839098626769381
+      type: {class: GetDecimalItemPropertyValue, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Bag:
+          m_Property:
+            rid: 1779839098626769382
+        m_Item:
+          m_Property:
+            rid: 1779839098626769383
+        m_PropertyId:
+          m_String: burst-delay
+    - rid: 1779839098626769382
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839098626769383
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000, guid: 6fc765efdb6b4e647a2cc31f616ac32f, type: 2}
