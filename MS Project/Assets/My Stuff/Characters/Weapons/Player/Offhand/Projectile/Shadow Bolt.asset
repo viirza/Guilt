@@ -90,7 +90,7 @@ MonoBehaviour:
     m_ConsumeWhenUse: 0
     m_Cooldown:
       m_Property:
-        rid: 2908845350248514437
+        rid: 1779839097277776215
     m_ConditionsCanUse:
       m_Conditions:
         m_Conditions: []
@@ -150,6 +150,43 @@ MonoBehaviour:
       type: {class: GetWeaponShooterInstance, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
       data:
         m_Weapon: {fileID: 11400000, guid: 88002d7c86917c54e9cf3f04a9b1e3e0, type: 2}
+    - rid: 1779839097277776215
+      type: {class: GetDecimalMathSum, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Number1:
+          m_Property:
+            rid: 1779839097277776218
+        m_Number2:
+          m_Property:
+            rid: 1779839097277776222
+    - rid: 1779839097277776218
+      type: {class: GetDecimalItemPropertyValue, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Bag:
+          m_Property:
+            rid: 1779839097277776221
+        m_Item:
+          m_Property:
+            rid: 1779839097277776220
+        m_PropertyId:
+          m_String: fire-rate
+    - rid: 1779839097277776220
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000}
+    - rid: 1779839097277776221
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839097277776222
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
+          m_Name:
+            m_String: Extra-Fire-Rate
+            m_ID: 1215666651
     - rid: 2908845350248514433
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -163,10 +200,6 @@ MonoBehaviour:
       type: {class: GetSpriteInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Sprite: {fileID: 21300000, guid: 9904d9c067d7e8d4ead383545ed7c061, type: 3}
-    - rid: 2908845350248514437
-      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 1
     - rid: 2908845350248514475
       type: {class: InstructionShooterEquipWeapon, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
       data:
