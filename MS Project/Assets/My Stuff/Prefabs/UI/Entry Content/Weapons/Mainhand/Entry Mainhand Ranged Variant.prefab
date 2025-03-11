@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2211467908968639684, guid: a692c641c25999046b0f8db17cedfbb9, type: 3}
       propertyPath: m_Name
-      value: Entry Offhand Projectile
+      value: Entry Mainhand Ranged Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2499555687947449797, guid: a692c641c25999046b0f8db17cedfbb9, type: 3}
       propertyPath: m_AnchorMax.x
@@ -116,17 +116,9 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 360
       objectReference: {fileID: 0}
-    - target: {fileID: 5887993617172743519, guid: a692c641c25999046b0f8db17cedfbb9, type: 3}
-      propertyPath: m_Size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7624777850702118814, guid: a692c641c25999046b0f8db17cedfbb9, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7624777850702118814, guid: a692c641c25999046b0f8db17cedfbb9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.00024414062
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -134,14 +126,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5101410900305538864, guid: a692c641c25999046b0f8db17cedfbb9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8500335351803055983}
+      addedObject: {fileID: 5093445499607126192}
   m_SourcePrefab: {fileID: 100100000, guid: a692c641c25999046b0f8db17cedfbb9, type: 3}
 --- !u!1 &6504791089304892301 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5101410900305538864, guid: a692c641c25999046b0f8db17cedfbb9, type: 3}
   m_PrefabInstance: {fileID: 2057708692675009725}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8500335351803055983
+--- !u!114 &5093445499607126192
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,8 +149,6 @@ MonoBehaviour:
     m_Instructions:
     - rid: 3611814677120811234
     - rid: 1779838938962723452
-    - rid: 1779838938962723473
-    - rid: 1779838943155716115
   m_TriggerEvent:
     rid: 3611814677120811233
   references:
@@ -170,7 +160,7 @@ MonoBehaviour:
         m_Variable:
           m_TypeID:
             m_String: string
-          m_Variable: {fileID: 11400000, guid: ceb76510c79c4024fb43a6d4e97f6b2a, type: 2}
+          m_Variable: {fileID: 11400000, guid: 94c0866235ffe884591dce4123572ddc, type: 2}
           m_Name:
             m_String: Damage-Per-Projectile
             m_ID: -60337458
@@ -226,143 +216,17 @@ MonoBehaviour:
     - rid: 1779838938962723471
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: ' x '
+        m_Value: ' x  '
     - rid: 1779838938962723472
       type: {class: GetStringGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
         m_Variable:
           m_TypeID:
             m_String: string
-          m_Variable: {fileID: 11400000, guid: ceb76510c79c4024fb43a6d4e97f6b2a, type: 2}
+          m_Variable: {fileID: 11400000, guid: 94c0866235ffe884591dce4123572ddc, type: 2}
           m_Name:
             m_String: Projectile-Per-Shot
             m_ID: -1190911302
-    - rid: 1779838938962723473
-      type: {class: InstructionTextSetString, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Set:
-          m_Property:
-            rid: 1779838938962723474
-        m_Text:
-          m_Property:
-            rid: 1779838938962723475
-    - rid: 1779838938962723474
-      type: {class: SetStringUIText, ns: GameCreator.Runtime.Common.UnityUI, asm: GameCreator.Runtime.Core}
-      data:
-        m_Text:
-          m_Property:
-            rid: 1779838938962723476
-    - rid: 1779838938962723475
-      type: {class: GetStringMathJoin, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Text1:
-          m_Property:
-            rid: 1779838938962723477
-        m_Text2:
-          m_Property:
-            rid: 1779838938962723478
-    - rid: 1779838938962723476
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 6504791089304892301}
-    - rid: 1779838938962723477
-      type: {class: GetStringUIText, ns: GameCreator.Runtime.Common.UnityUI, asm: GameCreator.Runtime.Core}
-      data:
-        m_Text:
-          m_Property:
-            rid: 1779838938962723479
-    - rid: 1779838938962723478
-      type: {class: GetStringMathJoin, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Text1:
-          m_Property:
-            rid: 1779838938962723480
-        m_Text2:
-          m_Property:
-            rid: 1779838938962723481
-    - rid: 1779838938962723479
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 6504791089304892301}
-    - rid: 1779838938962723480
-      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: '\nFire Rate: '
-    - rid: 1779838938962723481
-      type: {class: GetStringGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: string
-          m_Variable: {fileID: 11400000, guid: ceb76510c79c4024fb43a6d4e97f6b2a, type: 2}
-          m_Name:
-            m_String: Fire-rate
-            m_ID: 1611825608
-    - rid: 1779838943155716115
-      type: {class: InstructionTextSetString, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Set:
-          m_Property:
-            rid: 1779838943155716116
-        m_Text:
-          m_Property:
-            rid: 1779838943155716117
-    - rid: 1779838943155716116
-      type: {class: SetStringUIText, ns: GameCreator.Runtime.Common.UnityUI, asm: GameCreator.Runtime.Core}
-      data:
-        m_Text:
-          m_Property:
-            rid: 1779838943155716118
-    - rid: 1779838943155716117
-      type: {class: GetStringMathJoin, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Text1:
-          m_Property:
-            rid: 1779838943155716119
-        m_Text2:
-          m_Property:
-            rid: 1779838943155716120
-    - rid: 1779838943155716118
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 6504791089304892301}
-    - rid: 1779838943155716119
-      type: {class: GetStringUIText, ns: GameCreator.Runtime.Common.UnityUI, asm: GameCreator.Runtime.Core}
-      data:
-        m_Text:
-          m_Property:
-            rid: 1779838943155716121
-    - rid: 1779838943155716120
-      type: {class: GetStringMathJoin, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Text1:
-          m_Property:
-            rid: 1779838943155716122
-        m_Text2:
-          m_Property:
-            rid: 1779838943155716123
-    - rid: 1779838943155716121
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 6504791089304892301}
-    - rid: 1779838943155716122
-      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: \n
-    - rid: 1779838943155716123
-      type: {class: GetStringGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: string
-          m_Variable: {fileID: 11400000, guid: ceb76510c79c4024fb43a6d4e97f6b2a, type: 2}
-          m_Name:
-            m_String: Offhand-Effect
-            m_ID: 364476372
     - rid: 3611814677120811233
       type: {class: EventOnEnable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data: 
