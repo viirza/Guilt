@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e203efa43fc9420f97b5e0072ce8db68, type: 3}
+  m_Name: Conductivity
+  m_EditorClassIdentifier: 
+  m_Data:
+    m_Type: 1
+    m_MaxStack:
+      m_Property:
+        rid: 6402566420962476362
+    m_HasDuration: 1
+    m_IsHidden: 0
+    m_Duration:
+      m_Property:
+        rid: 6402566420962476363
+  m_Info:
+    m_Name:
+      m_Property:
+        rid: 6402566420962476364
+    m_Acronym:
+      m_Property:
+        rid: 6402566420962476365
+    m_Description:
+      m_Property:
+        rid: 6402566420962476366
+    m_Icon:
+      m_Property:
+        rid: 6402566420962476367
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_OnStart:
+    m_Instructions:
+      m_Instructions:
+      - rid: 6402566420962476368
+      - rid: 6402566421309292547
+      - rid: 6402566420962477047
+      - rid: 6402566421309292545
+  m_OnEnd:
+    m_Instructions:
+      m_Instructions:
+      - rid: 6402566420962476369
+  m_WhileActive:
+    m_Instructions:
+      m_Instructions:
+      - rid: 6402566420962476370
+  m_ID:
+    m_Save:
+      m_Save: 0
+    m_UniqueID:
+      m_SerializedID:
+        m_String: Conductivity
+  references:
+    version: 2
+    RefIds:
+    - rid: 6402566420962476362
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 10
+    - rid: 6402566420962476363
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 5
+    - rid: 6402566420962476364
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Conductivity
+    - rid: 6402566420962476365
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: SE
+    - rid: 6402566420962476366
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: ' Enemies take shared damage alongside other enemies with the conductivity
+          stack. They take 10% per stack damage from main source damage.'
+    - rid: 6402566420962476367
+      type: {class: GetSpriteNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566420962476368
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed right after this Status Effect is applied
+    - rid: 6402566420962476369
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed right after this Status Effect finishes
+    - rid: 6402566420962476370
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed over and over again while this Status Effect lasts
+    - rid: 6402566420962477047
+      type: {class: InstructionStatsChangeAttribute, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Target:
+          m_Property:
+            rid: 6402566420962477048
+        m_Attribute:
+          m_Property:
+            rid: 6402566420962477049
+        m_Change:
+          m_Operation: 2
+          m_Value:
+            m_Property:
+              rid: 6402566420962477050
+    - rid: 6402566420962477048
+      type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566420962477049
+      type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Attribute: {fileID: 11400000, guid: 91e989c89e934194da21053b9c882591, type: 2}
+    - rid: 6402566420962477050
+      type: {class: GetDecimalMathMultiply, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Number1:
+          m_Property:
+            rid: 6402566420962477051
+        m_Number2:
+          m_Property:
+            rid: 6402566420962477052
+    - rid: 6402566420962477051
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: a29560df9e36d5041b7fb8e5b1da38d2, type: 2}
+          m_Name:
+            m_String: InitialDamage
+            m_ID: 654683706
+    - rid: 6402566420962477052
+      type: {class: GetDecimalMathMultiply, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Number1:
+          m_Property:
+            rid: 6402566420962477053
+        m_Number2:
+          m_Property:
+            rid: 6402566420962477054
+    - rid: 6402566420962477053
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0.1
+    - rid: 6402566420962477054
+      type: {class: GetDecimalStatusEffectCount, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Traits:
+          m_Property:
+            rid: 6402566420962477055
+        m_StatusEffect:
+          m_Property:
+            rid: 6402566421309292544
+    - rid: 6402566420962477055
+      type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566421309292544
+      type: {class: GetStatusEffectInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_StatusEffect: {fileID: 11400000}
+    - rid: 6402566421309292545
+      type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Message:
+          m_Property:
+            rid: 6402566421309292546
+    - rid: 6402566421309292546
+      type: {class: GetStringTargetName, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566421309292547
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 6402566421309292548
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 6402566421309292548
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0.1
