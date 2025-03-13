@@ -1,0 +1,720 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6815fbbd9e37487e9668b2023ca36daa, type: 3}
+  m_Name: Suicide Enemy
+  m_EditorClassIdentifier: 
+  m_Nodes:
+  - rid: 6402566455486841537
+  - rid: 6402566455486841772
+  - rid: 6402566455486841790
+  - rid: 6402566461627302479
+  - rid: 6402566461627302717
+  - rid: 6402566463132532860
+  m_Data:
+    m_List:
+    - rid: 6402566455486841556
+    - rid: 6402566455486841848
+    - rid: 6402566459926773960
+    - rid: 6402566459926774212
+    - rid: 6402566461627302780
+  references:
+    version: 2
+    RefIds:
+    - rid: 6402566455486841537
+      type: {class: NodeBehaviorTreeEntry, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Id:
+          m_String: c2a5bc88-c7b0-49ec-9aad-135b1422ad87
+        m_Position: {x: -150, y: 0}
+        m_Ports:
+          m_Inputs: []
+          m_Outputs:
+          - rid: 6402566455486841538
+    - rid: 6402566455486841538
+      type: {class: OutputPortBehaviorTreeDefault, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Id:
+          m_Value: 6ed78130-382d-4d8f-9df8-461fd6caab48
+        m_Connections:
+        - m_Value: 8d85a77f-fc26-46ce-8299-e27b3c75a29b
+    - rid: 6402566455486841556
+      type: {class: Parameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 6402566455486841558
+        m_Name: catchRange
+    - rid: 6402566455486841558
+      type: {class: ValueNumber, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: 0
+    - rid: 6402566455486841772
+      type: {class: NodeBehaviorTreeTask, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Id:
+          m_String: 41e7cd9b-5870-4013-9dd7-7c9597babf71
+        m_Position: {x: -630, y: 184}
+        m_Ports:
+          m_Inputs:
+          - rid: 6402566455486841773
+          m_Outputs: []
+        m_Stop: 0
+        m_Conditions:
+          m_Conditions:
+            m_Conditions: []
+        m_Instructions:
+          m_Instructions:
+            m_Instructions:
+            - rid: 6402566461627302600
+            - rid: 6402566455486841774
+            - rid: 6402566461627302783
+            - rid: 6402566461627302413
+    - rid: 6402566455486841773
+      type: {class: InputPortBehaviorTreeDefault, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Id:
+          m_Value: 5f761fbf-7a16-4f3d-84cb-2d1efb27e5f2
+    - rid: 6402566455486841774
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 6402566455486841775
+    - rid: 6402566455486841775
+      type: {class: ConditionMathCompareDistance, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_PointA:
+          m_Property:
+            rid: 6402566455486841779
+        m_PointB:
+          m_Property:
+            rid: 6402566455486841780
+        m_Distance:
+          m_Comparison: 4
+          m_CompareTo:
+            m_Property:
+              rid: 6402566459926773895
+    - rid: 6402566455486841779
+      type: {class: GetPositionSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566455486841780
+      type: {class: GetPositionCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566455486841790
+      type: {class: NodeBehaviorTreeComposite, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Id:
+          m_String: 5a36842e-5301-4992-8ccd-e38aa30fbe2a
+        m_Position: {x: -150, y: 86}
+        m_Ports:
+          m_Inputs:
+          - rid: 6402566455486841791
+          m_Outputs:
+          - rid: 6402566455486841792
+        m_Stop: 0
+        m_Conditions:
+          m_Conditions:
+            m_Conditions: []
+        m_Composite:
+          rid: 6402566459926773858
+    - rid: 6402566455486841791
+      type: {class: InputPortBehaviorTreeDefault, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Id:
+          m_Value: 8d85a77f-fc26-46ce-8299-e27b3c75a29b
+    - rid: 6402566455486841792
+      type: {class: OutputPortBehaviorTreeComposite, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Id:
+          m_Value: 3b4ca209-47d6-43f7-a42a-52143fc579b2
+        m_Connections:
+        - m_Value: 5f761fbf-7a16-4f3d-84cb-2d1efb27e5f2
+        - m_Value: 9dab29df-c4f7-4c32-8146-6da8af2bd0bd
+        - m_Value: f642974e-d988-4fd3-818b-5ee991a548a5
+        - m_Value: 20fee5a1-e7be-4c54-b531-afd5ba0f1582
+    - rid: 6402566455486841848
+      type: {class: Parameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 6402566455486841850
+        m_Name: suicideRange
+    - rid: 6402566455486841850
+      type: {class: ValueNumber, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: 0
+    - rid: 6402566459926773858
+      type: {class: CompositeSequence, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data: 
+    - rid: 6402566459926773895
+      type: {class: GetDecimalParameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Processor:
+          m_Property:
+            rid: 6402566459926773896
+        m_Name:
+          m_String: catchRange
+    - rid: 6402566459926773896
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566459926773960
+      type: {class: Parameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 6402566459926773962
+        m_Name: delay
+    - rid: 6402566459926773962
+      type: {class: ValueNumber, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: 0
+    - rid: 6402566459926774212
+      type: {class: Parameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 6402566459926774222
+        m_Name: damage
+    - rid: 6402566459926774222
+      type: {class: ValueNumber, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: 0
+    - rid: 6402566461627302413
+      type: {class: InstructionCharacterNavigationFollowStart, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6402566461627302418
+        m_FollowTarget:
+          m_Property:
+            rid: 6402566461627302415
+        m_MinDistance:
+          m_Property:
+            rid: 6402566461627302416
+        m_MaxDistance:
+          m_Property:
+            rid: 6402566461627302503
+    - rid: 6402566461627302415
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566461627302416
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 6402566461627302418
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566461627302479
+      type: {class: NodeBehaviorTreeTask, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Id:
+          m_String: 5ef4dce8-0529-46a1-a775-5321b772834f
+        m_Position: {x: 10, y: 184}
+        m_Ports:
+          m_Inputs:
+          - rid: 6402566461627302480
+          m_Outputs: []
+        m_Stop: 0
+        m_Conditions:
+          m_Conditions:
+            m_Conditions: []
+        m_Instructions:
+          m_Instructions:
+            m_Instructions:
+            - rid: 6402566461627302601
+            - rid: 6402566461627302481
+            - rid: 6402566461627302501
+            - rid: 6402566461627302788
+            - rid: 6402566463132532967
+            - rid: 6402566463132532773
+    - rid: 6402566461627302480
+      type: {class: InputPortBehaviorTreeDefault, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Id:
+          m_Value: f642974e-d988-4fd3-818b-5ee991a548a5
+    - rid: 6402566461627302481
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 6402566461627302484
+    - rid: 6402566461627302484
+      type: {class: ConditionMathCompareDistance, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_PointA:
+          m_Property:
+            rid: 6402566461627302493
+        m_PointB:
+          m_Property:
+            rid: 6402566461627302494
+        m_Distance:
+          m_Comparison: 4
+          m_CompareTo:
+            m_Property:
+              rid: 6402566461627302495
+    - rid: 6402566461627302493
+      type: {class: GetPositionSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566461627302494
+      type: {class: GetPositionCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566461627302495
+      type: {class: GetDecimalParameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Processor:
+          m_Property:
+            rid: 6402566461627302499
+        m_Name:
+          m_String: suicideRange
+    - rid: 6402566461627302499
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566461627302501
+      type: {class: InstructionCharacterNavigationFollowStop, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6402566461627302627
+    - rid: 6402566461627302503
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 3
+    - rid: 6402566461627302600
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: If player is in catchRange
+    - rid: 6402566461627302601
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: If player is in range of explosion
+    - rid: 6402566461627302627
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566461627302717
+      type: {class: NodeBehaviorTreeTask, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Id:
+          m_String: f0b83c58-d9d9-4aed-951b-1cb1d8e5d1a0
+        m_Position: {x: 330, y: 184}
+        m_Ports:
+          m_Inputs:
+          - rid: 6402566461627302718
+          m_Outputs: []
+        m_Stop: 0
+        m_Conditions:
+          m_Conditions:
+            m_Conditions: []
+        m_Instructions:
+          m_Instructions:
+            m_Instructions:
+            - rid: 6402566461627302792
+            - rid: 6402566463132532756
+            - rid: 6402566461627302732
+    - rid: 6402566461627302718
+      type: {class: InputPortBehaviorTreeDefault, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Id:
+          m_Value: 20fee5a1-e7be-4c54-b531-afd5ba0f1582
+    - rid: 6402566461627302732
+      type: {class: InstructionGameObjectDestroy, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 6402566461627302734
+    - rid: 6402566461627302734
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566461627302780
+      type: {class: Parameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 6402566461627302782
+        m_Name: ready
+    - rid: 6402566461627302782
+      type: {class: ValueBool, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: 0
+    - rid: 6402566461627302783
+      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 6402566461627302786
+        m_From:
+          m_Property:
+            rid: 6402566461627302785
+    - rid: 6402566461627302785
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 6402566461627302786
+      type: {class: SetBoolParameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Processor:
+          m_Property:
+            rid: 6402566461627302787
+        m_Name:
+          m_String: ready
+    - rid: 6402566461627302787
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566461627302788
+      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 6402566461627302789
+        m_From:
+          m_Property:
+            rid: 6402566461627302790
+    - rid: 6402566461627302789
+      type: {class: SetBoolParameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Processor:
+          m_Property:
+            rid: 6402566461627302791
+        m_Name:
+          m_String: ready
+    - rid: 6402566461627302790
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 6402566461627302791
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566461627302792
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 6402566461627302793
+          - rid: 6402566463132532761
+    - rid: 6402566461627302793
+      type: {class: ConditionMathCompareBooleans, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 6402566461627302796
+        m_Comparison: 0
+        m_CompareTo:
+          m_Property:
+            rid: 6402566461627302795
+    - rid: 6402566461627302795
+      type: {class: GetBoolTrue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566461627302796
+      type: {class: GetBoolParameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Processor:
+          m_Property:
+            rid: 6402566461627302797
+        m_Name:
+          m_String: ready
+    - rid: 6402566461627302797
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532756
+      type: {class: InstructionStatsChangeAttribute, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Target:
+          m_Property:
+            rid: 6402566463132532757
+        m_Attribute:
+          m_Property:
+            rid: 6402566463132532758
+        m_Change:
+          m_Operation: 2
+          m_Value:
+            m_Property:
+              rid: 6402566463132532759
+    - rid: 6402566463132532757
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532758
+      type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Attribute: {fileID: 11400000, guid: 91e989c89e934194da21053b9c882591, type: 2}
+    - rid: 6402566463132532759
+      type: {class: GetDecimalParameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Processor:
+          m_Property:
+            rid: 6402566463132532760
+        m_Name:
+          m_String: damage
+    - rid: 6402566463132532760
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532761
+      type: {class: ConditionMathCompareDistance, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_PointA:
+          m_Property:
+            rid: 6402566463132532762
+        m_PointB:
+          m_Property:
+            rid: 6402566463132532763
+        m_Distance:
+          m_Comparison: 4
+          m_CompareTo:
+            m_Property:
+              rid: 6402566463132532764
+    - rid: 6402566463132532762
+      type: {class: GetPositionSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532763
+      type: {class: GetPositionCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532764
+      type: {class: GetDecimalParameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Processor:
+          m_Property:
+            rid: 6402566463132532765
+        m_Name:
+          m_String: suicideRange
+    - rid: 6402566463132532765
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532773
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 6402566463132532774
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 6402566463132532774
+      type: {class: GetDecimalParameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Processor:
+          m_Property:
+            rid: 6402566463132532775
+        m_Name:
+          m_String: delay
+    - rid: 6402566463132532775
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532860
+      type: {class: NodeBehaviorTreeTask, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Id:
+          m_String: 60457362-d203-40b2-b50f-12410a6fd821
+        m_Position: {x: -310, y: 184}
+        m_Ports:
+          m_Inputs:
+          - rid: 6402566463132532861
+          m_Outputs: []
+        m_Stop: 0
+        m_Conditions:
+          m_Conditions:
+            m_Conditions: []
+        m_Instructions:
+          m_Instructions:
+            m_Instructions:
+            - rid: 6402566463132532862
+            - rid: 6402566463132532863
+            - rid: 6402566463132532878
+            - rid: 6402566463132532881
+    - rid: 6402566463132532861
+      type: {class: InputPortBehaviorTreeDefault, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Id:
+          m_Value: 9dab29df-c4f7-4c32-8146-6da8af2bd0bd
+    - rid: 6402566463132532862
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: If player is too far away
+    - rid: 6402566463132532863
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 6402566463132532866
+    - rid: 6402566463132532866
+      type: {class: ConditionMathCompareDistance, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_PointA:
+          m_Property:
+            rid: 6402566463132532873
+        m_PointB:
+          m_Property:
+            rid: 6402566463132532874
+        m_Distance:
+          m_Comparison: 3
+          m_CompareTo:
+            m_Property:
+              rid: 6402566463132532875
+    - rid: 6402566463132532873
+      type: {class: GetPositionSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532874
+      type: {class: GetPositionCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532875
+      type: {class: GetDecimalParameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Processor:
+          m_Property:
+            rid: 6402566463132532877
+        m_Name:
+          m_String: catchRange
+    - rid: 6402566463132532877
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532878
+      type: {class: InstructionCharacterNavigationFollowStop, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6402566463132532880
+    - rid: 6402566463132532880
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532881
+      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 6402566463132532882
+        m_From:
+          m_Property:
+            rid: 6402566463132532883
+    - rid: 6402566463132532882
+      type: {class: SetBoolParameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Processor:
+          m_Property:
+            rid: 6402566463132532884
+        m_Name:
+          m_String: ready
+    - rid: 6402566463132532883
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 6402566463132532884
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532967
+      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 6402566463132532968
+          usePooling: 1
+          size: 1
+          hasDuration: 1
+          duration: 2
+        m_Position:
+          m_Property:
+            rid: 6402566463132532969
+        m_Rotation:
+          m_Property:
+            rid: 6402566463132532970
+        m_Parent:
+          m_Property:
+            rid: 6402566463132532971
+        m_Save:
+          m_Property:
+            rid: 6402566463132532972
+    - rid: 6402566463132532968
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 7131401307255788800, guid: fe9869b5137eeda4e9a9010f401f304c, type: 3}
+    - rid: 6402566463132532969
+      type: {class: GetPositionCharacterBone, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data:
+        m_Character:
+          m_Property:
+            rid: 6402566463132532973
+        m_Bone:
+          m_Type: 1
+          m_Human: 0
+          m_Path: 
+    - rid: 6402566463132532970
+      type: {class: GetRotationSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Space: 1
+    - rid: 6402566463132532971
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532972
+      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566463132532973
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
