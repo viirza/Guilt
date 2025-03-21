@@ -5601,6 +5601,8 @@ MonoBehaviour:
         - rid: 6402566480995811683
         - rid: 6402566480995811685
         - rid: 6402566480995811687
+        - rid: 6402566643515130323
+        - rid: 6402566643515130325
         m_TypeID:
           m_String: game-object
     - rid: 6402566480995811677
@@ -5681,6 +5683,32 @@ MonoBehaviour:
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Value: {fileID: 8792302914223367424, guid: 70abfa2e12769a948b4c97ca042b1205, type: 3}
+    - rid: 6402566643515130323
+      type: {class: IndexVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 6402566643515130324
+    - rid: 6402566643515130324
+      type: {class: ValueGameObject, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: {fileID: 8936493290603245813, guid: c6607c6bb2f9b1e4ea73cd560affdde6, type: 3}
+    - rid: 6402566643515130325
+      type: {class: IndexVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 6402566643515130326
+    - rid: 6402566643515130326
+      type: {class: ValueGameObject, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: {fileID: 6696238213012965093, guid: a2addb870c946184abf58db0cdf934ed, type: 3}
 --- !u!114 &487279752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10285,6 +10313,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1587230904}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &867342910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 867342911}
+  m_Layer: 0
+  m_Name: FlameThrowerPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &867342911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867342910}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1587230904}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &877668846
 GameObject:
   m_ObjectHideFlags: 0
@@ -11694,41 +11753,11 @@ MonoBehaviour:
         m_Description: 
         m_ConditionList:
           m_Conditions:
-          - rid: 6402566575885648058
           - rid: 6402566575885648066
         m_InstructionList:
           m_Instructions:
           - rid: 6402566575885648062
           - rid: 6402566575885648078
-    - rid: 6402566575885648058
-      type: {class: ConditionCompareAttribute, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Sign: 1
-        m_Traits:
-          m_Property:
-            rid: 6402566575885648059
-        m_Attribute:
-          m_Property:
-            rid: 6402566575885648060
-        m_Value: 3
-        m_CompareTo:
-          m_Comparison: 4
-          m_CompareTo:
-            m_Property:
-              rid: 6402566575885648061
-    - rid: 6402566575885648059
-      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 6402566575885648060
-      type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
-      data:
-        m_Attribute: {fileID: 11400000, guid: 91e989c89e934194da21053b9c882591, type: 2}
-    - rid: 6402566575885648061
-      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 0.5
     - rid: 6402566575885648062
       type: {class: InstructionStatsChangeAttribute, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
       data:
@@ -11832,7 +11861,7 @@ MonoBehaviour:
     m_Instructions:
     - rid: 6402566575885648055
   m_TriggerEvent:
-    rid: 6402566575885648272
+    rid: 6402566639066284603
   references:
     version: 2
     RefIds:
@@ -11849,9 +11878,23 @@ MonoBehaviour:
       type: {class: GetGameObjectConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Conditions: {fileID: 979307117}
-    - rid: 6402566575885648272
-      type: {class: EventOnUpdate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+    - rid: 6402566639066284603
+      type: {class: EventStatsAttributeChange, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Target:
+          m_Property:
+            rid: 6402566639066284604
+        m_When: 2
+        m_Attribute:
+          m_Property:
+            rid: 6402566639066284605
+    - rid: 6402566639066284604
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 6402566639066284605
+      type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Attribute: {fileID: 11400000, guid: 91e989c89e934194da21053b9c882591, type: 2}
 --- !u!1 &998167407
 GameObject:
   m_ObjectHideFlags: 0
@@ -16630,6 +16673,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362171372}
   m_CullTransparentMesh: 1
+--- !u!1 &1382250637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1382250638}
+  m_Layer: 0
+  m_Name: FlamePillarPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1382250638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382250637}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1587230904}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1401724404
 GameObject:
   m_ObjectHideFlags: 0
@@ -17381,6 +17455,12 @@ MonoBehaviour:
     - m_Text: Ranged Flicker
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: Flame Thrower
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: Flame Pillar
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -17853,6 +17933,8 @@ MonoBehaviour:
         - rid: 6402566484497793385
         - rid: 6402566484497793387
         - rid: 6402566484497793389
+        - rid: 6402566643515130327
+        - rid: 6402566643515130329
         m_TypeID:
           m_String: string
     - rid: 6402566484497793379
@@ -17933,6 +18015,32 @@ MonoBehaviour:
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Value: Ranged Flicker
+    - rid: 6402566643515130327
+      type: {class: IndexVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 6402566643515130328
+    - rid: 6402566643515130328
+      type: {class: ValueString, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: Flame Thrower
+    - rid: 6402566643515130329
+      type: {class: IndexVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 6402566643515130330
+    - rid: 6402566643515130330
+      type: {class: ValueString, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: Flame Piilar
 --- !u!1 &1516357964
 GameObject:
   m_ObjectHideFlags: 0
@@ -18560,6 +18668,8 @@ Transform:
   - {fileID: 2093806353}
   - {fileID: 1195723282}
   - {fileID: 360653338}
+  - {fileID: 867342911}
+  - {fileID: 1382250638}
   m_Father: {fileID: 1872070715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1587230905
@@ -18600,6 +18710,8 @@ MonoBehaviour:
         - rid: 6402566551914676750
         - rid: 6402566551914676752
         - rid: 6402566551914676754
+        - rid: 6402566643515130319
+        - rid: 6402566643515130321
         m_TypeID:
           m_String: game-object
     - rid: 6402566551914676744
@@ -18680,6 +18792,32 @@ MonoBehaviour:
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Value: {fileID: 360653337}
+    - rid: 6402566643515130319
+      type: {class: IndexVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 6402566643515130320
+    - rid: 6402566643515130320
+      type: {class: ValueGameObject, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: {fileID: 867342910}
+    - rid: 6402566643515130321
+      type: {class: IndexVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 6402566643515130322
+    - rid: 6402566643515130322
+      type: {class: ValueGameObject, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: {fileID: 1382250637}
 --- !u!1 &1590285868
 GameObject:
   m_ObjectHideFlags: 0
