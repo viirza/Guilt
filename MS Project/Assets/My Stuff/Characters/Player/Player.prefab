@@ -17524,6 +17524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Instructions:
     m_Instructions:
+    - rid: 6402566592252871455
     - rid: 6402566326414737494
   m_TriggerEvent:
     rid: 6402566326414737529
@@ -17553,6 +17554,42 @@ MonoBehaviour:
       data:
         m_Signal:
           m_String: Mainhand-Hit
+    - rid: 6402566592252871455
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 6402566592252871456
+    - rid: 6402566592252871456
+      type: {class: ConditionMathCompareIntegers, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 6402566592252871459
+        m_CompareTo:
+          m_Comparison: 5
+          m_CompareTo:
+            m_Property:
+              rid: 6402566592252871458
+    - rid: 6402566592252871458
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 6402566592252871459
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: baea46a273346c84eb97d3f9d7c494f5, type: 2}
+          m_Name:
+            m_String: Unrelenting-Upgrade
+            m_ID: 807646017
 --- !u!114 &8245224594218816704
 MonoBehaviour:
   m_ObjectHideFlags: 0
