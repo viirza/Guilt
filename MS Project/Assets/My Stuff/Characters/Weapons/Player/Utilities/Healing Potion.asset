@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e25e7ff5b3ce840cd941cc265f0dfce0, type: 3}
+  m_Name: Healing Potion
+  m_EditorClassIdentifier: 
+  m_ID:
+    m_SerializedID:
+      m_String: 687e64aa-f2be-4f8c-a68b-68c766ffcf32
+  m_Parent: {fileID: 11400000, guid: de8fc54ec6a57e340b6e9985c4700cc2, type: 2}
+  m_Prefab: {fileID: 0}
+  m_CanDrop:
+    m_IsEnabled: 1
+    m_Value:
+      serializedVersion: 2
+      m_Bits: 4294967295
+  m_Info:
+    m_Name:
+      m_Property:
+        rid: 1779839167126831256
+    m_Description:
+      m_Property:
+        rid: 1779839167126831257
+    m_Sprite:
+      m_Property:
+        rid: 1779839167126831258
+    m_Color:
+      m_Property:
+        rid: 1779839167126831259
+    m_OnCreate:
+      m_Instructions:
+        m_Instructions: []
+    m_ExecuteFromParent: 0
+  m_Shape:
+    m_Width: 1
+    m_Height: 1
+    m_Weight: 1
+    m_MaxStack: 1
+  m_Price:
+    m_Currency: {fileID: 11400000, guid: 812bb03c10bc04b41813432ec124b319, type: 2}
+    m_Value: 100
+    m_CanBuyFromMerchant: 1
+    m_CanSellToMerchant: 1
+  m_Properties:
+    m_InheritFromParent: 1
+    m_List: []
+    m_Overrides:
+      m_Keys: []
+      m_Values: []
+  m_Sockets:
+    m_InheritFromParent: 1
+    m_List: []
+    m_PrefabSocket: {fileID: 6601483847937136946, guid: 893b9486b35e95749aa0893ded398890, type: 3}
+  m_Equip:
+    m_IsEquippable: 1
+    m_Prefab: {fileID: 0}
+    m_ConditionsEquip:
+      m_Conditions:
+        m_Conditions: []
+    m_InstructionsOnEquip:
+      m_Instructions:
+        m_Instructions: []
+    m_InstructionsOnUnequip:
+      m_Instructions:
+        m_Instructions: []
+    m_ExecuteFromParent: 0
+  m_Usage:
+    m_CanUse: 1
+    m_ConsumeWhenUse: 1
+    m_Cooldown:
+      m_Property:
+        rid: 1779839167126831260
+    m_ConditionsCanUse:
+      m_Conditions:
+        m_Conditions: []
+    m_InstructionsOnUse:
+      m_Instructions:
+        m_Instructions:
+        - rid: 1779839393632616609
+    m_ExecuteFromParent: 0
+  m_Crafting:
+    m_Ingredients: []
+    m_CanCraft: 0
+    m_ConditionsCraft:
+      m_Conditions:
+        m_Conditions: []
+    m_InstructionsOnCraft:
+      m_Instructions:
+        m_Instructions: []
+    m_CanDismantle: 0
+    m_ConditionsDismantle:
+      m_Conditions:
+        m_Conditions: []
+    m_InstructionsOnDismantle:
+      m_Instructions:
+        m_Instructions: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 1779839167126831256
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Utilities
+    - rid: 1779839167126831257
+      type: {class: GetStringTextArea, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Text:
+          m_Text: 
+    - rid: 1779839167126831258
+      type: {class: GetSpriteInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Sprite: {fileID: 21300000, guid: 1e73a956844354b3b8933696f0f87725, type: 3}
+    - rid: 1779839167126831259
+      type: {class: GetColorColorsWhite, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839167126831260
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 1779839393632616609
+      type: {class: InstructionStatsChangeAttribute, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Target:
+          m_Property:
+            rid: 1779839393632616610
+        m_Attribute:
+          m_Property:
+            rid: 1779839393632616611
+        m_Change:
+          m_Operation: 1
+          m_Value:
+            m_Property:
+              rid: 1779839393632616612
+    - rid: 1779839393632616610
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839393632616611
+      type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Attribute: {fileID: 11400000, guid: 91e989c89e934194da21053b9c882591, type: 2}
+    - rid: 1779839393632616612
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 50
