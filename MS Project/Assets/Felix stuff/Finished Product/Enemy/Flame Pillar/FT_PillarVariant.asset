@@ -374,6 +374,7 @@ MonoBehaviour:
         m_Instructions:
           m_Instructions:
             m_Instructions:
+            - rid: 6402566711426155495
             - rid: 5820885496008278236
             - rid: 5820885496008278246
             - rid: 4295615616275185686
@@ -1320,6 +1321,7 @@ MonoBehaviour:
           m_Conditions:
             m_Conditions:
             - rid: 5820885340893479364
+            - rid: 6402566712381145774
         m_Composite:
           rid: 5820885340893479365
     - rid: 5820885340893479361
@@ -1674,10 +1676,62 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_Seconds:
           m_Property:
-            rid: 6402566644555317774
+            rid: 6402566711980590022
         m_Mode:
           m_UpdateTime: 0
-    - rid: 6402566644555317774
-      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 6402566711426155495
+      type: {class: InstructionCharacterNavigationMoveStop, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 0.5
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6402566711426155498
+        m_Priority:
+          m_Property:
+            rid: 6402566711426155497
+    - rid: 6402566711426155497
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 6402566711426155498
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566711980590022
+      type: {class: GetDecimalParameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Processor:
+          m_Property:
+            rid: 6402566711980590023
+        m_Name:
+          m_String: cooldown-timer
+    - rid: 6402566711980590023
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566712381145774
+      type: {class: ConditionMathCompareBooleans, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 6402566712381145775
+        m_Comparison: 0
+        m_CompareTo:
+          m_Property:
+            rid: 6402566712381145778
+    - rid: 6402566712381145775
+      type: {class: GetBoolParameter, ns: GameCreator.Runtime.Behavior, asm: GameCreator.Runtime.Behavior}
+      data:
+        m_Processor:
+          m_Property:
+            rid: 6402566712381145777
+        m_Name:
+          m_String: Is-Attacking
+    - rid: 6402566712381145777
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566712381145778
+      type: {class: GetBoolFalse, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
