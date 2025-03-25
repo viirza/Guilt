@@ -128,7 +128,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: Mark 7 Chain Lighting
+        m_Description: Chain Lighting
         m_ConditionList:
           m_Conditions:
           - rid: 1296926278140035702
@@ -190,7 +190,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: 
+        m_Description: Shadow Bolt
         m_ConditionList:
           m_Conditions:
           - rid: 5820885226081485816
@@ -202,7 +202,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: 
+        m_Description: Exposure
         m_ConditionList:
           m_Conditions:
           - rid: 5820885226666328068
@@ -214,7 +214,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: 
+        m_Description: Molten Shower
         m_ConditionList:
           m_Conditions:
           - rid: 5820885226666328065
@@ -226,7 +226,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: 
+        m_Description: Siphoning Water
         m_ConditionList:
           m_Conditions:
           - rid: 5820885226081485822
@@ -238,7 +238,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: 
+        m_Description: Stinger
         m_ConditionList:
           m_Conditions:
           - rid: 5820885226081485819
@@ -250,7 +250,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: 
+        m_Description: Binding Ball of Light
         m_ConditionList:
           m_Conditions:
           - rid: 5820885226666328071
@@ -484,7 +484,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: Mark 8 Blink
+        m_Description: Blink
         m_ConditionList:
           m_Conditions:
           - rid: 6402566234027589898
@@ -533,7 +533,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: Mark 9 Poison Cloud
+        m_Description: Poison Cloud
         m_ConditionList:
           m_Conditions:
           - rid: 6402566298237928404
@@ -582,7 +582,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: Mark 10 Water Bubble
+        m_Description: Water Bubble
         m_ConditionList:
           m_Conditions:
           - rid: 6402566302454776532
@@ -1095,6 +1095,7 @@ Transform:
   - {fileID: 2876040990148167511}
   - {fileID: 3637705473310438464}
   - {fileID: 7232939206389565598}
+  - {fileID: 7398144397630962415}
   - {fileID: 3665684153849741031}
   - {fileID: 6144863830713675510}
   - {fileID: 3765135944036043675}
@@ -1147,11 +1148,159 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 4295615162713637172
+    - rid: 1779839415236428696
+    - rid: 1779839415236428698
+    - rid: 1779839415236428704
+    - rid: 1779839415236428710
   m_TriggerEvent:
     rid: 4295615162026557500
   references:
     version: 2
     RefIds:
+    - rid: 1779839415236428696
+      type: {class: InstructionCameraShakeBurst, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Camera:
+          m_Property:
+            rid: 1779839415236428697
+        m_Delay: 0
+        m_Duration: 0.2
+        m_ShakeEffect:
+          m_ShakePosition: 0
+          m_ShakeRotation: 1
+          m_Magnitude: 1.8
+          m_Roughness: 5.5
+          m_Transform: {fileID: 0}
+          m_Radius: 10
+    - rid: 1779839415236428697
+      type: {class: GetGameObjectCameraMain, ns: GameCreator.Runtime.Cameras, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839415236428698
+      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 1779839415236428699
+          usePooling: 1
+          size: 1
+          hasDuration: 1
+          duration: 2
+        m_Position:
+          m_Property:
+            rid: 1779839415236428700
+        m_Rotation:
+          m_Property:
+            rid: 1779839415236428701
+        m_Parent:
+          m_Property:
+            rid: 1779839415236428702
+        m_Save:
+          m_Property:
+            rid: 1779839415236428703
+    - rid: 1779839415236428699
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 66808795712187290, guid: fb1935ad403dbb844bc7c57f26ffb7e2, type: 3}
+    - rid: 1779839415236428700
+      type: {class: GetPositionCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839415236428701
+      type: {class: GetRotationCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Space: 1
+    - rid: 1779839415236428702
+      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839415236428703
+      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839415236428704
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 1779839415236428705
+    - rid: 1779839415236428705
+      type: {class: ConditionMathCompareIntegers, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 1779839415236428706
+        m_CompareTo:
+          m_Comparison: 4
+          m_CompareTo:
+            m_Property:
+              rid: 1779839415236428707
+    - rid: 1779839415236428706
+      type: {class: GetDecimalRandomRange, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_MinValue:
+          m_Property:
+            rid: 1779839415236428708
+        m_MaxValue:
+          m_Property:
+            rid: 1779839415236428709
+    - rid: 1779839415236428707
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 20
+    - rid: 1779839415236428708
+      type: {class: GetDecimalConstantZero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839415236428709
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 100
+    - rid: 1779839415236428710
+      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 0
+        m_GameObject:
+          m_Property:
+            rid: 1779839415236428711
+          usePooling: 1
+          size: 1
+          hasDuration: 1
+          duration: 2
+        m_Position:
+          m_Property:
+            rid: 1779839415236428712
+        m_Rotation:
+          m_Property:
+            rid: 1779839415236428713
+        m_Parent:
+          m_Property:
+            rid: 1779839415236428714
+        m_Save:
+          m_Property:
+            rid: 1779839415236428715
+    - rid: 1779839415236428711
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 66808795712187290, guid: e830a72a67f9c3f43a55ed570beba627, type: 3}
+    - rid: 1779839415236428712
+      type: {class: GetPositionCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839415236428713
+      type: {class: GetRotationCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Space: 1
+    - rid: 1779839415236428714
+      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839415236428715
+      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
     - rid: 4295615162026557500
       type: {class: EventStatsAttributeChange, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
       data:
@@ -4097,6 +4246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1451596381812845389}
   - component: {fileID: 3702967621543606049}
+  - component: {fileID: 3708660141337667397}
   m_Layer: 8
   m_Name: Offhand Shield Raise
   m_TagString: Untagged
@@ -4146,6 +4296,123 @@ MonoBehaviour:
           m_Property:
             rid: 1779839144478114206
     - rid: 1779839144478114206
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+--- !u!114 &3708660141337667397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673218799242733046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721fb82976bce47f38247178301b66c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Branches:
+    m_Branches:
+    - rid: 1779839415646159849
+    - rid: 1779839415646159856
+  references:
+    version: 2
+    RefIds:
+    - rid: 1779839415646159849
+      type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Description: 
+        m_ConditionList:
+          m_Conditions:
+          - rid: 1779839415646159850
+        m_InstructionList:
+          m_Instructions:
+          - rid: 1779839415646159853
+    - rid: 1779839415646159850
+      type: {class: ConditionInventoryIsEquipped, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Item:
+          m_Property:
+            rid: 1779839415646159851
+        m_Bag:
+          m_Property:
+            rid: 1779839415646159852
+    - rid: 1779839415646159851
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000, guid: 2082d1f1942e2104cb5100685954f958, type: 2}
+    - rid: 1779839415646159852
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839415646159853
+      type: {class: InstructionInventoryUseItem, ns: GameCreator.Runtime.Inventory, asm: Assembly-CSharp-firstpass}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Item:
+          m_Property:
+            rid: 1779839415646159854
+        m_Bag:
+          m_Property:
+            rid: 1779839415646159855
+    - rid: 1779839415646159854
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000, guid: 2082d1f1942e2104cb5100685954f958, type: 2}
+    - rid: 1779839415646159855
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839415646159856
+      type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Description: 
+        m_ConditionList:
+          m_Conditions:
+          - rid: 1779839415646159857
+        m_InstructionList:
+          m_Instructions:
+          - rid: 1779839415646159858
+    - rid: 1779839415646159857
+      type: {class: ConditionInventoryIsEquipped, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Item:
+          m_Property:
+            rid: 1779839415646159859
+        m_Bag:
+          m_Property:
+            rid: 1779839415646159860
+    - rid: 1779839415646159858
+      type: {class: InstructionInventoryUseItem, ns: GameCreator.Runtime.Inventory, asm: Assembly-CSharp-firstpass}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Item:
+          m_Property:
+            rid: 1779839415646159861
+        m_Bag:
+          m_Property:
+            rid: 1779839415646159862
+    - rid: 1779839415646159859
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000, guid: 2082d1f1942e2104cb5100685954f958, type: 2}
+    - rid: 1779839415646159860
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839415646159861
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000, guid: 2082d1f1942e2104cb5100685954f958, type: 2}
+    - rid: 1779839415646159862
       type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data: 
 --- !u!1 &1748994257170160849
@@ -10563,7 +10830,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: Mark 7 Chain Lighting
+        m_Description: Chain Lighting
         m_ConditionList:
           m_Conditions:
           - rid: 1296926278140035690
@@ -10697,7 +10964,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: 
+        m_Description: Shadow Bolt
         m_ConditionList:
           m_Conditions:
           - rid: 5820885226081485807
@@ -10709,7 +10976,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: 
+        m_Description: Exposure
         m_ConditionList:
           m_Conditions:
           - rid: 5820885226081485810
@@ -10739,7 +11006,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: 
+        m_Description: Molten Shower
         m_ConditionList:
           m_Conditions:
           - rid: 5820885226081485381
@@ -10751,7 +11018,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: 
+        m_Description: Siphoning Water
         m_ConditionList:
           m_Conditions:
           - rid: 5820885226081485801
@@ -10763,7 +11030,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: 
+        m_Description: Stinger
         m_ConditionList:
           m_Conditions:
           - rid: 5820885226081485804
@@ -10775,7 +11042,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: 
+        m_Description: Binding Ball of Light
         m_ConditionList:
           m_Conditions:
           - rid: 5820885226081485813
@@ -10919,7 +11186,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: Mark 8 Blink
+        m_Description: Blink
         m_ConditionList:
           m_Conditions:
           - rid: 6402566234027589889
@@ -10968,7 +11235,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: Mark 9 Poison Cloud
+        m_Description: Poison Cloud
         m_ConditionList:
           m_Conditions:
           - rid: 6402566298237928397
@@ -11017,7 +11284,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Description: Mark 10 Water Bubble
+        m_Description: Water Bubble
         m_ConditionList:
           m_Conditions:
           - rid: 6402566302454776525
@@ -15626,12 +15893,12 @@ GameObject:
   - component: {fileID: 8410853721132555794}
   - component: {fileID: 2890490293149480970}
   m_Layer: 8
-  m_Name: CameraShake
+  m_Name: CameraShake (moved to on hit trigger)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8410853721132555794
 Transform:
   m_ObjectHideFlags: 0
@@ -15794,7 +16061,7 @@ MonoBehaviour:
       type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
-        m_IsEnabled: 1
+        m_IsEnabled: 0
         m_GameObject:
           m_Property:
             rid: 1296926057039397444
@@ -16058,10 +16325,10 @@ MonoBehaviour:
         m_Delay: 0.25
         m_Duration: 0.25
         m_ShakeEffect:
-          m_ShakePosition: 1
+          m_ShakePosition: 0
           m_ShakeRotation: 1
           m_Magnitude: 0.5
-          m_Roughness: 0.5
+          m_Roughness: 1
           m_Transform: {fileID: 0}
           m_Radius: 1
     - rid: 5820885338470219890
@@ -16742,6 +17009,83 @@ MonoBehaviour:
     RefIds:
     - rid: 3611814383093810143
       type: {class: MarkerTypeDirection, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+--- !u!1 &8596001310247226254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7398144397630962415}
+  - component: {fileID: 6899140217869730683}
+  m_Layer: 0
+  m_Name: Melee hit shake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7398144397630962415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596001310247226254}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.79, y: -0.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7251197729208954187}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6899140217869730683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596001310247226254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 5820885338470219889
+  m_TriggerEvent:
+    rid: 5820885337933348872
+  references:
+    version: 2
+    RefIds:
+    - rid: 5820885337933348872
+      type: {class: EventOnReceiveSignal, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Signal:
+          m_String: Mainhand-Hit
+    - rid: 5820885338470219889
+      type: {class: InstructionCameraShakeBurst, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Camera:
+          m_Property:
+            rid: 5820885338470219890
+        m_Delay: 0.25
+        m_Duration: 0.25
+        m_ShakeEffect:
+          m_ShakePosition: 0
+          m_ShakeRotation: 1
+          m_Magnitude: 0.2
+          m_Roughness: 0.2
+          m_Transform: {fileID: 0}
+          m_Radius: 1
+    - rid: 5820885338470219890
+      type: {class: GetGameObjectCameraMain, ns: GameCreator.Runtime.Cameras, asm: GameCreator.Runtime.Core}
       data: 
 --- !u!1 &8614273639407279822
 GameObject:
