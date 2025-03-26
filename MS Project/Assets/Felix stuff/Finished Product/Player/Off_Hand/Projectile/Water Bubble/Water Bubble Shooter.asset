@@ -24,7 +24,7 @@ AnimatorOverrideController:
   - m_OriginalClip: {fileID: 7400000, guid: 97f666d52615f44bd9d76cf19c9d2c86, type: 2}
     m_OverrideClip: {fileID: 0}
   - m_OriginalClip: {fileID: 7400000, guid: 9f44dbe24364e4ece814a7ab9bab293b, type: 2}
-    m_OverrideClip: {fileID: 0}
+    m_OverrideClip: {fileID: 7400000, guid: e950e5244dd39434a98bc403df405f17, type: 3}
   - m_OriginalClip: {fileID: 7400000, guid: b947eb4672e994a76a0d5e37f5c2dbdc, type: 2}
     m_OverrideClip: {fileID: 0}
   - m_OriginalClip: {fileID: 7400000, guid: a032dcd01ac0e476b956b7ab2fe946d7, type: 2}
@@ -244,7 +244,7 @@ MonoBehaviour:
         rid: 6402566302454775813
   m_Sights:
     m_Sights:
-    - rid: 6402566302454775814
+    - rid: 6402566752754205093
   m_Reloads:
     m_State:
       m_StateType: 2
@@ -261,7 +261,8 @@ MonoBehaviour:
     - rid: 6402566302454775817
   m_CanShoot:
     m_Conditions:
-      m_Conditions: []
+      m_Conditions:
+      - rid: 6402566753563181190
   m_OnShoot:
     m_Instructions:
       m_Instructions: []
@@ -293,7 +294,7 @@ MonoBehaviour:
   m_Animations:
     m_Idle: {fileID: 0}
     m_Empty: {fileID: 0}
-    m_Shoot: {fileID: 0}
+    m_Shoot: {fileID: 7400000, guid: e950e5244dd39434a98bc403df405f17, type: 3}
     m_ReloadQuick: {fileID: 0}
     m_ReloadDry: {fileID: 0}
     m_JamEnter: {fileID: 0}
@@ -450,18 +451,6 @@ MonoBehaviour:
       type: {class: GetAudioClip, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: {fileID: 0}
-    - rid: 6402566302454775814
-      type: {class: SightItem, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Id:
-          m_String: my-sight-id
-        m_Sight: {fileID: 11400000, guid: bdcaee78d047a234b863f03500748dbe, type: 2}
-        m_ScopeThrough: 0
-        m_ScopePosition: {x: 0, y: 0.25, z: 0}
-        m_ScopeRotation: {x: 0, y: 0, z: 0}
-        m_ScopeDistance: 0.25
     - rid: 6402566302454775815
       type: {class: GetAnimationInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -855,4 +844,28 @@ MonoBehaviour:
         m_StatusEffect: {fileID: 11400000, guid: c2ff5ba3b92b3c44cb287744a654eb6e, type: 2}
     - rid: 6402566463650791541
       type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566752754205093
+      type: {class: SightItem, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Id:
+          m_String: shoot-sight
+        m_Sight: {fileID: 11400000, guid: c61bb362d74444341b41b44e158d4fda, type: 2}
+        m_ScopeThrough: 0
+        m_ScopePosition: {x: 0, y: 0.25, z: 0}
+        m_ScopeRotation: {x: 0, y: 0, z: 0}
+        m_ScopeDistance: 0.25
+    - rid: 6402566753563181190
+      type: {class: ConditionCharacterIsDead, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 0
+        m_Character:
+          m_Property:
+            rid: 6402566753563181191
+    - rid: 6402566753563181191
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data: 

@@ -72,13 +72,15 @@ MonoBehaviour:
       m_Instructions:
         m_Instructions:
         - rid: 1296926259504480744
+        - rid: 6402566757644239213
         - rid: 1296926259504480750
     m_InstructionsOnUnequip:
       m_Instructions:
         m_Instructions:
         - rid: 1296926259504480754
+        - rid: 6402566757644239210
         - rid: 1296926259504480757
-    m_ExecuteFromParent: 0
+    m_ExecuteFromParent: 1
   m_Usage:
     m_CanUse: 0
     m_ConsumeWhenUse: 1
@@ -220,3 +222,50 @@ MonoBehaviour:
       type: {class: GetWeaponShooterInstance, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
       data:
         m_Weapon: {fileID: 11400000, guid: d08c0636bc6a8584c89409130ab24ec4, type: 2}
+    - rid: 6402566757644239210
+      type: {class: InstructionCharacterRemoveProp, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6402566757644239211
+        m_Type: 0
+        m_Prop:
+          m_Property:
+            rid: 6402566757644239212
+    - rid: 6402566757644239211
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566757644239212
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 4781478481398384604, guid: 22034faedb4d42a4ba64b1bdf7e6bbd2, type: 3}
+    - rid: 6402566757644239213
+      type: {class: InstructionCharacterAttachProp, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6402566757644239214
+        m_Type: 0
+        m_Prop:
+          m_Property:
+            rid: 6402566757644239215
+        m_Handle:
+          m_Type: 1
+          m_Bone:
+            m_Type: 1
+            m_Human: 18
+            m_Path: 
+          m_LocalPosition: {x: 0, y: 0, z: 0}
+          m_LocalRotation: {x: 0, y: 0, z: 0}
+          m_Handle: {fileID: 11400000, guid: 22df92eb6f9e95c459fc3bbfd645b0b3, type: 2}
+    - rid: 6402566757644239214
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566757644239215
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 4781478481398384604, guid: 22034faedb4d42a4ba64b1bdf7e6bbd2, type: 3}
