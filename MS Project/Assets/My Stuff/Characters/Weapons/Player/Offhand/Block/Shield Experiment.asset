@@ -49,7 +49,8 @@ MonoBehaviour:
         rid: 7624060967053951851
     m_InstructionsList:
       m_Instructions:
-        m_Instructions: []
+        m_Instructions:
+        - rid: 1779839436921242210
   m_Parry:
     m_Reaction: {fileID: 11400000, guid: a83000910f9274be2b97a638fa58788b, type: 2}
     m_Effect:
@@ -73,6 +74,47 @@ MonoBehaviour:
       type: {class: GetAnimationInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: {fileID: 0}
+    - rid: 1779839436921242210
+      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 1779839436921242211
+          usePooling: 0
+          size: 5
+          hasDuration: 0
+          duration: 10
+        m_Position:
+          m_Property:
+            rid: 1779839436921242212
+        m_Rotation:
+          m_Property:
+            rid: 1779839436921242213
+        m_Parent:
+          m_Property:
+            rid: 1779839436921242214
+        m_Save:
+          m_Property:
+            rid: 1779839436921242215
+    - rid: 1779839436921242211
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 9161762220320829639, guid: e6286742d6812b847b412af1314f2110, type: 3}
+    - rid: 1779839436921242212
+      type: {class: GetPositionCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839436921242213
+      type: {class: GetRotationCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Space: 1
+    - rid: 1779839436921242214
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839436921242215
+      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
     - rid: 7624060967053950993
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -84,7 +126,7 @@ MonoBehaviour:
     - rid: 7624060967053950995
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 3
+        m_Value: 6
     - rid: 7624060967053950996
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
