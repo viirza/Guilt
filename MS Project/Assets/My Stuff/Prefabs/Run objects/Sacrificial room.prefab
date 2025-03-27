@@ -44082,6 +44082,8 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 1779838921704473417
+    - rid: 1779839461833835080
+    - rid: 1779839461833835064
     - rid: 1779838921704473420
     - rid: 1779838921704473428
     - rid: 1779838921704473425
@@ -44165,6 +44167,93 @@ MonoBehaviour:
     - rid: 1779838921704473431
       type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 1779839461833835064
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 1779839461833835065
+        m_From:
+          m_Property:
+            rid: 1779839461833835066
+    - rid: 1779839461833835065
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 161d697657a3f914584d4fbb68523741, type: 2}
+          m_Name:
+            m_String: Next-room-index
+            m_ID: 490296335
+    - rid: 1779839461833835066
+      type: {class: GetDecimalMathRound, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Number:
+          m_Property:
+            rid: 1779839461833835067
+    - rid: 1779839461833835067
+      type: {class: GetDecimalRandomRange, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_MinValue:
+          m_Property:
+            rid: 1779839461833835068
+        m_MaxValue:
+          m_Property:
+            rid: 1779839461833835069
+    - rid: 1779839461833835068
+      type: {class: GetDecimalConstantZero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1779839461833835069
+      type: {class: GetDecimalMathSum, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Number1:
+          m_Property:
+            rid: 1779839461833835070
+        m_Number2:
+          m_Property:
+            rid: 1779839461833835071
+    - rid: 1779839461833835070
+      type: {class: GetDecimalGlobalListLength, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable: {fileID: 11400000, guid: 42c304b8105065641a3f6f3fd62c25d7, type: 2}
+    - rid: 1779839461833835071
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: -1
+    - rid: 1779839461833835080
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 1779839461833835081
+        m_From:
+          m_Property:
+            rid: 1779839461833835082
+    - rid: 1779839461833835081
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 161d697657a3f914584d4fbb68523741, type: 2}
+          m_Name:
+            m_String: Last-room-index
+            m_ID: 1272632614
+    - rid: 1779839461833835082
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 161d697657a3f914584d4fbb68523741, type: 2}
+          m_Name:
+            m_String: Next-room-index
+            m_ID: 490296335
     - rid: 3611814880486097201
       type: {class: EventCharacterOnInteract, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -59441,66 +59530,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1717390805014558120}
     m_Modifications:
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: 'managedReferences[1779839328257048762]'
-      value: GameCreator.Runtime.Inventory GameCreator.Runtime.Inventory.InstructionInventoryCurrency
-      objectReference: {fileID: 0}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: 'managedReferences[1779839328257048763]'
-      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetDecimalInteger
-      objectReference: {fileID: 0}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: 'managedReferences[1779839328257048764]'
-      value: GameCreator.Runtime.Core GameCreator.Runtime.Characters.GetGameObjectPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: m_Instructions.m_Instructions.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: 'm_Instructions.m_Instructions.Array.data[2]'
-      value: 1779839328257048762
-      objectReference: {fileID: 0}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: 'm_Instructions.m_Instructions.Array.data[3]'
-      value: 1779839324221341778
-      objectReference: {fileID: 0}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: 'm_Instructions.m_Instructions.Array.data[4]'
-      value: 1779839324221341794
-      objectReference: {fileID: 0}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: 'm_Instructions.m_Instructions.Array.data[5]'
-      value: 1779839324221341791
-      objectReference: {fileID: 0}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: managedReferences[1779839328257048763].m_Value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: managedReferences[1779839328257048762].m_Currency
-      value: 
-      objectReference: {fileID: 11400000, guid: 812bb03c10bc04b41813432ec124b319, type: 2}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: managedReferences[1779839328257048762].m_IsEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: managedReferences[1779839328257048762].m_Breakpoint
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: managedReferences[1779839328257048762].m_Bag.m_Property
-      value: 1779839328257048764
-      objectReference: {fileID: 0}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: managedReferences[1779839328257048762].m_Amount.m_Operation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 891545548772554270, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
-      propertyPath: managedReferences[1779839328257048762].m_Amount.m_Value.m_Property
-      value: 1779839328257048763
-      objectReference: {fileID: 0}
     - target: {fileID: 1151111167168406857, guid: d87688dd5bb1dd948af4ac8a9434aca5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.27
