@@ -31,7 +31,8 @@ MonoBehaviour:
   m_ParriedReaction: {fileID: 0}
   m_OnEquip:
     m_Instructions:
-      m_Instructions: []
+      m_Instructions:
+      - rid: 6402566773315732084
   m_OnUnequip:
     m_Instructions:
       m_Instructions: []
@@ -216,7 +217,6 @@ MonoBehaviour:
   m_Sights:
     m_Sights:
     - rid: 6402566756900012437
-    - rid: 1296926259504480549
   m_Reloads:
     m_State:
       m_StateType: 2
@@ -460,18 +460,6 @@ MonoBehaviour:
       type: {class: GetAudioClip, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: {fileID: 0}
-    - rid: 1296926259504480549
-      type: {class: SightItem, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Id:
-          m_String: shoot-sight
-        m_Sight: {fileID: 11400000, guid: ea08a69171ddf484c821a84e2cf6e86e, type: 2}
-        m_ScopeThrough: 0
-        m_ScopePosition: {x: 0, y: 0.25, z: 0}
-        m_ScopeRotation: {x: 0, y: 0, z: 0}
-        m_ScopeDistance: 0.25
     - rid: 1296926259504480550
       type: {class: GetAnimationInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -626,6 +614,42 @@ MonoBehaviour:
         m_ScopePosition: {x: 0, y: 0.25, z: 0}
         m_ScopeRotation: {x: 0, y: 0, z: 0}
         m_ScopeDistance: 0.25
+    - rid: 6402566773315732084
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 6402566773315732085
+        m_From:
+          m_Property:
+            rid: 6402566773315732086
+    - rid: 6402566773315732085
+      type: {class: SetNumberInMagazine, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Character:
+          m_Property:
+            rid: 6402566773315732087
+        m_Weapon:
+          m_Property:
+            rid: 6402566773315732088
+    - rid: 6402566773315732086
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 6402566773315732087
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6402566773315732088
+      type: {class: GetWeaponShooterCharacter, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Character:
+          m_Property:
+            rid: 6402566773315732089
+    - rid: 6402566773315732089
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
 --- !u!221 &3338979932305063886
 AnimatorOverrideController:
   m_ObjectHideFlags: 1
