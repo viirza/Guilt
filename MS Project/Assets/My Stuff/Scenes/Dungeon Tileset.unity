@@ -146,10 +146,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8694957747293629189, guid: f4062be418d706748a5b39dcd557ddd2, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 05885dc3f04cc98468db5232b41fbf25, type: 3}
-  m_Resource: {fileID: 8300000, guid: 05885dc3f04cc98468db5232b41fbf25, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 57855da698d34b846ab48f3420fd7587, type: 3}
+  m_Resource: {fileID: 8300000, guid: 57855da698d34b846ab48f3420fd7587, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.33
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1774,7 +1774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &749635810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1792,6 +1792,7 @@ MonoBehaviour:
     - rid: 1779838921704473417
     - rid: 1779838921704473420
     - rid: 1779838965463646927
+    - rid: 1051822697398927540
     - rid: 1779838921704473422
     - rid: 1779838921704473428
     - rid: 1779838921704473425
@@ -1800,6 +1801,61 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 1051822697398927540
+      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 0
+        m_GameObject:
+          m_Property:
+            rid: 1051822697398927541
+          usePooling: 0
+          size: 5
+          hasDuration: 0
+          duration: 10
+        m_Position:
+          m_Property:
+            rid: 1051822697398927542
+        m_Rotation:
+          m_Property:
+            rid: 1051822697398927543
+        m_Parent:
+          m_Property:
+            rid: 1051822697398927544
+        m_Save:
+          m_Property:
+            rid: 1051822697398927545
+    - rid: 1051822697398927541
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 4961786702507100639, guid: de3986b130fc91d4687cbf1f1e5a451e, type: 3}
+    - rid: 1051822697398927542
+      type: {class: GetPositionGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject:
+          m_Property:
+            rid: 1051822697398927546
+    - rid: 1051822697398927543
+      type: {class: GetRotationGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject:
+          m_Property:
+            rid: 1051822697398927547
+        m_Space: 1
+    - rid: 1051822697398927544
+      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1051822697398927545
+      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1051822697398927546
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 461795868}
+    - rid: 1051822697398927547
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 461795868}
     - rid: 1779838921704473417
       type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -2054,10 +2110,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690592046422164891, guid: 04cf11d1013e2b244ac438ab0354996b, type: 3}
-      propertyPath: managedReferences[5820885338470219889].m_ShakeEffect.m_Transform
-      value: 
-      objectReference: {fileID: 1703752632}
     - target: {fileID: 3194522875439461703, guid: 04cf11d1013e2b244ac438ab0354996b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.79
@@ -2951,7 +3003,6 @@ GameObject:
   - component: {fileID: 955920187}
   - component: {fileID: 955920186}
   - component: {fileID: 955920185}
-  - component: {fileID: 955920188}
   m_Layer: 0
   m_Name: equip
   m_TagString: Untagged
@@ -3159,79 +3210,6 @@ Transform:
   - {fileID: 181161288}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &955920188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955920184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 280989d249f9b482d890a5f97137f44b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Instructions:
-    m_Instructions:
-    - rid: 5820885359967076352
-  references:
-    version: 2
-    RefIds:
-    - rid: 5820885359967076352
-      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_GameObject:
-          m_Property:
-            rid: 5820885359967076364
-          usePooling: 0
-          size: 5
-          hasDuration: 0
-          duration: 10
-        m_Position:
-          m_Property:
-            rid: 5820885359967076354
-        m_Rotation:
-          m_Property:
-            rid: 5820885359967076355
-        m_Parent:
-          m_Property:
-            rid: 5820885359967076356
-        m_Save:
-          m_Property:
-            rid: 5820885359967076357
-    - rid: 5820885359967076354
-      type: {class: GetPositionGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject:
-          m_Property:
-            rid: 5820885359967076359
-    - rid: 5820885359967076355
-      type: {class: GetRotationGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject:
-          m_Property:
-            rid: 5820885359967076360
-        m_Space: 1
-    - rid: 5820885359967076356
-      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 5820885359967076357
-      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 5820885359967076359
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 461795868}
-    - rid: 5820885359967076360
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 461795868}
-    - rid: 5820885359967076364
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 8441853593244590888, guid: 7020a143aee860c49a56edcc3cc0c5a5, type: 3}
 --- !u!1 &959601174
 GameObject:
   m_ObjectHideFlags: 0
@@ -6861,11 +6839,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!4 &1703752632 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3296862025395309205, guid: 111ed00ce95212343a619814376b3446, type: 3}
-  m_PrefabInstance: {fileID: 1720064062}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1718761273
 GameObject:
   m_ObjectHideFlags: 0
@@ -8757,7 +8730,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 40.4474, y: 40.4474, z: 40.4474}
+  m_LocalScale: {x: 9.174057, y: 9.174057, z: 9.174057}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2481044497991803714}
@@ -13934,7 +13907,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3364249353127978279}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9979901, z: -0, w: -0.06337015}
+  m_LocalRotation: {x: -0, y: -0.7587505, z: -0, w: 0.6513814}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13968,7 +13941,7 @@ Transform:
   m_GameObject: {fileID: 8115155328969232983}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3517418, y: 12.259324, z: 4.4597197}
+  m_LocalPosition: {x: -0.25110245, y: 1.6436932, z: 2.3143616}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
