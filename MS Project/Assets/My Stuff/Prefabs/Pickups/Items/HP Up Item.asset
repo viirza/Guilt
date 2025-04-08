@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ID:
     m_SerializedID:
-      m_String: 6d8dec8c-d5fa-45fd-9217-3103eb32025f
+      m_String: HpUp
   m_Parent: {fileID: 11400000, guid: c26bcf30e1a9d6749a4387d17ff87a32, type: 2}
   m_Prefab: {fileID: 0}
   m_CanDrop:
@@ -86,7 +86,8 @@ MonoBehaviour:
         m_Conditions: []
     m_InstructionsOnUse:
       m_Instructions:
-        m_Instructions: []
+        m_Instructions:
+        - rid: 949394394627179427
     m_ExecuteFromParent: 0
   m_Crafting:
     m_Ingredients: []
@@ -107,6 +108,31 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 949394394627179427
+      type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 949394394627179428
+        m_Value:
+          m_Property:
+            rid: 949394394627179429
+    - rid: 949394394627179428
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: baea46a273346c84eb97d3f9d7c494f5, type: 2}
+          m_Name:
+            m_String: Hp-Up-Upgrade
+            m_ID: -1444795194
+    - rid: 949394394627179429
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
     - rid: 5820885540781425159
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
