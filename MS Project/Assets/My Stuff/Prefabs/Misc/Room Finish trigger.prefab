@@ -369,6 +369,81 @@ MonoBehaviour:
       type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 1
+--- !u!1 &7113839827782149702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5118176998177760069}
+  - component: {fileID: 8689795250190519038}
+  m_Layer: 0
+  m_Name: OoR Currency reward
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5118176998177760069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7113839827782149702}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5913386214274141699}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8689795250190519038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7113839827782149702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280989d249f9b482d890a5f97137f44b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 1051822740274675895
+  references:
+    version: 2
+    RefIds:
+    - rid: 1051822740274675895
+      type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 1051822740274675896
+        m_Value:
+          m_Property:
+            rid: 1051822740274675897
+    - rid: 1051822740274675896
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: e087d8219925f0045a2f1fbeef9b572c, type: 2}
+          m_Name:
+            m_String: OoR-Currency
+            m_ID: -1051489647
+    - rid: 1051822740274675897
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 10
 --- !u!1 &8173878282397344478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,9 +1159,48 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room Completed Listener
       objectReference: {fileID: 0}
+    - target: {fileID: 6069352697691143049, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: 'managedReferences[1051822740274675898]'
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.InstructionLogicRunActions
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069352697691143049, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: 'managedReferences[1051822740274675899]'
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.GetGameObjectActions
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069352697691143049, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: m_Instructions.m_Instructions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069352697691143049, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: 'm_Instructions.m_Instructions.Array.data[2]'
+      value: 1051822740274675898
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069352697691143049, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: managedReferences[1051822740274675899].m_Actions
+      value: 
+      objectReference: {fileID: 8689795250190519038}
+    - target: {fileID: 6069352697691143049, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: managedReferences[1051822740274675898].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069352697691143049, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: managedReferences[1051822740274675898].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069352697691143049, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: managedReferences[1051822740274675898].m_WaitToFinish
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069352697691143049, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: managedReferences[1051822740274675898].m_Actions.m_Property
+      value: 1051822740274675899
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1195880435230654597, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5118176998177760069}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
 --- !u!1 &185887142369359854 stripped
