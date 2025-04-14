@@ -10,19 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6965c45d6044a989f046010528d201e, type: 3}
-  m_Name: Rapier Combo
+  m_Name: Rapier Riposte Combo
   m_EditorClassIdentifier: 
   m_Combos:
     rid: 2908845172104626464
   references:
     version: 2
     RefIds:
+    - rid: 1051822762143515588
+      type: {class: ComboItem, ns: GameCreator.Runtime.Melee, asm: GameCreator.Runtime.Melee}
+      data:
+        m_IsDisabled: 0
+        m_Key: 2
+        m_Mode: 0
+        m_When: 0
+        m_AutoRelease: 0
+        m_Timeout:
+          m_Property:
+            rid: 1051822762143515589
+        m_HasDelay:
+          m_IsEnabled: 0
+          m_Value: 0.5
+        m_Conditions:
+          m_Conditions:
+            m_Conditions: []
+        m_Skill: {fileID: 11400000, guid: bb65ef482608d7541a2de9081419efa9, type: 2}
+    - rid: 1051822762143515589
+      type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
     - rid: 2908845172104626464
       type: {class: ComboTree, ns: GameCreator.Runtime.Melee, asm: GameCreator.Runtime.Melee}
       data:
-        m_Dirty: 48249
+        m_Dirty: 26098
         m_Data:
-          m_Keys: f207b252e67bdedf777c6893
+          m_Keys: f207b252e67bdedf777c6893ab7808a5
           m_Values:
           - m_Id: 1387399154
             m_Value:
@@ -33,8 +54,11 @@ MonoBehaviour:
           - m_Id: -1821868937
             m_Value:
               rid: 4295615028146733349
+          - m_Id: -1526171477
+            m_Value:
+              rid: 1051822762143515588
         m_Nodes:
-          m_Keys: f207b252e67bdedf777c6893
+          m_Keys: f207b252e67bdedf777c6893ab7808a5
           m_Values:
           - m_Id: 1387399154
             m_Parent: -1
@@ -45,7 +69,10 @@ MonoBehaviour:
           - m_Id: -1821868937
             m_Parent: -539067418
             m_Children: 
-        m_Roots: f207b252
+          - m_Id: -1526171477
+            m_Parent: -1
+            m_Children: 
+        m_Roots: f207b252ab7808a5
     - rid: 2908845172104626465
       type: {class: ComboItem, ns: GameCreator.Runtime.Melee, asm: GameCreator.Runtime.Melee}
       data:
@@ -63,7 +90,7 @@ MonoBehaviour:
         m_Conditions:
           m_Conditions:
             m_Conditions: []
-        m_Skill: {fileID: 11400000, guid: d9eae22e5a99ffe41846eb01f5b96495, type: 2}
+        m_Skill: {fileID: 11400000, guid: 23859eed21669054c9221aeee9f91eab, type: 2}
     - rid: 2908845172104626466
       type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
@@ -84,7 +111,7 @@ MonoBehaviour:
         m_Conditions:
           m_Conditions:
             m_Conditions: []
-        m_Skill: {fileID: 11400000, guid: 8a657f788c639d647b32aeceec821f62, type: 2}
+        m_Skill: {fileID: 11400000, guid: fc77eeadcf590aa43bdeb1ed57767f71, type: 2}
     - rid: 4295614956151243067
       type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
@@ -105,7 +132,7 @@ MonoBehaviour:
         m_Conditions:
           m_Conditions:
             m_Conditions: []
-        m_Skill: {fileID: 11400000, guid: 09bca2459878a9b4e90190101e219a24, type: 2}
+        m_Skill: {fileID: 11400000, guid: 8cd96197f8096d346962c78f8aa32b95, type: 2}
     - rid: 4295615028146733350
       type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
