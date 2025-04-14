@@ -613,6 +613,7 @@ GameObject:
   - component: {fileID: 2521216412067477706}
   - component: {fileID: 5308429719455511597}
   - component: {fileID: 4904741408834014020}
+  - component: {fileID: 72857551779012863}
   m_Layer: 5
   m_Name: Speech
   m_TagString: Untagged
@@ -631,8 +632,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 2869886203378668636}
+  m_Children: []
   m_Father: {fileID: 6803370199602019881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -733,8 +733,8 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 949394534822052427
+    - rid: 949394539132485757
     - rid: 949394535136100620
-    - rid: 949394535136101074
   m_TriggerEvent:
     rid: 949394535136100875
   references:
@@ -853,19 +853,82 @@ MonoBehaviour:
       data:
         m_Signal:
           m_String: NextDeathDialogue
-    - rid: 949394535136101074
-      type: {class: InstructionLogicRunActions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+    - rid: 949394539132485757
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Actions:
+        m_Seconds:
           m_Property:
-            rid: 949394535136101075
-        m_WaitToFinish: 1
-    - rid: 949394535136101075
-      type: {class: GetGameObjectActions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+            rid: 949394539132485758
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 949394539132485758
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Actions: {fileID: 7613917812095220485}
+        m_Value: 0.3
+--- !u!114 &72857551779012863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6803370200481793005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 949394539132485884
+  m_TriggerEvent:
+    rid: 949394539132485863
+  references:
+    version: 2
+    RefIds:
+    - rid: 949394539132485863
+      type: {class: EventOnReceiveSignal, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Signal:
+          m_String: BubbleTextFadeOut
+    - rid: 949394539132485884
+      type: {class: InstructionShadingLerpColor, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 949394539132485885
+        m_Color1:
+          m_Property:
+            rid: 949394539132485886
+        m_Color2:
+          m_Property:
+            rid: 949394539132485887
+        m_Transition:
+          m_Duration: 0
+          m_Easing: 3
+          m_Time: 0
+          m_WaitToComplete: 1
+    - rid: 949394539132485885
+      type: {class: SetColorUIGraphic, ns: GameCreator.Runtime.Common.UnityUI, asm: GameCreator.Runtime.Core}
+      data:
+        m_Graphic:
+          m_Property:
+            rid: 949394539132485888
+    - rid: 949394539132485886
+      type: {class: GetColorValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: {r: 1, g: 1, b: 1, a: 1}
+    - rid: 949394539132485887
+      type: {class: GetColorValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: {r: 1, g: 1, b: 1, a: 0}
+    - rid: 949394539132485888
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 6803370200481793005}
 --- !u!1 &6803370201359091999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,171 +1233,3 @@ MonoBehaviour:
       type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 4
---- !u!1001 &5507215461916139246
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 6803370200481793004}
-    m_Modifications:
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323443, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_Name
-      value: GameOver Speech Skin
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763762668613323447, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7763762668613323443, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7613917812095220485}
-  m_SourcePrefab: {fileID: 100100000, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
---- !u!224 &2869886203378668636 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7763762668613323442, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-  m_PrefabInstance: {fileID: 5507215461916139246}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2869886203378668637 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7763762668613323443, guid: 8705bf75cdd963c4e8cbb1f65a0f7574, type: 3}
-  m_PrefabInstance: {fileID: 5507215461916139246}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7613917812095220485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2869886203378668637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 280989d249f9b482d890a5f97137f44b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Instructions:
-    m_Instructions:
-    - rid: 949394535136100985
-  references:
-    version: 2
-    RefIds:
-    - rid: 949394535136100985
-      type: {class: InstructionShadingLerpColor, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Set:
-          m_Property:
-            rid: 949394535136100999
-        m_Color1:
-          m_Property:
-            rid: 949394535136101022
-        m_Color2:
-          m_Property:
-            rid: 949394535136101033
-        m_Transition:
-          m_Duration: 2
-          m_Easing: 3
-          m_Time: 0
-          m_WaitToComplete: 1
-    - rid: 949394535136100999
-      type: {class: SetColorUIGraphic, ns: GameCreator.Runtime.Common.UnityUI, asm: GameCreator.Runtime.Core}
-      data:
-        m_Graphic:
-          m_Property:
-            rid: 949394535136101011
-    - rid: 949394535136101011
-      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 949394535136101022
-      type: {class: GetColorValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: {r: 1, g: 1, b: 1, a: 0}
-    - rid: 949394535136101033
-      type: {class: GetColorValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: {r: 1, g: 1, b: 1, a: 1}
