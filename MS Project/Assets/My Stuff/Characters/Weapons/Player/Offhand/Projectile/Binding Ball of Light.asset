@@ -54,16 +54,16 @@ MonoBehaviour:
     m_List: []
     m_Overrides:
       m_Keys:
-      - m_String: dmg
-      - m_String: projectile
-      - m_String: fire-rate
+      - m_String: damage-increase
+      - m_String: projectile-increase
+      - m_String: fire-rate-increase
       m_Values:
-      - m_Override: 1
+      - m_Override: 0
         m_Number: 0
-      - m_Override: 1
+      - m_Override: 0
         m_Number: 0
-      - m_Override: 1
-        m_Number: 2.5
+      - m_Override: 0
+        m_Number: 0
   m_Sockets:
     m_InheritFromParent: 1
     m_List: []
@@ -118,33 +118,52 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 1051822853687345804
+      type: {class: GetDecimalMathSum, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Number1:
+          m_Property:
+            rid: 1051822853687345807
+        m_Number2:
+          m_Property:
+            rid: 1051822853687345808
+    - rid: 1051822853687345807
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 4a27b8ed0127ab14889b3c0341c7f9d2, type: 2}
+          m_Name:
+            m_String: Fire-rate
+            m_ID: 1611825608
+    - rid: 1051822853687345808
+      type: {class: GetDecimalItemPropertyValue, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Bag:
+          m_Property:
+            rid: 1051822853687345811
+        m_Item:
+          m_Property:
+            rid: 1051822853687345810
+        m_PropertyId:
+          m_String: fire-rate-increase
+    - rid: 1051822853687345810
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000}
+    - rid: 1051822853687345811
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
     - rid: 1779839439574401265
       type: {class: GetDecimalMathSum, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Number1:
           m_Property:
-            rid: 1779839439574401268
+            rid: 1051822853687345804
         m_Number2:
           m_Property:
             rid: 1779839439574401272
-    - rid: 1779839439574401268
-      type: {class: GetDecimalItemPropertyValue, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
-      data:
-        m_Bag:
-          m_Property:
-            rid: 1779839439574401271
-        m_Item:
-          m_Property:
-            rid: 1779839439574401270
-        m_PropertyId:
-          m_String: fire-rate
-    - rid: 1779839439574401270
-      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
-      data:
-        m_Item: {fileID: 11400000}
-    - rid: 1779839439574401271
-      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data: 
     - rid: 1779839439574401272
       type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
