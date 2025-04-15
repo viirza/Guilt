@@ -133,6 +133,43 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 1051822855106068902
+      type: {class: GetDecimalMathSum, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Number1:
+          m_Property:
+            rid: 1051822855106068909
+        m_Number2:
+          m_Property:
+            rid: 1051822855106068905
+    - rid: 1051822855106068905
+      type: {class: GetDecimalItemPropertyValue, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Bag:
+          m_Property:
+            rid: 1051822855106068908
+        m_Item:
+          m_Property:
+            rid: 1051822855106068907
+        m_PropertyId:
+          m_String: damage-increase
+    - rid: 1051822855106068907
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000, guid: e5ccddfb7267823439952bd6c6d1ee60, type: 2}
+    - rid: 1051822855106068908
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1051822855106068909
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: e033e39a6ce3e8f46935cdee52a1b3aa, type: 2}
+          m_Name:
+            m_String: Damage-Riposte
+            m_ID: 466277431
     - rid: 1296926032201777250
       type: {class: ClipDefault, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -418,7 +455,7 @@ MonoBehaviour:
             rid: 3611814520187781458
         m_From:
           m_Property:
-            rid: 3611814520187781459
+            rid: 1051822855106068902
     - rid: 3611814520187781458
       type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
@@ -429,16 +466,6 @@ MonoBehaviour:
           m_Name:
             m_String: Damage
             m_ID: 375673178
-    - rid: 3611814520187781459
-      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: number
-          m_Variable: {fileID: 11400000, guid: e033e39a6ce3e8f46935cdee52a1b3aa, type: 2}
-          m_Name:
-            m_String: Damage-Riposte
-            m_ID: 466277431
     - rid: 3611814520187781473
       type: {class: InstructionGameObjectDestroy, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -461,7 +488,7 @@ MonoBehaviour:
       type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
-        m_IsEnabled: 1
+        m_IsEnabled: 0
         m_Set:
           m_Property:
             rid: 3611814520187781526
@@ -595,7 +622,6 @@ MonoBehaviour:
         m_Instructions:
           m_Instructions:
             m_Instructions:
-            - rid: 4295615138195047164
             - rid: 3611814520187781457
             - rid: 3611814520187781525
             - rid: 3611814812161147048
@@ -606,31 +632,6 @@ MonoBehaviour:
             - rid: 5820885315309535314
             - rid: 1296926055128629868
             - rid: 5820885341654220836
-    - rid: 4295615138195047164
-      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 0
-        m_Set:
-          m_Property:
-            rid: 4295615138195047165
-        m_From:
-          m_Property:
-            rid: 4295615138195047166
-    - rid: 4295615138195047165
-      type: {class: SetBoolGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: boolean
-          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
-          m_Name:
-            m_String: is-Attacking
-            m_ID: 1948955503
-    - rid: 4295615138195047166
-      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 1
     - rid: 4295615138195047167
       type: {class: ClipDefault, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
