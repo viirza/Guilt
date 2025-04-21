@@ -1640,13 +1640,10 @@ MonoBehaviour:
     - rid: 1051822857032041251
     - rid: 1051822857032041245
   m_TriggerEvent:
-    rid: 1051822857032041236
+    rid: 1051822989767344702
   references:
     version: 2
     RefIds:
-    - rid: 1051822857032041236
-      type: {class: EventOnStart, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data: 
     - rid: 1051822857032041237
       type: {class: InstructionShadingSetColor, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -1892,7 +1889,10 @@ MonoBehaviour:
     - rid: 1051822857032041274
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_GameObject: {fileID: 8699028140871648113}
+        m_GameObject: {fileID: 2816643339729472436}
+    - rid: 1051822989767344702
+      type: {class: EventOnEnable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data: 
 --- !u!1 &1074252327306357705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,8 +2276,8 @@ MonoBehaviour:
           m_Variable:
             rid: 3611814679080337588
           m_Name:
-            m_String: Alternate-Attack-Footnote
-            m_ID: -710466127
+            m_String: Damage-Type-Footnote
+            m_ID: -1533681642
     - rid: 3611814679080337588
       type: {class: PropertyGetGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -5310,8 +5310,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 112.5, y: -140}
-  m_SizeDelta: {x: 225, y: 100}
+  m_AnchoredPosition: {x: 112.5, y: -215}
+  m_SizeDelta: {x: 225, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5167061138466154283
 CanvasRenderer:
@@ -5593,8 +5593,8 @@ MonoBehaviour:
           m_Variable:
             rid: 3611814679080337588
           m_Name:
-            m_String: Damage-Type-Footnote
-            m_ID: -1533681642
+            m_String: Alternate-Attack-Footnote
+            m_ID: -710466127
     - rid: 3611814679080337588
       type: {class: PropertyGetGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -5689,7 +5689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3936700355553714229
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8338,7 +8338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1848072363980900451
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8350,8 +8350,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5497158877792904456}
+  m_Children: []
   m_Father: {fileID: 6137325576308792572}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -15281,7 +15280,7 @@ GameObject:
   - component: {fileID: 5805964175881579217}
   - component: {fileID: 7685218925980759062}
   m_Layer: 5
-  m_Name: Change variant logic
+  m_Name: Select Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15294,12 +15293,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8223069622274356178}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1848072363980900451}
+  m_Father: {fileID: 6137325576308792572}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16021,14 +16020,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6137325576308792572}
   - component: {fileID: 1118794884114189070}
-  - component: {fileID: 5221388836303656309}
   m_Layer: 5
   m_Name: Weapon Stats UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6137325576308792572
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16044,6 +16042,7 @@ RectTransform:
   - {fileID: 2734039798208796950}
   - {fileID: 3655824430693705727}
   - {fileID: 5247894118569427409}
+  - {fileID: 5497158877792904456}
   - {fileID: 1848072363980900451}
   m_Father: {fileID: 3936700355553714229}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16060,88 +16059,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8699028140871648113}
   m_CullTransparentMesh: 1
---- !u!114 &5221388836303656309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699028140871648113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Instructions:
-    m_Instructions:
-    - rid: 3611814680165089424
-    - rid: 3611814680165089430
-    - rid: 3611814680165089427
-  m_TriggerEvent:
-    rid: 3611814680165089423
-  references:
-    version: 2
-    RefIds:
-    - rid: 3611814680165089423
-      type: {class: EventOnEnable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 3611814680165089424
-      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_GameObject:
-          m_Property:
-            rid: 3611814680165089425
-        m_Active:
-          m_Property:
-            rid: 3611814680165089426
-    - rid: 3611814680165089425
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 0}
-    - rid: 3611814680165089426
-      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 1
-    - rid: 3611814680165089427
-      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_GameObject:
-          m_Property:
-            rid: 3611814680165089428
-        m_Active:
-          m_Property:
-            rid: 3611814680165089429
-    - rid: 3611814680165089428
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 0}
-    - rid: 3611814680165089429
-      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 1
-    - rid: 3611814680165089430
-      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_GameObject:
-          m_Property:
-            rid: 3611814680165089431
-        m_Active:
-          m_Property:
-            rid: 3611814680165089432
-    - rid: 3611814680165089431
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 0}
-    - rid: 3611814680165089432
-      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 1
 --- !u!1 &9079635600701339567
 GameObject:
   m_ObjectHideFlags: 0

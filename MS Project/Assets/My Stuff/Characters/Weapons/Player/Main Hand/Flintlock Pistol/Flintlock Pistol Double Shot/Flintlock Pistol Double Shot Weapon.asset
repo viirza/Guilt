@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7635ada77d9fe448ea6057df7e0d1972, type: 3}
-  m_Name: Flintlock Pistol Pyre Ammo Weapon
+  m_Name: Flintlock Pistol Double Shot Weapon
   m_EditorClassIdentifier: 
   m_Id:
     m_SerializedID:
-      m_String: 946f0c46-db9f-4851-903e-e38d1794aed2
+      m_String: 1c27e88e-7d00-4a1e-a846-77d1b9739822
   m_Title:
     m_Property:
       rid: 1820692989843341547
@@ -32,7 +32,7 @@ MonoBehaviour:
   m_OnEquip:
     m_Instructions:
       m_Instructions:
-      - rid: 6402566773315732090
+      - rid: 1051822990680654721
   m_OnUnequip:
     m_Instructions:
       m_Instructions: []
@@ -78,7 +78,7 @@ MonoBehaviour:
         rid: 3428531543345201227
     m_FireRate:
       m_Property:
-        rid: 1820692989843341557
+        rid: 1051822991280964113
     m_Burst:
       m_Property:
         rid: 1820692989843341558
@@ -254,7 +254,6 @@ MonoBehaviour:
       - rid: 5820885155951411831
       - rid: 1779839099844166560
       - rid: 1296925971285278720
-      - rid: 1051822879145197719
       - rid: 1296925971285278724
   m_Animations:
     m_Idle: {fileID: 7400000, guid: 2330c52814918429597886bf4bb096e6, type: 2}
@@ -272,24 +271,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 1051822879145197719
-      type: {class: InstructionStatsAddStatusEffect, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Target:
-          m_Property:
-            rid: 1051822879145197722
-        m_StatusEffect:
-          m_Property:
-            rid: 1051822879145197721
-    - rid: 1051822879145197721
-      type: {class: GetStatusEffectInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
-      data:
-        m_StatusEffect: {fileID: 11400000, guid: d2878b118116a3c45817fb9c442e1a4f, type: 2}
-    - rid: 1051822879145197722
-      type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
     - rid: 1051822897811161089
       type: {class: InstructionLogicRaiseSignal, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -297,6 +278,50 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_Signal:
           m_String: Blackpowder-Fire
+    - rid: 1051822990627176709
+      type: {class: GetDecimalConstantZero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1051822990680654721
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 1051822990680654722
+        m_From:
+          m_Property:
+            rid: 1051822990680654723
+    - rid: 1051822990680654722
+      type: {class: SetNumberInMagazine, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Character:
+          m_Property:
+            rid: 1051822990680654724
+        m_Weapon:
+          m_Property:
+            rid: 1051822990680654727
+    - rid: 1051822990680654723
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 2
+    - rid: 1051822990680654724
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1051822990680654727
+      type: {class: GetWeaponShooterInstance, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Weapon: {fileID: 11400000}
+    - rid: 1051822991280964113
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 4a83de886cb79f1409994645cf850b96, type: 2}
+          m_Name:
+            m_String: Fire-rate
+            m_ID: 1611825608
     - rid: 1296925971285278720
       type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -373,7 +398,7 @@ MonoBehaviour:
     - rid: 1779839099844166561
       type: {class: GetGameObjectActions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
-        m_Actions: {fileID: 3598000056189803097, guid: 097653482e8e4214db0045d4f9a4312a, type: 3}
+        m_Actions: {fileID: 3598000056189803097, guid: e11fe5e70abaca74abf297186a06a582, type: 3}
     - rid: 1820692989843341547
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -395,17 +420,13 @@ MonoBehaviour:
     - rid: 1820692989843341554
       type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 1
+        m_Value: 2
     - rid: 1820692989843341555
       type: {class: GetBoolTrue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 1820692989843341556
       type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
-    - rid: 1820692989843341557
-      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 0.5
     - rid: 1820692989843341558
       type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -437,7 +458,7 @@ MonoBehaviour:
             rid: 1820692989843341587
         m_Pierces:
           m_Property:
-            rid: 5820885182335680837
+            rid: 1051822990627176709
         m_UseLineRenderer: 1
         m_Duration:
           m_Property:
@@ -534,7 +555,7 @@ MonoBehaviour:
         m_Conditions:
           m_Conditions:
             m_Conditions: []
-        m_Asset: {fileID: 11400000, guid: b5cc1372651af2842bc74cf8f6f1bc3a, type: 2}
+        m_Asset: {fileID: 11400000, guid: ebe7bcd6622dd2848bedfa9ac46be343, type: 2}
     - rid: 1820692989843341587
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -675,7 +696,7 @@ MonoBehaviour:
         m_Variable:
           m_TypeID:
             m_String: number
-          m_Variable: {fileID: 11400000, guid: 94c0866235ffe884591dce4123572ddc, type: 2}
+          m_Variable: {fileID: 11400000, guid: 4a83de886cb79f1409994645cf850b96, type: 2}
           m_Name:
             m_String: Damage-Per-Projectile
             m_ID: -60337458
@@ -724,9 +745,6 @@ MonoBehaviour:
     - rid: 5820885161199534415
       type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
-    - rid: 5820885182335680837
-      type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
     - rid: 5820885314773713718
       type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data: 
@@ -736,42 +754,6 @@ MonoBehaviour:
         m_Value: 0.1
     - rid: 6402566705451369211
       type: {class: GetBoolTrue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 6402566773315732090
-      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Set:
-          m_Property:
-            rid: 6402566773315732091
-        m_From:
-          m_Property:
-            rid: 6402566773315732092
-    - rid: 6402566773315732091
-      type: {class: SetNumberInMagazine, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
-      data:
-        m_Character:
-          m_Property:
-            rid: 6402566773315732093
-        m_Weapon:
-          m_Property:
-            rid: 6402566773315732094
-    - rid: 6402566773315732092
-      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 1
-    - rid: 6402566773315732093
-      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 6402566773315732094
-      type: {class: GetWeaponShooterCharacter, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
-      data:
-        m_Character:
-          m_Property:
-            rid: 6402566773315732095
-    - rid: 6402566773315732095
-      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 7510531224956306379
       type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
