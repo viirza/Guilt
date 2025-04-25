@@ -21074,28 +21074,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Instructions:
     m_Instructions:
+    - rid: 1053890167699669801
     - rid: 1053890167034085858
   m_TriggerEvent:
-    rid: 1053890167034085827
+    rid: 1053890167699669800
   references:
     version: 2
     RefIds:
-    - rid: 1053890167034085827
-      type: {class: EventOnInputButton, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Button:
-          m_Input:
-            rid: 1053890167034085874
-        m_MinDistance:
-          m_MinDistance: 0
-          m_To:
-            m_Property:
-              rid: 1053890167034085829
-          m_Radius: 2
-          m_Offset: {x: 0, y: 0, z: 0}
-    - rid: 1053890167034085829
-      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data: 
     - rid: 1053890167034085858
       type: {class: InstructionLogicRunActions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -21109,10 +21094,23 @@ MonoBehaviour:
       type: {class: GetGameObjectActions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Actions: {fileID: 1028217959}
-    - rid: 1053890167034085874
-      type: {class: InputButtonKeyboardPress, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 1053890167699669800
+      type: {class: EventOnStart, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1053890167699669801
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
-        m_Key: 41
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 1053890167699669802
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 1053890167699669802
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0.5
 --- !u!1 &1029669504
 GameObject:
   m_ObjectHideFlags: 0
@@ -46743,15 +46741,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 370071186024137053, guid: 103723a7edd55424e8cce5f8c930b62d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 229.03
+      value: 225.33795
       objectReference: {fileID: 0}
     - target: {fileID: 370071186024137053, guid: 103723a7edd55424e8cce5f8c930b62d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.89
+      value: 14.905777
       objectReference: {fileID: 0}
     - target: {fileID: 370071186024137053, guid: 103723a7edd55424e8cce5f8c930b62d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -151.77
+      value: -148.59686
       objectReference: {fileID: 0}
     - target: {fileID: 947370017621331460, guid: 103723a7edd55424e8cce5f8c930b62d, type: 3}
       propertyPath: cozyCamera
@@ -46799,15 +46797,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2595190747846303318, guid: 103723a7edd55424e8cce5f8c930b62d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 7.0793667
       objectReference: {fileID: 0}
     - target: {fileID: 2595190747846303318, guid: 103723a7edd55424e8cce5f8c930b62d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 7.0793667
       objectReference: {fileID: 0}
     - target: {fileID: 2595190747846303318, guid: 103723a7edd55424e8cce5f8c930b62d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 7.0793667
       objectReference: {fileID: 0}
     - target: {fileID: 4864476158831557505, guid: 103723a7edd55424e8cce5f8c930b62d, type: 3}
       propertyPath: m_Name
@@ -46815,11 +46813,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5127341758343814764, guid: 103723a7edd55424e8cce5f8c930b62d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9889931
+      value: 0.94104004
       objectReference: {fileID: 0}
     - target: {fileID: 5127341758343814764, guid: 103723a7edd55424e8cce5f8c930b62d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.14796153
+      value: -0.33829537
       objectReference: {fileID: 0}
     - target: {fileID: 8076039303309041563, guid: 103723a7edd55424e8cce5f8c930b62d, type: 3}
       propertyPath: satHolder
@@ -46841,10 +46839,6 @@ SceneRoots:
   - {fileID: 8803422366069822929}
   - {fileID: 834256395}
   - {fileID: 1628018312}
-  - {fileID: 1438780873}
-  - {fileID: 2032203743}
-  - {fileID: 1046215672}
-  - {fileID: 1422543545}
   - {fileID: 54942775}
   - {fileID: 360261203}
   - {fileID: 1873326683}
@@ -46856,3 +46850,7 @@ SceneRoots:
   - {fileID: 553288349}
   - {fileID: 1751718238}
   - {fileID: 1667834737}
+  - {fileID: 1438780873}
+  - {fileID: 2032203743}
+  - {fileID: 1046215672}
+  - {fileID: 1422543545}
