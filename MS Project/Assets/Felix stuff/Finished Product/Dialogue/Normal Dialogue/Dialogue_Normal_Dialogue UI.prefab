@@ -1477,6 +1477,8 @@ GameObject:
   - component: {fileID: 6803370201294808413}
   - component: {fileID: 6803370201294808387}
   - component: {fileID: 6803370201294808412}
+  - component: {fileID: 179950505737161963}
+  - component: {fileID: 35077963699914332}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1524,7 +1526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1541,6 +1543,126 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &179950505737161963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6803370201294808414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 949394870644507346
+  m_TriggerEvent:
+    rid: 949394870644507336
+  references:
+    version: 2
+    RefIds:
+    - rid: 949394870644507336
+      type: {class: EventOnStart, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 949394870644507346
+      type: {class: InstructionShadingLerpColor, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 949394870644507360
+        m_Color1:
+          m_Property:
+            rid: 949394870644507382
+        m_Color2:
+          m_Property:
+            rid: 949394870644507393
+        m_Transition:
+          m_Duration: 0.7
+          m_Easing: 3
+          m_Time: 0
+          m_WaitToComplete: 1
+    - rid: 949394870644507360
+      type: {class: SetColorUIGraphic, ns: GameCreator.Runtime.Common.UnityUI, asm: GameCreator.Runtime.Core}
+      data:
+        m_Graphic:
+          m_Property:
+            rid: 949394870644507361
+    - rid: 949394870644507361
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 6803370201294808414}
+    - rid: 949394870644507382
+      type: {class: GetColorValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: {r: 1, g: 1, b: 1, a: 0}
+    - rid: 949394870644507393
+      type: {class: GetColorValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &35077963699914332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6803370201294808414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 949394870644507458
+  m_TriggerEvent:
+    rid: 949394870644507446
+  references:
+    version: 2
+    RefIds:
+    - rid: 949394870644507446
+      type: {class: EventOnEnable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 949394870644507458
+      type: {class: InstructionShadingLerpColor, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 949394870644507459
+        m_Color1:
+          m_Property:
+            rid: 949394870644507460
+        m_Color2:
+          m_Property:
+            rid: 949394870644507461
+        m_Transition:
+          m_Duration: 0.7
+          m_Easing: 3
+          m_Time: 0
+          m_WaitToComplete: 1
+    - rid: 949394870644507459
+      type: {class: SetColorUIGraphic, ns: GameCreator.Runtime.Common.UnityUI, asm: GameCreator.Runtime.Core}
+      data:
+        m_Graphic:
+          m_Property:
+            rid: 949394870644507462
+    - rid: 949394870644507460
+      type: {class: GetColorValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: {r: 1, g: 1, b: 1, a: 0}
+    - rid: 949394870644507461
+      type: {class: GetColorValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: {r: 1, g: 1, b: 1, a: 1}
+    - rid: 949394870644507462
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 6803370201294808414}
 --- !u!1 &6803370201359091999
 GameObject:
   m_ObjectHideFlags: 0
