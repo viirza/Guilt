@@ -1664,10 +1664,11 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 1051823060082754170
+    - rid: 1051823152741745050
     - rid: 4295615113735963089
     - rid: 3611814542948434032
     - rid: 1051823062016852413
-    - rid: 1051823062016851980
+    - rid: 1051823152741745052
   m_TriggerEvent:
     rid: 2908845172104626450
   references:
@@ -1757,18 +1758,6 @@ MonoBehaviour:
       type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 0
-    - rid: 1051823062016851980
-      type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Message:
-          m_Property:
-            rid: 1051823062016851981
-    - rid: 1051823062016851981
-      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: dashing
     - rid: 1051823062016852413
       type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -1816,6 +1805,30 @@ MonoBehaviour:
       type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
       data:
         m_Attribute: {fileID: 11400000, guid: 58814894263e931428e498e3a519e581, type: 2}
+    - rid: 1051823152741745050
+      type: {class: InstructionCharactersSetAvailable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 1051823152741745051
+        m_Limbs: 15
+    - rid: 1051823152741745051
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1051823152741745052
+      type: {class: InstructionCharactersSetBusy, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 1051823152741745053
+        m_Limbs: 15
+    - rid: 1051823152741745053
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
     - rid: 2908845172104626450
       type: {class: EventOnInputButton, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -14275,7 +14288,8 @@ MonoBehaviour:
     rid: 2908845350248514446
   m_Stock:
     m_Stock: []
-    m_Wealth: []
+    m_Wealth:
+    - rid: 1051823152130425723
   m_SkinUI: {fileID: 11400000, guid: 8f3362d7c61f00f47bda62d83c07b476, type: 2}
   m_Wearer:
     m_Property:
@@ -14283,6 +14297,13 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 1051823152130425723
+      type: {class: WealthData, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Currency: {fileID: 11400000, guid: 812bb03c10bc04b41813432ec124b319, type: 2}
+        m_Amount: 1000
     - rid: 2908845350248514446
       type: {class: BagList, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
       data:
