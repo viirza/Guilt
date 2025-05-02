@@ -1585,6 +1585,8 @@ MonoBehaviour:
     m_Instructions:
     - rid: 6402566618610925579
     - rid: 6402566619113456458
+    - rid: 5827057631388238749
+    - rid: 5827057631388238752
     - rid: 949394459901296905
     - rid: 949394459901296910
     - rid: 949394459901296912
@@ -1651,6 +1653,49 @@ MonoBehaviour:
       type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 1
+    - rid: 5827057631388238749
+      type: {class: InstructionCharacterPropertyIsControllable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 5827057631388238750
+        m_IsControllable:
+          m_Property:
+            rid: 5827057631388238751
+    - rid: 5827057631388238750
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 5827057631388238751
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 5827057631388238752
+      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5827057631388238753
+        m_From:
+          m_Property:
+            rid: 5827057631388238754
+    - rid: 5827057631388238753
+      type: {class: SetBoolGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: boolean
+          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
+          m_Name:
+            m_String: IsControllable
+            m_ID: 1409024256
+    - rid: 5827057631388238754
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
     - rid: 6402566603046125569
       type: {class: EventOnEnable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data: 
@@ -1939,6 +1984,7 @@ GameObject:
   - component: {fileID: 2846501366782879860}
   - component: {fileID: 7042843707264606938}
   - component: {fileID: 2725900662498559667}
+  - component: {fileID: 4412658401355516768}
   m_Layer: 5
   m_Name: New_ShopUI
   m_TagString: Untagged
@@ -2030,6 +2076,50 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4412658401355516768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056187656500112457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 5827057631388238330
+  m_TriggerEvent:
+    rid: 5827057631388238519
+  references:
+    version: 2
+    RefIds:
+    - rid: 5827057631388238330
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 5827057631388238331
+        m_Active:
+          m_Property:
+            rid: 5827057631388238332
+    - rid: 5827057631388238331
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 4694993680493056492}
+    - rid: 5827057631388238332
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 5827057631388238519
+      type: {class: EventOnReceiveSignal, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Signal:
+          m_String: Show-Shop
 --- !u!1 &5553311338917708429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2653,10 +2743,10 @@ MonoBehaviour:
     - rid: 949394569960096387
     - rid: 6402566802394055191
     - rid: 6402566802394055295
-    - rid: 6402566802367579057
     - rid: 949394459901296914
     - rid: 949394459901296916
     - rid: 949394779354431506
+    - rid: 6402566802367579057
   references:
     version: 2
     RefIds:
