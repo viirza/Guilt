@@ -9457,6 +9457,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2616820191011966850}
+  - component: {fileID: 1380662084901325937}
+  - component: {fileID: 5227710187573249239}
   m_Layer: 9
   m_Name: _Weapon Pickup
   m_TagString: Untagged
@@ -9485,6 +9487,134 @@ Transform:
   - {fileID: 5737450009506254518}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1380662084901325937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5099940126912940064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 7898181392907633203
+  m_TriggerEvent:
+    rid: 7898181393043685648
+  references:
+    version: 2
+    RefIds:
+    - rid: 7898181392907633203
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181392907633206
+        m_From:
+          m_Property:
+            rid: 7898181392907633209
+    - rid: 7898181392907633206
+      type: {class: SetNumberLocalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable:
+            rid: 7898181392907633207
+          m_Name:
+            m_String: Weapon-Rarity
+            m_ID: 1158684320
+    - rid: 7898181392907633207
+      type: {class: PropertyGetGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Property:
+          rid: 7898181392907633208
+    - rid: 7898181392907633208
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 4250487001526743336}
+    - rid: 7898181392907633209
+      type: {class: GetDecimalLocalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable:
+            rid: 7898181392907633210
+          m_Name:
+            m_String: Choose-3-Rarity
+            m_ID: 1201862605
+    - rid: 7898181392907633210
+      type: {class: PropertyGetGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Property:
+          rid: 7898181392907633211
+    - rid: 7898181392907633211
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 5099940126912940064}
+    - rid: 7898181393043685648
+      type: {class: EventOnVariableLocalNameChange, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_Variable: {fileID: 5227710187573249239}
+          m_When: 1
+          m_Name:
+            m_String: Choose-3-Rarity
+            m_ID: 1201862605
+--- !u!114 &5227710187573249239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5099940126912940064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe2b16044a04efba6795e323236dc60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SaveUniqueID:
+    m_Save:
+      m_Save: 0
+    m_UniqueID:
+      m_SerializedID:
+        m_String: 29055af9-d628-4e9e-887f-8876c147b7f6
+  m_Runtime:
+    rid: 7898181392907633197
+  references:
+    version: 2
+    RefIds:
+    - rid: 7898181392907633197
+      type: {class: NameVariableRuntime, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_List:
+          rid: 7898181392907633198
+    - rid: 7898181392907633198
+      type: {class: NameList, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Source:
+        - rid: 7898181392907633199
+    - rid: 7898181392907633199
+      type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 7898181392907633201
+        m_Name:
+          m_String: Choose-3-Rarity
+    - rid: 7898181392907633201
+      type: {class: ValueNumber, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: 0
 --- !u!1 &5318684063775400562
 GameObject:
   m_ObjectHideFlags: 0
