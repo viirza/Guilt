@@ -75,6 +75,7 @@ MonoBehaviour:
     - rid: 5820885520142565392
     - rid: 1779839327467996106
     - rid: 5820885520142566325
+    - rid: 7898181437079421778
     - rid: 2908845373346545672
   m_TriggerEvent:
     rid: 5820885249359086564
@@ -191,6 +192,31 @@ MonoBehaviour:
       type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 1
+    - rid: 7898181437079421778
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 7898181437079421779
+        m_Active:
+          m_Property:
+            rid: 7898181437079421780
+    - rid: 7898181437079421779
+      type: {class: GetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 161d697657a3f914584d4fbb68523741, type: 2}
+          m_Name:
+            m_String: Last-Room
+            m_ID: 1164250101
+    - rid: 7898181437079421780
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
 --- !u!114 &4356890009685306203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,7 +482,7 @@ GameObject:
   - component: {fileID: 8931332392773052405}
   - component: {fileID: 958327511874043277}
   m_Layer: 0
-  m_Name: Reward
+  m_Name: Reward (unused)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1148,8 +1174,12 @@ PrefabInstance:
       value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.InstructionLogicRaiseSignal
       objectReference: {fileID: 0}
     - target: {fileID: 2610289559816847981, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: 'managedReferences[7898181436795781961]'
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.InstructionLogicRaiseSignal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610289559816847981, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
       propertyPath: m_Instructions.m_Instructions.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2610289559816847981, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
       propertyPath: 'm_Instructions.m_Instructions.Array.data[1]'
@@ -1161,7 +1191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2610289559816847981, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
       propertyPath: 'm_Instructions.m_Instructions.Array.data[3]'
-      value: 1051823062364979403
+      value: 7898181436795781961
       objectReference: {fileID: 0}
     - target: {fileID: 2610289559816847981, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
       propertyPath: managedReferences[1051823083947295286].m_Value
@@ -1184,6 +1214,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2610289559816847981, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: managedReferences[7898181436795781961].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610289559816847981, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
       propertyPath: managedReferences[1051823062364979403].m_Breakpoint
       value: 0
       objectReference: {fileID: 0}
@@ -1196,12 +1230,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2610289559816847981, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: managedReferences[7898181436795781961].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610289559816847981, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
       propertyPath: managedReferences[1051823062364979403].m_Signal.m_String
-      value: Room-Completed
+      value: Add-Unlock-Point
       objectReference: {fileID: 0}
     - target: {fileID: 2610289559816847981, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
       propertyPath: managedReferences[6402566329019662952].m_Signal.m_String
       value: Choose-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610289559816847981, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: managedReferences[7898181436795781961].m_Signal.m_String
+      value: Room-Completed
       objectReference: {fileID: 0}
     - target: {fileID: 2610289559816847981, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
       propertyPath: managedReferences[1051823083947295285].m_Mode.m_UpdateTime
@@ -1250,6 +1292,10 @@ PrefabInstance:
     - target: {fileID: 6069352697691143049, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
       propertyPath: managedReferences[1051822740274675898].m_Actions.m_Property
       value: 1051822740274675899
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100604872388081614, guid: 4a725012a65453a4f85a54c133fd6634, type: 3}
+      propertyPath: m_Name
+      value: Rewards
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -70,6 +70,8 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 1779839327101517844
+    - rid: 7898181437152559798
+    - rid: 7898181437152559801
     - rid: 2908845373346545672
   m_TriggerEvent:
     rid: 5820885249359086508
@@ -129,6 +131,67 @@ MonoBehaviour:
               rid: 5820885249359086509
     - rid: 5820885249359086509
       type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181437152559798
+      type: {class: InstructionGameObjectSetGameObject, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181437152559799
+        m_From:
+          m_Property:
+            rid: 7898181437152559800
+    - rid: 7898181437152559799
+      type: {class: SetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 161d697657a3f914584d4fbb68523741, type: 2}
+          m_Name:
+            m_String: Last-Room
+            m_ID: 1164250101
+    - rid: 7898181437152559800
+      type: {class: GetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 161d697657a3f914584d4fbb68523741, type: 2}
+          m_Name:
+            m_String: Current-Room
+            m_ID: -2042757228
+    - rid: 7898181437152559801
+      type: {class: InstructionGameObjectSetGameObject, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181437152559802
+        m_From:
+          m_Property:
+            rid: 7898181437152559803
+    - rid: 7898181437152559802
+      type: {class: SetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 161d697657a3f914584d4fbb68523741, type: 2}
+          m_Name:
+            m_String: Current-Room
+            m_ID: -2042757228
+    - rid: 7898181437152559803
+      type: {class: GetGameObjectParent, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Transform:
+          m_Property:
+            rid: 7898181437152559804
+    - rid: 7898181437152559804
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
 --- !u!114 &3715248132545935507
 MonoBehaviour:
@@ -246,7 +309,7 @@ MonoBehaviour:
       type: {class: InstructionGameObjectSetGameObject, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
-        m_IsEnabled: 1
+        m_IsEnabled: 0
         m_Set:
           m_Property:
             rid: 5820885223076003917
@@ -277,7 +340,7 @@ MonoBehaviour:
       type: {class: InstructionGameObjectSetGameObject, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
-        m_IsEnabled: 1
+        m_IsEnabled: 0
         m_Set:
           m_Property:
             rid: 5820885223076003922
