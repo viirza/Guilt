@@ -33,6 +33,7 @@ MonoBehaviour:
     m_Instructions:
       m_Instructions:
       - rid: 1051822990680654721
+      - rid: 7898181575024051148
   m_OnUnequip:
     m_Instructions:
       m_Instructions: []
@@ -239,6 +240,7 @@ MonoBehaviour:
       m_Instructions:
       - rid: 5820885154965226119
       - rid: 1051822897811161089
+      - rid: 7898181575224852858
   m_OnStartReload:
     m_Instructions:
       m_Instructions: []
@@ -286,7 +288,7 @@ MonoBehaviour:
       type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
-        m_IsEnabled: 1
+        m_IsEnabled: 0
         m_Set:
           m_Property:
             rid: 1051822990680654722
@@ -803,6 +805,84 @@ MonoBehaviour:
     - rid: 7510531224956306379
       type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 7898181575024051148
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181575024051149
+        m_From:
+          m_Property:
+            rid: 7898181575024051150
+    - rid: 7898181575024051149
+      type: {class: SetNumberInMagazine, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Character:
+          m_Property:
+            rid: 7898181575024051151
+        m_Weapon:
+          m_Property:
+            rid: 7898181575024051152
+    - rid: 7898181575024051150
+      type: {class: GetDecimalItemPropertyValue, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Bag:
+          m_Property:
+            rid: 7898181575024051153
+        m_Item:
+          m_Property:
+            rid: 7898181575024051154
+        m_PropertyId:
+          m_String: ammo-count
+    - rid: 7898181575024051151
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181575024051152
+      type: {class: GetWeaponShooterInstance, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      data:
+        m_Weapon: {fileID: 11400000}
+    - rid: 7898181575024051153
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181575024051154
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000, guid: f252c9df3a381d24c98e8fa70235a3b4, type: 2}
+    - rid: 7898181575224852858
+      type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181575224852859
+        m_Value:
+          m_Property:
+            rid: 7898181575224852860
+    - rid: 7898181575224852859
+      type: {class: SetNumberItemPropertyValue, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Bag:
+          m_Property:
+            rid: 7898181575224852861
+        m_Item:
+          m_Property:
+            rid: 7898181575224852862
+        m_PropertyId:
+          m_String: ammo-count
+    - rid: 7898181575224852860
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: -1
+    - rid: 7898181575224852861
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181575224852862
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000, guid: f252c9df3a381d24c98e8fa70235a3b4, type: 2}
     - rid: 8814677073454694606
       type: {class: SightItem, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
       data:

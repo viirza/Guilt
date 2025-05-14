@@ -55,9 +55,12 @@ MonoBehaviour:
     m_Overrides:
       m_Keys:
       - m_String: dmg-increase
+      - m_String: ammo-count
       m_Values:
       - m_Override: 0
         m_Number: 0
+      - m_Override: 1
+        m_Number: 1
   m_Sockets:
     m_InheritFromParent: 1
     m_List: []
@@ -71,6 +74,7 @@ MonoBehaviour:
     m_InstructionsOnEquip:
       m_Instructions:
         m_Instructions:
+        - rid: 7898181569708818785
         - rid: 2908845351081083463
         - rid: 5820885154965226422
         - rid: 2908845350248514475
@@ -331,3 +335,52 @@ MonoBehaviour:
     - rid: 7898181459223249661
       type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 7898181569708818785
+      type: {class: InstructionCharacterGesture, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 7898181569708818786
+        m_AnimationClip:
+          m_Property:
+            rid: 7898181569708818787
+        m_AvatarMask: {fileID: 31900000, guid: 9bf8ddda34e8fb646bf37001a5b12691, type: 2}
+        m_BlendMode: 0
+        m_Delay:
+          m_Property:
+            rid: 7898181569708818788
+        m_Speed:
+          m_Property:
+            rid: 7898181569708818789
+        m_UseRootMotion: 0
+        m_TransitionIn:
+          m_Property:
+            rid: 7898181569708818790
+        m_TransitionOut:
+          m_Property:
+            rid: 7898181569708818791
+        m_WaitToComplete: 0
+    - rid: 7898181569708818786
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181569708818787
+      type: {class: GetAnimationInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: {fileID: 1827226128182048838, guid: b454398d28e4c5640a6116f975c0f212, type: 3}
+    - rid: 7898181569708818788
+      type: {class: GetDecimalConstantZero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181569708818789
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 7898181569708818790
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0.2
+    - rid: 7898181569708818791
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0.3
