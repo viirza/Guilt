@@ -30,7 +30,7 @@ public class RandomNumberGen : Instruction
         int max = (int)this.maxValue.Get(args);
         int randomValue = UnityEngine.Random.Range(min, max + 1);
         this.storeNumber.Set(randomValue, args);
-        Debug.Log($"Generated random number: {randomValue}");
+        //Debug.Log($"Generated random number: {randomValue}");
         return DefaultResult;
     }
 }
