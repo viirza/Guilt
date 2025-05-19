@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 1051822857572844374
+    - rid: 7898181615364079967
     - rid: 1051822857572844381
     - rid: 1051822857572844384
     - rid: 1051822857572844387
@@ -310,3 +311,42 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_Signal:
           m_String: Melee-Swing
+    - rid: 7898181615364079967
+      type: {class: InstructionTextSetString, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181615364079968
+        m_Text:
+          m_Property:
+            rid: 7898181615364079969
+    - rid: 7898181615364079968
+      type: {class: SetStringGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: string
+          m_Variable: {fileID: 11400000, guid: 543f01dd0702b704981fbca0c3f16b00, type: 2}
+          m_Name:
+            m_String: Infusion
+            m_ID: 285570565
+    - rid: 7898181615364079969
+      type: {class: GetStringItemPropertyText, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Bag:
+          m_Property:
+            rid: 7898181615364079970
+        m_Item:
+          m_Property:
+            rid: 7898181615364079971
+        m_PropertyId:
+          m_String: infusion
+    - rid: 7898181615364079970
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181615364079971
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000, guid: 2a7ce1fb24b6ca54ea2b2d66ba186be7, type: 2}

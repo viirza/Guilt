@@ -251,6 +251,8 @@ MonoBehaviour:
     m_Instructions:
       m_Instructions:
       - rid: 5827057686214607395
+      - rid: 7898181618101125523
+      - rid: 7898181618101125517
   m_Animations:
     m_Idle: {fileID: 0}
     m_Empty: {fileID: 0}
@@ -745,6 +747,70 @@ MonoBehaviour:
             rid: 6402566773315732089
     - rid: 6402566773315732089
       type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181618101125517
+      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 7898181618101125518
+          usePooling: 1
+          size: 1
+          hasDuration: 1
+          duration: 2
+        m_Position:
+          m_Property:
+            rid: 7898181618101125519
+        m_Rotation:
+          m_Property:
+            rid: 7898181618101125520
+        m_Parent:
+          m_Property:
+            rid: 7898181618101125521
+        m_Save:
+          m_Property:
+            rid: 7898181618101125522
+    - rid: 7898181618101125518
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 1433295770268946, guid: 0f961cc3626646443ac23f4e578573c0, type: 3}
+    - rid: 7898181618101125519
+      type: {class: GetPositionCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181618101125520
+      type: {class: GetRotationCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Space: 1
+    - rid: 7898181618101125521
+      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181618101125522
+      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181618101125523
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 7898181618101125524
+    - rid: 7898181618101125524
+      type: {class: ConditionGameObjectLayerMask, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_GameObject:
+          m_Property:
+            rid: 7898181618101125525
+        m_LayerMask:
+          serializedVersion: 2
+          m_Bits: 128
+    - rid: 7898181618101125525
+      type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
 --- !u!221 &3338979932305063886
 AnimatorOverrideController:

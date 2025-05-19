@@ -420,37 +420,6 @@ MonoBehaviour:
           m_Name:
             m_String: Hitbox
             m_ID: -715220355
-    - rid: 3611814520187781528
-      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 0
-        m_Set:
-          m_Property:
-            rid: 3611814520187781529
-        m_From:
-          m_Property:
-            rid: 3611814520187781530
-    - rid: 3611814520187781529
-      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: number
-          m_Variable: {fileID: 11400000, guid: 543f01dd0702b704981fbca0c3f16b00, type: 2}
-          m_Name:
-            m_String: Obstacle-Damage
-            m_ID: -2072258557
-    - rid: 3611814520187781530
-      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: number
-          m_Variable: {fileID: 11400000, guid: 9ce6962f2e848ad47b42c98f1acf2bd1, type: 2}
-          m_Name:
-            m_String: Damage-Obstacle
-            m_ID: 299507732
     - rid: 3611814520187781531
       type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -610,9 +579,8 @@ MonoBehaviour:
         m_Instructions:
           m_Instructions:
             m_Instructions:
-            - rid: 4295615138195047010
             - rid: 3611814520187781531
-            - rid: 3611814520187781528
+            - rid: 7898181615364079942
             - rid: 3611814812161147055
             - rid: 1779839079348700017
             - rid: 1779839123830603898
@@ -631,31 +599,6 @@ MonoBehaviour:
             m_Instructions:
             - rid: 4295615138195047017
             - rid: 3611814520187781477
-    - rid: 4295615138195047010
-      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 0
-        m_Set:
-          m_Property:
-            rid: 4295615138195047013
-        m_From:
-          m_Property:
-            rid: 4295615138195047012
-    - rid: 4295615138195047012
-      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 1
-    - rid: 4295615138195047013
-      type: {class: SetBoolGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: boolean
-          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
-          m_Name:
-            m_String: is-Attacking
-            m_ID: 1948955503
     - rid: 4295615138195047017
       type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -805,3 +748,42 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_Signal:
           m_String: Melee-Swing
+    - rid: 7898181615364079942
+      type: {class: InstructionTextSetString, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181615364079943
+        m_Text:
+          m_Property:
+            rid: 7898181615364079944
+    - rid: 7898181615364079943
+      type: {class: SetStringGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: string
+          m_Variable: {fileID: 11400000, guid: 543f01dd0702b704981fbca0c3f16b00, type: 2}
+          m_Name:
+            m_String: Infusion
+            m_ID: 285570565
+    - rid: 7898181615364079944
+      type: {class: GetStringItemPropertyText, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Bag:
+          m_Property:
+            rid: 7898181615364079945
+        m_Item:
+          m_Property:
+            rid: 7898181615364079946
+        m_PropertyId:
+          m_String: infusion
+    - rid: 7898181615364079945
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181615364079946
+      type: {class: GetItemInstance, ns: GameCreator.Runtime.Inventory, asm: GameCreator.Runtime.Inventory}
+      data:
+        m_Item: {fileID: 11400000, guid: 7a101de8eef47064fb710ca59f7f5a6a, type: 2}
