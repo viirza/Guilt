@@ -1,0 +1,190 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e203efa43fc9420f97b5e0072ce8db68, type: 3}
+  m_Name: Pride Penalty
+  m_EditorClassIdentifier: 
+  m_Data:
+    m_Type: 2
+    m_MaxStack:
+      m_Property:
+        rid: 7898181686990209127
+    m_HasDuration: 1
+    m_IsHidden: 0
+    m_Duration:
+      m_Property:
+        rid: 7898181686990209126
+  m_Info:
+    m_Name:
+      m_Property:
+        rid: 5820885154965226381
+    m_Acronym:
+      m_Property:
+        rid: 5820885154965226382
+    m_Description:
+      m_Property:
+        rid: 5820885154965226383
+    m_Icon:
+      m_Property:
+        rid: 5820885159829045649
+    m_Color: {r: 1, g: 0.544253, b: 0, a: 1}
+  m_OnStart:
+    m_Instructions:
+      m_Instructions:
+      - rid: 5820885154965226385
+      - rid: 7898181706456236041
+  m_OnEnd:
+    m_Instructions:
+      m_Instructions:
+      - rid: 5820885154965226386
+      - rid: 7898181706456236060
+  m_WhileActive:
+    m_Instructions:
+      m_Instructions:
+      - rid: 5820885154965226387
+  m_ID:
+    m_Save:
+      m_Save: 0
+    m_UniqueID:
+      m_SerializedID:
+        m_String: 24e22719-eb50-4cee-ba91-7b9400a08547
+  references:
+    version: 2
+    RefIds:
+    - rid: 5820885154965226381
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Wrath Penalty
+    - rid: 5820885154965226382
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: WP
+    - rid: 5820885154965226383
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Description...
+    - rid: 5820885154965226385
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed right after this Status Effect is applied
+    - rid: 5820885154965226386
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed right after this Status Effect finishes
+    - rid: 5820885154965226387
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed over and over again while this Status Effect lasts
+    - rid: 5820885159829045649
+      type: {class: GetSpriteInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Sprite: {fileID: 21300000, guid: b2654ededa0a08743b40fbe974c2bafd, type: 3}
+    - rid: 7898181686990209126
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 1ff20cb469e03624cbfc27ae112c1062, type: 2}
+          m_Name:
+            m_String: Duration
+            m_ID: 2133451414
+    - rid: 7898181686990209127
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 1ff20cb469e03624cbfc27ae112c1062, type: 2}
+          m_Name:
+            m_String: Maximum-Stack
+            m_ID: 1907714693
+    - rid: 7898181706456236041
+      type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181706456236042
+        m_Value:
+          m_Property:
+            rid: 7898181706456236056
+    - rid: 7898181706456236042
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
+          m_Name:
+            m_String: Extra-Attack-Speed
+            m_ID: -832541701
+    - rid: 7898181706456236056
+      type: {class: GetDecimalMathMultiply, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Number1:
+          m_Property:
+            rid: 7898181706456236059
+        m_Number2:
+          m_Property:
+            rid: 7898181706456236058
+    - rid: 7898181706456236058
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: -1
+    - rid: 7898181706456236059
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 1ff20cb469e03624cbfc27ae112c1062, type: 2}
+          m_Name:
+            m_String: Attack-Speed-Decrease
+            m_ID: -615283370
+    - rid: 7898181706456236060
+      type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181706456236061
+        m_Value:
+          m_Property:
+            rid: 7898181706456236065
+    - rid: 7898181706456236061
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
+          m_Name:
+            m_String: Extra-Attack-Speed
+            m_ID: -832541701
+    - rid: 7898181706456236065
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 1ff20cb469e03624cbfc27ae112c1062, type: 2}
+          m_Name:
+            m_String: Attack-Speed-Decrease
+            m_ID: -615283370

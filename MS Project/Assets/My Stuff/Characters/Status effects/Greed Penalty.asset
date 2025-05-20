@@ -1,0 +1,287 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e203efa43fc9420f97b5e0072ce8db68, type: 3}
+  m_Name: Greed Penalty
+  m_EditorClassIdentifier: 
+  m_Data:
+    m_Type: 2
+    m_MaxStack:
+      m_Property:
+        rid: 7898181686990209127
+    m_HasDuration: 0
+    m_IsHidden: 0
+    m_Duration:
+      m_Property:
+        rid: 7898181708414451795
+  m_Info:
+    m_Name:
+      m_Property:
+        rid: 5820885154965226381
+    m_Acronym:
+      m_Property:
+        rid: 5820885154965226382
+    m_Description:
+      m_Property:
+        rid: 5820885154965226383
+    m_Icon:
+      m_Property:
+        rid: 5820885159829045649
+    m_Color: {r: 1, g: 0.88550174, b: 0, a: 1}
+  m_OnStart:
+    m_Instructions:
+      m_Instructions:
+      - rid: 5820885154965226385
+      - rid: 7898181708414451783
+      - rid: 7898181708414451796
+      - rid: 7898181708414452318
+  m_OnEnd:
+    m_Instructions:
+      m_Instructions:
+      - rid: 5820885154965226386
+      - rid: 7898181708414451806
+      - rid: 7898181708414451817
+      - rid: 7898181708414452320
+  m_WhileActive:
+    m_Instructions:
+      m_Instructions:
+      - rid: 5820885154965226387
+  m_ID:
+    m_Save:
+      m_Save: 0
+    m_UniqueID:
+      m_SerializedID:
+        m_String: fe0bd608-118d-4586-b7fb-0573d2314f63
+  references:
+    version: 2
+    RefIds:
+    - rid: 5820885154965226381
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Greed Penalty
+    - rid: 5820885154965226382
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: GP
+    - rid: 5820885154965226383
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Description...
+    - rid: 5820885154965226385
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed right after this Status Effect is applied
+    - rid: 5820885154965226386
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed right after this Status Effect finishes
+    - rid: 5820885154965226387
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed over and over again while this Status Effect lasts
+    - rid: 5820885159829045649
+      type: {class: GetSpriteInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Sprite: {fileID: 21300000, guid: 013a000e1aae09c4680df6c53c65108c, type: 3}
+    - rid: 7898181686990209127
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: b5aa2b28c81c6c448b4caeeb23073f78, type: 2}
+          m_Name:
+            m_String: Maximum-Stack
+            m_ID: 1907714693
+    - rid: 7898181708414451783
+      type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181708414451784
+        m_Value:
+          m_Property:
+            rid: 7898181708414451786
+    - rid: 7898181708414451784
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
+          m_Name:
+            m_String: Physical-Damage-Multiplier
+            m_ID: 1768596274
+    - rid: 7898181708414451786
+      type: {class: GetDecimalMathMultiply, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Number1:
+          m_Property:
+            rid: 7898181708414451794
+        m_Number2:
+          m_Property:
+            rid: 7898181708414451788
+    - rid: 7898181708414451788
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: -1
+    - rid: 7898181708414451794
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: b5aa2b28c81c6c448b4caeeb23073f78, type: 2}
+          m_Name:
+            m_String: Damage-Penalty-Step
+            m_ID: 1955497748
+    - rid: 7898181708414451795
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Infinity
+    - rid: 7898181708414451796
+      type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181708414451797
+        m_Value:
+          m_Property:
+            rid: 7898181708414451798
+    - rid: 7898181708414451797
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
+          m_Name:
+            m_String: Magical-Damage-Multiplier
+            m_ID: 59891617
+    - rid: 7898181708414451798
+      type: {class: GetDecimalMathMultiply, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Number1:
+          m_Property:
+            rid: 7898181708414451799
+        m_Number2:
+          m_Property:
+            rid: 7898181708414451800
+    - rid: 7898181708414451799
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: b5aa2b28c81c6c448b4caeeb23073f78, type: 2}
+          m_Name:
+            m_String: Damage-Penalty-Step
+            m_ID: 1955497748
+    - rid: 7898181708414451800
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: -1
+    - rid: 7898181708414451806
+      type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181708414451807
+        m_Value:
+          m_Property:
+            rid: 7898181708414451816
+    - rid: 7898181708414451807
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
+          m_Name:
+            m_String: Physical-Damage-Multiplier
+            m_ID: 1768596274
+    - rid: 7898181708414451816
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: b5aa2b28c81c6c448b4caeeb23073f78, type: 2}
+          m_Name:
+            m_String: Damage-Penalty-Step
+            m_ID: 1955497748
+    - rid: 7898181708414451817
+      type: {class: InstructionArithmeticIncrementNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181708414451818
+        m_Value:
+          m_Property:
+            rid: 7898181708414451819
+    - rid: 7898181708414451818
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 947c4c693020b7e41965f1f81dcd89cb, type: 2}
+          m_Name:
+            m_String: Magical-Damage-Multiplier
+            m_ID: 59891617
+    - rid: 7898181708414451819
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: b5aa2b28c81c6c448b4caeeb23073f78, type: 2}
+          m_Name:
+            m_String: Damage-Penalty-Step
+            m_ID: 1955497748
+    - rid: 7898181708414452318
+      type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Message:
+          m_Property:
+            rid: 7898181708414452319
+    - rid: 7898181708414452319
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: add
+    - rid: 7898181708414452320
+      type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Message:
+          m_Property:
+            rid: 7898181708414452321
+    - rid: 7898181708414452321
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: remove

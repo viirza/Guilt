@@ -1,0 +1,355 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e203efa43fc9420f97b5e0072ce8db68, type: 3}
+  m_Name: Lust Enemy Buff
+  m_EditorClassIdentifier: 
+  m_Data:
+    m_Type: 2
+    m_MaxStack:
+      m_Property:
+        rid: 7898181708414452395
+    m_HasDuration: 1
+    m_IsHidden: 0
+    m_Duration:
+      m_Property:
+        rid: 7898181686990209126
+  m_Info:
+    m_Name:
+      m_Property:
+        rid: 5820885154965226381
+    m_Acronym:
+      m_Property:
+        rid: 5820885154965226382
+    m_Description:
+      m_Property:
+        rid: 5820885154965226383
+    m_Icon:
+      m_Property:
+        rid: 5820885159829045649
+    m_Color: {r: 1, g: 0, b: 0.6971979, a: 1}
+  m_OnStart:
+    m_Instructions:
+      m_Instructions:
+      - rid: 5820885154965226385
+      - rid: 7898181686990209114
+      - rid: 7898181708414452371
+      - rid: 7898181708414452367
+      - rid: 7898181708414452438
+  m_OnEnd:
+    m_Instructions:
+      m_Instructions:
+      - rid: 5820885154965226386
+      - rid: 7898181686990209120
+      - rid: 7898181708414452391
+      - rid: 7898181708414452387
+      - rid: 7898181708414452443
+  m_WhileActive:
+    m_Instructions:
+      m_Instructions:
+      - rid: 5820885154965226387
+  m_ID:
+    m_Save:
+      m_Save: 0
+    m_UniqueID:
+      m_SerializedID:
+        m_String: ae850fdf-a1bf-41e9-9b48-e8886d9a2cd7
+  references:
+    version: 2
+    RefIds:
+    - rid: 5820885154965226381
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Wrath Penalty
+    - rid: 5820885154965226382
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: WP
+    - rid: 5820885154965226383
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Description...
+    - rid: 5820885154965226385
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed right after this Status Effect is applied
+    - rid: 5820885154965226386
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed right after this Status Effect finishes
+    - rid: 5820885154965226387
+      type: {class: InstructionCommonDebugComment, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Text: Executed over and over again while this Status Effect lasts
+    - rid: 5820885159829045649
+      type: {class: GetSpriteInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Sprite: {fileID: 21300000, guid: 1643aa4c790915442be1fc2003eec515, type: 3}
+    - rid: 7898181686990209114
+      type: {class: InstructionStatsAddModifier, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Target:
+          m_Property:
+            rid: 7898181686990209118
+        m_Stat:
+          m_Property:
+            rid: 7898181686990209116
+        m_Type: 0
+        m_Value:
+          m_Property:
+            rid: 7898181686990209119
+    - rid: 7898181686990209116
+      type: {class: GetStatInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Stat: {fileID: 11400000, guid: ac9e42ca099b9724e9e6e7bb5dd5cefd, type: 2}
+    - rid: 7898181686990209118
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181686990209119
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 0fdfc6abbf34374459da4259a8f8ef64, type: 2}
+          m_Name:
+            m_String: Damage-Buff
+            m_ID: 1500923759
+    - rid: 7898181686990209120
+      type: {class: InstructionStatsRemoveModifier, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Target:
+          m_Property:
+            rid: 7898181686990209124
+        m_Stat:
+          m_Property:
+            rid: 7898181686990209122
+        m_Type: 0
+        m_Value:
+          m_Property:
+            rid: 7898181686990209125
+    - rid: 7898181686990209122
+      type: {class: GetStatInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Stat: {fileID: 11400000, guid: ac9e42ca099b9724e9e6e7bb5dd5cefd, type: 2}
+    - rid: 7898181686990209124
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181686990209125
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 0fdfc6abbf34374459da4259a8f8ef64, type: 2}
+          m_Name:
+            m_String: Damage-Buff
+            m_ID: 1500923759
+    - rid: 7898181686990209126
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 0fdfc6abbf34374459da4259a8f8ef64, type: 2}
+          m_Name:
+            m_String: Duration
+            m_ID: 2133451414
+    - rid: 7898181708414452367
+      type: {class: InstructionStatsAddModifier, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Target:
+          m_Property:
+            rid: 7898181708414452368
+        m_Stat:
+          m_Property:
+            rid: 7898181708414452369
+        m_Type: 0
+        m_Value:
+          m_Property:
+            rid: 7898181708414452370
+    - rid: 7898181708414452368
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181708414452369
+      type: {class: GetStatInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Stat: {fileID: 11400000, guid: 02de302327164734ab01dfc66ba85749, type: 2}
+    - rid: 7898181708414452370
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 0fdfc6abbf34374459da4259a8f8ef64, type: 2}
+          m_Name:
+            m_String: Damage-Taken-Increase
+            m_ID: 1761270169
+    - rid: 7898181708414452371
+      type: {class: InstructionStatsAddModifier, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Target:
+          m_Property:
+            rid: 7898181708414452372
+        m_Stat:
+          m_Property:
+            rid: 7898181708414452373
+        m_Type: 0
+        m_Value:
+          m_Property:
+            rid: 7898181708414452374
+    - rid: 7898181708414452372
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181708414452373
+      type: {class: GetStatInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Stat: {fileID: 11400000, guid: 8b13bb03c8b67ea4e833011117d239bc, type: 2}
+    - rid: 7898181708414452374
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 0fdfc6abbf34374459da4259a8f8ef64, type: 2}
+          m_Name:
+            m_String: Movement-Buff
+            m_ID: 1029143069
+    - rid: 7898181708414452387
+      type: {class: InstructionStatsRemoveModifier, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Target:
+          m_Property:
+            rid: 7898181708414452388
+        m_Stat:
+          m_Property:
+            rid: 7898181708414452389
+        m_Type: 0
+        m_Value:
+          m_Property:
+            rid: 7898181708414452390
+    - rid: 7898181708414452388
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181708414452389
+      type: {class: GetStatInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Stat: {fileID: 11400000, guid: 02de302327164734ab01dfc66ba85749, type: 2}
+    - rid: 7898181708414452390
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 0fdfc6abbf34374459da4259a8f8ef64, type: 2}
+          m_Name:
+            m_String: Damage-Taken-Increase
+            m_ID: 1761270169
+    - rid: 7898181708414452391
+      type: {class: InstructionStatsRemoveModifier, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Target:
+          m_Property:
+            rid: 7898181708414452392
+        m_Stat:
+          m_Property:
+            rid: 7898181708414452393
+        m_Type: 0
+        m_Value:
+          m_Property:
+            rid: 7898181708414452394
+    - rid: 7898181708414452392
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181708414452393
+      type: {class: GetStatInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Stat: {fileID: 11400000, guid: 8b13bb03c8b67ea4e833011117d239bc, type: 2}
+    - rid: 7898181708414452394
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 0fdfc6abbf34374459da4259a8f8ef64, type: 2}
+          m_Name:
+            m_String: Movement-Buff
+            m_ID: 1029143069
+    - rid: 7898181708414452395
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 7898181708414452438
+      type: {class: InstructionGameObjectSetGameObject, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181708414452441
+        m_From:
+          m_Property:
+            rid: 7898181708414452442
+    - rid: 7898181708414452441
+      type: {class: SetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 0fdfc6abbf34374459da4259a8f8ef64, type: 2}
+          m_Name:
+            m_String: Affected-Enemy
+            m_ID: 1926555274
+    - rid: 7898181708414452442
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181708414452443
+      type: {class: InstructionGameObjectSetGameObject, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181708414452444
+        m_From:
+          m_Property:
+            rid: 7898181708414452446
+    - rid: 7898181708414452444
+      type: {class: SetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 0fdfc6abbf34374459da4259a8f8ef64, type: 2}
+          m_Name:
+            m_String: Affected-Enemy
+            m_ID: 1926555274
+    - rid: 7898181708414452446
+      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
