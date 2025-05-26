@@ -51,6 +51,7 @@ MonoBehaviour:
       m_Instructions:
         m_Instructions:
         - rid: 1779839436921242210
+        - rid: 7898181843988251229
   m_Parry:
     m_Reaction: {fileID: 11400000, guid: a83000910f9274be2b97a638fa58788b, type: 2}
     m_Effect:
@@ -155,3 +156,33 @@ MonoBehaviour:
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_GameObject: {fileID: 3135502183617210236, guid: 0dcb143c0eba94489aa1e73bc9d9cc26, type: 3}
+    - rid: 7898181843988251229
+      type: {class: InstructionMeleeReact, ns: GameCreator.Runtime.Melee, asm: GameCreator.Runtime.Melee}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 7898181843988251230
+        m_Attacker:
+          m_Property:
+            rid: 7898181843988251231
+        m_Reaction: {fileID: 11400000, guid: 99566d0115a73564abb75b33daa408c1, type: 2}
+        m_Direction:
+          m_Property:
+            rid: 7898181843988251232
+        m_Force:
+          m_Property:
+            rid: 7898181843988251233
+    - rid: 7898181843988251230
+      type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181843988251231
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181843988251232
+      type: {class: GetDirectionConstantBackward, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181843988251233
+      type: {class: GetDecimalConstantZero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
