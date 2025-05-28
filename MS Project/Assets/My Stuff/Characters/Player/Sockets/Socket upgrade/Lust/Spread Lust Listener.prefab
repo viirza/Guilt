@@ -258,6 +258,8 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 7898181842653413428
+    - rid: 7898181892276486875
+    - rid: 7898181892276486883
   m_TriggerEvent:
     rid: 7898181844797751550
   references:
@@ -326,6 +328,81 @@ MonoBehaviour:
           m_Name:
             m_String: Affected-Enemy
             m_ID: 1926555274
+    - rid: 7898181892276486875
+      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 7898181892276486876
+          usePooling: 0
+          size: 5
+          hasDuration: 0
+          duration: 10
+        m_Position:
+          m_Property:
+            rid: 7898181892276486877
+        m_Rotation:
+          m_Property:
+            rid: 7898181892276486878
+        m_Parent:
+          m_Property:
+            rid: 7898181892276486879
+        m_Save:
+          m_Property:
+            rid: 7898181892276486880
+    - rid: 7898181892276486876
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 8836402853192743943}
+    - rid: 7898181892276486877
+      type: {class: GetPositionCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181892276486878
+      type: {class: GetRotationCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Space: 1
+    - rid: 7898181892276486879
+      type: {class: GetGameObjectLocalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable:
+            rid: 7898181892276486881
+          m_Name:
+            m_String: Listeners-Parent
+            m_ID: -512412461
+    - rid: 7898181892276486880
+      type: {class: SetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 96b74d112ff8f29498f9419a576972d6, type: 2}
+          m_Name:
+            m_String: Listener
+            m_ID: 1827296884
+    - rid: 7898181892276486881
+      type: {class: PropertyGetGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Property:
+          rid: 7898181892276486882
+    - rid: 7898181892276486882
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7898181892276486883
+      type: {class: InstructionGameObjectDestroy, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 7898181892276486885
+    - rid: 7898181892276486885
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
 --- !u!114 &5253374970859203238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +419,7 @@ MonoBehaviour:
     m_Instructions:
     - rid: 7898181842653413439
     - rid: 7898181844797751564
+    - rid: 7898181892426170532
     - rid: 7898181844797751570
   m_TriggerEvent:
     rid: 7898181842653413417
@@ -563,6 +641,60 @@ MonoBehaviour:
           m_Name:
             m_String: Affected-Enemy
             m_ID: 1926555274
+    - rid: 7898181892426170532
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 7898181892426170533
+        m_From:
+          m_Property:
+            rid: 7898181892426170534
+    - rid: 7898181892426170533
+      type: {class: SetNumberLocalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable:
+            rid: 7898181892426170535
+          m_Name:
+            m_String: Last-HP
+            m_ID: -467734510
+    - rid: 7898181892426170534
+      type: {class: GetDecimalAttributeCurrentValue, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Traits:
+          m_Property:
+            rid: 7898181892426170536
+        m_Attribute:
+          m_Property:
+            rid: 7898181892426170537
+    - rid: 7898181892426170535
+      type: {class: PropertyGetGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Property:
+          rid: 7898181892426170538
+    - rid: 7898181892426170536
+      type: {class: GetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 0fdfc6abbf34374459da4259a8f8ef64, type: 2}
+          m_Name:
+            m_String: Affected-Enemy
+            m_ID: 1926555274
+    - rid: 7898181892426170537
+      type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Attribute: {fileID: 11400000, guid: 91e989c89e934194da21053b9c882591, type: 2}
+    - rid: 7898181892426170538
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 9167146078300425537}
 --- !u!114 &8316295061477239108
 MonoBehaviour:
   m_ObjectHideFlags: 0
