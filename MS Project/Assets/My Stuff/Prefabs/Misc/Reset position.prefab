@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 935749680420502729}
   - component: {fileID: 7274945313186485083}
+  - component: {fileID: 3514749585438861812}
   m_Layer: 0
   m_Name: Reset position
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8030806008644189402}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7070002, z: -0, w: 0.70721334}
+  m_LocalRotation: {x: 0, y: 0.7070019, z: 0, w: 0.7072116}
   m_LocalPosition: {x: 0.43087578, y: 0.47499934, z: -5.0304337}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -57,6 +58,54 @@ MonoBehaviour:
     - rid: 5820884997410128190
       type: {class: MarkerTypeDirection, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
+--- !u!114 &3514749585438861812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8030806008644189402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 6132260456664662018
+  m_TriggerEvent:
+    rid: 6132260456664662017
+  references:
+    version: 2
+    RefIds:
+    - rid: 6132260456664662017
+      type: {class: EventOnReceiveSignal, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Signal:
+          m_String: Unstuck
+    - rid: 6132260456664662018
+      type: {class: InstructionCharacterNavigationTeleport, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6132260456664662019
+        m_Location:
+          m_Property:
+            rid: 6132260456664662020
+    - rid: 6132260456664662019
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6132260456664662020
+      type: {class: GetLocationNavigationMarker, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Marker:
+          m_Property:
+            rid: 6132260456664662022
+    - rid: 6132260456664662022
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
 --- !u!1 &8422481384949157540
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1370868254115406085
 Transform:
   m_ObjectHideFlags: 0
@@ -126,6 +175,7 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 5820884997410128186
+    - rid: 6132260456664662023
   m_TriggerEvent:
     rid: 5820884997410127900
   references:
@@ -146,7 +196,7 @@ MonoBehaviour:
       type: {class: InstructionCharacterNavigationTeleport, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
-        m_IsEnabled: 1
+        m_IsEnabled: 0
         m_Character:
           m_Property:
             rid: 5820884997410128187
@@ -166,3 +216,10 @@ MonoBehaviour:
       type: {class: GetGameObjectNavigationMarker, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Marker: {fileID: 7274945313186485083}
+    - rid: 6132260456664662023
+      type: {class: InstructionLogicRaiseSignal, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Signal:
+          m_String: Unstuck
