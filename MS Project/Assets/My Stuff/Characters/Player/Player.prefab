@@ -1129,7 +1129,6 @@ MonoBehaviour:
     - rid: 1779839415236428696
     - rid: 1779839415236428698
     - rid: 1779839415236428704
-    - rid: 1779839415236428710
   m_TriggerEvent:
     rid: 4295615162026557500
   references:
@@ -1238,47 +1237,6 @@ MonoBehaviour:
       type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 100
-    - rid: 1779839415236428710
-      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 0
-        m_GameObject:
-          m_Property:
-            rid: 1779839415236428711
-          usePooling: 1
-          size: 1
-          hasDuration: 1
-          duration: 2
-        m_Position:
-          m_Property:
-            rid: 1779839415236428712
-        m_Rotation:
-          m_Property:
-            rid: 1779839415236428713
-        m_Parent:
-          m_Property:
-            rid: 1779839415236428714
-        m_Save:
-          m_Property:
-            rid: 1779839415236428715
-    - rid: 1779839415236428711
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 66808795712187290, guid: e830a72a67f9c3f43a55ed570beba627, type: 3}
-    - rid: 1779839415236428712
-      type: {class: GetPositionCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 1779839415236428713
-      type: {class: GetRotationCharactersPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Space: 1
-    - rid: 1779839415236428714
-      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 1779839415236428715
-      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
     - rid: 4295615162026557500
       type: {class: EventStatsAttributeChange, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
       data:
@@ -6853,11 +6811,8 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_Conditions:
           m_Property:
-            rid: 2908845285026299929
+            rid: 6132260482920743226
         m_WaitToFinish: 1
-    - rid: 2908845285026299929
-      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
     - rid: 3611814521306874307
       type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data: 
@@ -6875,6 +6830,10 @@ MonoBehaviour:
       type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
       data:
         m_Attribute: {fileID: 11400000, guid: 91e989c89e934194da21053b9c882591, type: 2}
+    - rid: 6132260482920743226
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 2213171809180238123}
 --- !u!114 &9146854146496019053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7093,7 +7052,7 @@ MonoBehaviour:
         m_Sign: 1
         m_Traits:
           m_Property:
-            rid: 1051822720305594519
+            rid: 6132260482920743488
         m_Attribute:
           m_Property:
             rid: 1051822720305594520
@@ -7117,10 +7076,6 @@ MonoBehaviour:
           m_CompareTo:
             m_Property:
               rid: 1051822720305594523
-    - rid: 1051822720305594519
-      type: {class: GetGameObjectCharactersInstance, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data:
-        m_Character: {fileID: 7363406600483881252}
     - rid: 1051822720305594520
       type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
       data:
@@ -7262,18 +7217,6 @@ MonoBehaviour:
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_GameObject: {fileID: 2213171809180238123}
-    - rid: 1051823083259429012
-      type: {class: ConditionCharacterIsInvincible, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Sign: 0
-        m_Character:
-          m_Property:
-            rid: 1051823083259429013
-    - rid: 1051823083259429013
-      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data: 
     - rid: 2908845285026299915
       type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -7284,7 +7227,6 @@ MonoBehaviour:
           m_Conditions:
           - rid: 2908845285026299916
           - rid: 1051822720305594509
-          - rid: 1051823083259429012
         m_InstructionList:
           m_Instructions:
           - rid: 2908845285026299920
@@ -7297,7 +7239,7 @@ MonoBehaviour:
         m_Sign: 1
         m_Traits:
           m_Property:
-            rid: 2908845285026299923
+            rid: 6132260482920743487
         m_Attribute:
           m_Property:
             rid: 2908845285026299918
@@ -7323,11 +7265,13 @@ MonoBehaviour:
         m_Character:
           m_Property:
             rid: 3611814521306874306
-    - rid: 2908845285026299923
-      type: {class: GetGameObjectCharactersInstance, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data:
-        m_Character: {fileID: 7363406600483881252}
     - rid: 3611814521306874306
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6132260482920743487
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6132260482920743488
       type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data: 
 --- !u!114 &4119040756483573567
